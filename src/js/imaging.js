@@ -7,19 +7,16 @@ function loadImages() {
   var gallery = document.querySelectorAll("div[class='gallery']");
 
   var image = document.createElement('img');
-  // console.log(responsiveImage.srcSet);
 
   image.setAttribute("srcSet", responsiveImage.srcSet);
   image.src = responsiveImage.src;
   image.sizes = "(max-width: 400px) 100vw,(max-width: 960px) 75vw, 640px";
-  // sizes="(max-width: 400px) 100vw,
-  //           (max-width: 960px) 75vw,
-  //           640px"
 
   gallery[0].appendChild(image);
 
   createRegistryRenditions();
   createSplashRenditions();
+  createArrowRenditions();
 
   function createRegistryRenditions() {
     const responsiveImage = require("../img/Steph_Mat_Engagement_16.jpg");
@@ -40,6 +37,18 @@ function loadImages() {
     image.setAttribute("srcSet", responsiveImage.srcSet);
     image.src = responsiveImage.src;
     image.sizes = "(max-width: 500px) 100vw,(max-width: 2000px) 100vw, 100px";
+    splash.appendChild(image);
+  }
+
+  function createArrowRenditions() {
+    const responsiveImage = require("../img/white-arrow-down.png");
+    var splash = document.querySelector('.splash a');
+    var image = document.createElement('img');
+
+    image.className = "down-arrow";
+    image.setAttribute("srcSet", responsiveImage.srcSet);
+    image.src = responsiveImage.src;
+    image.sizes = "(max-width: 20px) 2vw,(max-width: 45) 5vw, 45px";
     splash.appendChild(image);
   }
 }

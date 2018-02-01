@@ -15,10 +15,10 @@ body {
   src:  url('../fonts/Proxima-Nova-Regular.ttf') format('truetype')
 }
 
-@font-face {
+/*@font-face {
   font-family: "Roboto";
   src:  url('../fonts/Roboto-Regular.ttf') format('truetype')
-}
+}*/
 
 h1,h2,h3 {
     font-family: 'Sacramento';
@@ -86,7 +86,6 @@ nav.fixed {
 }
 
 nav a {
-    font-size:;
     text-decoration: none;
     margin: 0 4em 0 4em;
 }

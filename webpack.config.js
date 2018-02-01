@@ -22,11 +22,11 @@ module.exports = {
           sizes: [100, 300, 600, 1200, 2000],
           adapter: require('responsive-loader/sharp')
         }
-      }
+      },
       // {
       //    test:/\.(s*)css$/,
-      //    loaders:['style-loader','css-loader', 'sass-loader']
-      // },
+      //    loaders:['style-loader','css-loader?url=false', 'sass-loader?sourceMap']
+      // }
       // {
       //   test: /\.css/
       //   use: ExtractTextPlugin.extract({
@@ -34,12 +34,39 @@ module.exports = {
       //         fallback: 'style-loader'
       //   })
       // }
+      {
+        test: /\.(s*)css$/,
+        include: [
+          path.resolve(__dirname, "./src/styles")
+        ],
+        use: ExtractTextPlugin.extract({
+          publicPath: '../../',
+          use: [
+            {
+              loader: 'css-loader'
+            }, {
+              loader: 'sass-loader'
+            }
+          ]
+        })
+        // use: ExtractTextPlugin.extract({
+        //   fallback: 'style-loader',
+        //   use: ['css-loader', 'sass-loader']
+        // })
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf)(\?[a-z0-9=.]+)?$/,
+        loader: 'url-loader?limit=100000'
+      }
       // {
-      //   test: /\.scss$/,
-      //   use: ExtractTextPlugin.extract({
-      //     fallback: 'style-loader',
-      //     use: ['css-loader', 'sass-loader']
-      //   })
+      //     test: /\.scss$/,
+      //     use: [{
+      //         loader: "style-loader" // creates style nodes from JS strings
+      //     }, {
+      //         loader: "css-loader" // translates CSS into CommonJS
+      //     }, {
+      //         loader: "sass-loader" // compiles Sass to CSS
+      //     }]
       // }
     // ],
     // loaders: [
