@@ -1,0 +1,215 @@
+html,
+body {
+    background-color: #f6f6f6;
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+  font-family: "Sacramento";
+  src:  url('../fonts/Sacramento-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src:  url('../fonts/Proxima-Nova-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:  url('../fonts/Roboto-Regular.ttf') format('truetype')
+}
+
+h1,h2,h3 {
+    font-family: 'Sacramento';
+}
+
+p,a {
+    font-family:'Roboto'
+}
+
+
+.splash {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.splash video {
+    /*position: absolute;
+    top: 50%;
+    left: 50%;*/
+    min-width: 100%;
+    /*min-height: 100%;
+    width: auto;
+    height: auto;*/
+    /*-webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-image: url(../img/blue_chicago.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
+    display: inline-block;
+    vertical-align: baseline;*/
+}
+
+.splash .splash-img {
+    width: 100%;
+}
+
+.splash .down-arrow {
+    position: absolute;
+    top:90%;
+    left: 48.5%;
+    z-index: 100;
+    margin: auto;
+}
+
+nav {
+    /*background-color: #f6f6f6;*/
+    background-color: lightgray;
+    height: 5em;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    box-shadow: 0 1px 21px 8px rgba(0, 0, 0, .07);
+}
+
+nav.fixed {
+    position: fixed;
+    width: 100%;
+    top:0;
+}
+
+nav a {
+    font-size:;
+    text-decoration: none;
+    margin: 0 4em 0 4em;
+}
+
+nav a:link{
+  color:black;
+}
+nav a:visited{
+  color:black;
+}
+nav a:hover{
+  color:maroon;
+}
+
+nav a[ id= "schedule" ]:target {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
+
+main {
+    display: inline-block;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+main.fixed-content {
+    margin-top: 5em;
+}
+
+main > * {
+    text-align: center;
+}
+
+main section {
+    padding: 5em;
+}
+
+/*.modal-cover {
+    display:none;
+    opacity: .7;
+    background-color: black;
+    z-index: 100
+}
+
+.modal-cover.active {
+    display: block;
+    height: 100%;
+}*/
+
+.rule {
+    width: 80%;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto 15px auto;
+}
+
+/*.rsvp-modal {
+    display: none;
+    position: absolute;
+    float: center;
+    z-index: 110;
+    background-color: white;
+    padding: 10em;
+    text-align: center;
+}*/
+
+.rsvp-modal.active {
+    display: block;
+}
+
+.rsvp-modal button {
+    margin: 0.5em;
+}
+
+.rsvp-modal input {
+    margin: 0.5em;
+}
+
+.day {
+    text-align: left;
+    padding-bottom: 2em;
+}
+
+.time-container {
+    text-align: right;
+}
+
+.event {
+    text-align: left;
+}
+
+#schedule h2,
+h3 {
+    text-align: left;
+}
+
+#ceremony-reception-map {
+    position: relative;
+    padding-bottom: 40%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+
+.travel {
+    margin: 0 15%;
+}
+
+.travel-data {
+    text-align: left;
+}
+
+#rsvpModal {
+    display: block;
+    position: absolute;
+}
+
+.show {
+    display: block;
+}
+
+/*Pinterest-like Responsive Fluid Grid Layout*/
+#photos img {
+    /*width: 100px;*/
+
+}
