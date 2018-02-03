@@ -2,8 +2,6 @@ import axios from 'axios';
 
 
 function form() {
-
-
   var findMyPartyBtn = document.querySelector(".find-my-party button");
   var firstName = document.querySelector("#first-name");
   var lastName = document.querySelector("#last-name");

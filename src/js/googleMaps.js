@@ -93,7 +93,7 @@ function initMaps() {
     }
   ];
 
-  var ceremonyReceptionCoordinates = {lat: 41.8919353, lng: -87.6257336};
+  var ceremonyReceptionCoordinates = {lat: 42.1957536, lng: -87.9252177};
 
   var ceremonyReceptionMap = new google.maps.Map(document.getElementById('ceremony-reception-map'), {
       center: ceremonyReceptionCoordinates,
