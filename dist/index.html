@@ -25,7 +25,7 @@
           <p>08-18-2018</p>
           <h1>Place</h1>
           <p>Lincolnshire Marriott Resort</p>
-          <button id="open-button" class="rsvp-button open-button">Click Here to RSVP</button>
+          <button id="open-button" class="rsvp-button primary-button">Click Here to RSVP</button>
         </section>
         <div class="divider"></div>
         <section id="story">
@@ -141,32 +141,28 @@
     <div class="modal closed" id="modal">
       <div class="modal-guts">
         <div class="name-tab">
-          <p>Please enter your first and last name and your passcode to RSVP</p>
-          <br>
-          <div class="row">
-            <div class="input-field s12">
-              <input name="first-name" placeholder="Jon" id="first-name" type="text" class="validate">
-              <label for="first-name" class="active">First Name</label>
+          <form novalidate>
+            <p>Please enter your first and last name and your passcode to RSVP</p>
+            <br>
+            <div class="row">
+              <div class="input-field s12">
+                <input id="first-name" type="text" name="first-name" placeholder="Jon" class="validate" required aria-required="true">
+                <label for="first-name" data-error="First Name cannot be empty." data-success="right" class="active" >First Name</label>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="input-field s12">
-              <input name="last-name" placeholder="Snow" id="last-name" type="text" class="validate">
-              <label for="last-name" class="active">Last Name</label>
+            <div class="row">
+              <div class="input-field s12">
+                <input name="last-name" placeholder="Snow" id="last-name" type="text" class="validate" required aria-required="true">
+                <label for="last-name" class="active" data-error="Last Name cannot be empty.">Last Name</label>
+              </div>
             </div>
-          </div>
-          <div class="find-my-party">
-            <button>Find My Party</button>
-          </div>
+            <div class="find-my-party">
+              <button>Find My Party</button>
+            </div>
+          </form>
         </div>
-        <div class="parties-tab">
-          <!-- <p>Choose your Party</p> -->
-        </div>
-        <div class="rsvp-tab">
-          <p>Enter RSVP Info</p>
-          <div class="people"></div>
-        </div>
-
+        <div class="rsvp-tab"></div>
+        <div class="loading-tab"></div>
         <!-- <div class="step-buttons">
           <button type="button" id="prevBtn">Previous</button>
           <button type="button" id="nextBtn">Next</button>

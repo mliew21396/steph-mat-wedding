@@ -42,7 +42,8 @@ input.invalid {
 }
 
 .parties-tab,
-.rsvp-tab {
+.rsvp-tab,
+.loading-tab {
   display: none;
 }
 
@@ -50,7 +51,7 @@ input.invalid {
   display: block;
 }
 
-#regForm .find-my-party {
+.find-my-party {
   text-align: center;
 }
 
@@ -59,5 +60,36 @@ input.invalid {
 }
 
 .mgl2 {
+  text-align: center;
+}
+
+.try-again-button {
+  text-align: center;
+}
+
+.submit-rsvp {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.radio-wrapper {
+  display: inline-block;
+  padding-bottom: 0 1em;
+}
+
+.rsvp-tab {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.rsvp-tab h2 {
+  text-align: center;
+}
+
+.rsvp-form {
+  margin-top: 4em;
+}
+
+.loading-tab div {
   text-align: center;
 }

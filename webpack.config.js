@@ -23,6 +23,20 @@ module.exports = {
           adapter: require('responsive-loader/sharp')
         }
       },
+      {
+        test: /\.(gif)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              gifsicle: {
+                interlaced: false,
+              }
+            }
+          },
+        ],
+      },
       // {
       //    test:/\.(s*)css$/,
       //    loaders:['style-loader','css-loader?url=false', 'sass-loader?sourceMap']
@@ -57,7 +71,15 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf)(\?[a-z0-9=.]+)?$/,
         loader: 'url-loader?limit=100000'
-      }
+      },
+
+
+
+      { test: /\.handlebars$/, loader: "handlebars-loader" }
+      // { test: /\.handlebars$/, loader: __dirname + "/../../" }
+
+
+
       // {
       //     test: /\.scss$/,
       //     use: [{
