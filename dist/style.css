@@ -6196,34 +6196,14 @@ p, a {
   height: 100%;
   overflow: hidden;
   text-align: center; }
-
-.splash video {
-  /*position: absolute;
-    top: 50%;
-    left: 50%;*/
-  min-width: 100%;
-  /*min-height: 100%;
-    width: auto;
-    height: auto;*/
-  /*-webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background-image: url(../img/blue_chicago.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-transition: 1s opacity;
-    transition: 1s opacity;
-    display: inline-block;
-    vertical-align: baseline;*/ }
-
-.splash .splash-img {
-  width: 100%; }
-
-.splash .down-arrow {
-  position: absolute;
-  top: 90%;
-  left: 48.5%;
-  z-index: 100;
-  margin: auto; }
+  .splash .splash-img {
+    width: 100%; }
+  .splash .down-arrow {
+    position: absolute;
+    top: 90%;
+    left: 48.5%;
+    z-index: 100;
+    margin: auto; }
 
 nav {
   /*background-color: #f6f6f6;*/
@@ -6235,28 +6215,23 @@ nav {
   align-items: center;
   top: 0;
   box-shadow: 0 1px 21px 8px rgba(0, 0, 0, 0.07); }
+  nav a {
+    text-decoration: none;
+    margin: 0 0 0 1em; }
+  nav a:link {
+    color: black; }
+  nav a:visited {
+    color: black; }
+  nav a:hover {
+    color: maroon; }
+  nav a[id="schedule"]:target {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); }
 
 nav.fixed {
   position: fixed;
   width: 100%;
   top: 0; }
-
-nav a {
-  text-decoration: none;
-  margin: 0 1em 0 1em; }
-
-nav a:link {
-  color: black; }
-
-nav a:visited {
-  color: black; }
-
-nav a:hover {
-  color: maroon; }
-
-nav a[id="schedule"]:target {
-  -webkit-transform: translateY(0px);
-  transform: translateY(0px); }
 
 @media (min-width: 550px) {
   nav a {
@@ -6272,6 +6247,10 @@ main {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column; }
+  main section {
+    padding: 5em;
+    /*width: 80%;*/
+    /*margin: 0 auto;*/ }
 
 main.fixed-content {
   margin-top: 5em; }
@@ -6279,42 +6258,10 @@ main.fixed-content {
 main > * {
   text-align: center; }
 
-main section {
-  padding: 5em; }
-
-/*.modal-cover {
-    display:none;
-    opacity: .7;
-    background-color: black;
-    z-index: 100
-}
-
-.modal-cover.active {
-    display: block;
-    height: 100%;
-}*/
 .rule {
   width: 80%;
   border-bottom: 1px solid #ccc;
   margin: 0 auto 15px auto; }
-
-/*.rsvp-modal {
-    display: none;
-    position: absolute;
-    float: center;
-    z-index: 110;
-    background-color: white;
-    padding: 10em;
-    text-align: center;
-}*/
-.rsvp-modal.active {
-  display: block; }
-
-.rsvp-modal button {
-  margin: 0.5em; }
-
-.rsvp-modal input {
-  margin: 0.5em; }
 
 .day {
   text-align: left;
@@ -6336,9 +6283,9 @@ h3 {
   height: 0;
   overflow: hidden; }
 
-.travel {
-  margin: 0 15%; }
-
+/*.travel {
+    margin: 0 15%;
+}*/
 .travel-data {
   text-align: left; }
 
@@ -6352,18 +6299,6 @@ h3 {
 /*Pinterest-like Responsive Fluid Grid Layout*/
 #photos img {
   /*width: 100px;*/ }
-
-.primary-button {
-  /*  border: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: lightgreen;
-  color: white;*/
-  padding: 10px 20px;
-  border-radius: 10px;
-  /*font-size: 21px;*/ }
 .modal {
   /* This way it could be display flex or grid or whatever also. */
   display: block;
@@ -6383,9 +6318,26 @@ h3 {
   /* margin: -200px 0 0 -200px; */
   background: white;
   box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9); }
-
-.closed {
-  display: none; }
+  .modal .modal-guts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 20px; }
+  .modal .close-button {
+    position: absolute;
+    /* don't need to go crazy with z-index here, just sits over .modal-guts */
+    z-index: 100;
+    top: 10px;
+    /* needs to look OK with or without scrollbar */
+    right: 20px;
+    border: 0;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1.3rem; }
 
 .modal-cover {
   position: fixed;
@@ -6396,34 +6348,8 @@ h3 {
   z-index: 1000;
   background: rgba(0, 0, 0, 0.6); }
 
-.modal-guts {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  padding: 20px; }
-
-.modal .close-button {
-  position: absolute;
-  /* don't need to go crazy with z-index here, just sits over .modal-guts */
-  z-index: 100;
-  top: 10px;
-  /* needs to look OK with or without scrollbar */
-  right: 20px;
-  border: 0;
-  background: black;
-  color: white;
-  padding: 5px 10px;
-  font-size: 1.3rem; }
-/*#regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
-}*/
+.closed {
+  display: none; }
 input {
   padding: 10px;
   width: 100%;
@@ -6435,25 +6361,6 @@ input {
 input.invalid {
   background-color: #ffdddd; }
 
-/* Make circles that indicate the steps of the form: */
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbbbbb;
-  border: none;
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5; }
-
-/* Mark the active step: */
-.step.active {
-  opacity: 1; }
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-  background-color: #4CAF50; }
-
 .parties-tab,
 .rsvp-tab,
 .loading-tab {
@@ -6461,36 +6368,24 @@ input.invalid {
 
 .name-tab {
   display: block; }
-
-.find-my-party {
-  text-align: center; }
-
-.step-buttons {
-  text-align: center; }
-
-.mgl2 {
-  text-align: center; }
-
-.try-again-button {
-  text-align: center; }
-
-.submit-rsvp {
-  text-align: center;
-  margin-top: 5em; }
-
-.radio-wrapper {
-  display: inline-block;
-  padding-bottom: 0 1em; }
+  .name-tab .find-my-party {
+    text-align: center; }
 
 .rsvp-tab {
   width: 80%;
   margin: 0 auto; }
-
-.rsvp-tab h2 {
-  text-align: center; }
-
-.rsvp-form {
-  margin-top: 4em; }
+  .rsvp-tab .rsvp-form {
+    margin-top: 4em; }
+    .rsvp-tab .rsvp-form .try-again-button {
+      text-align: center; }
+    .rsvp-tab .rsvp-form .radio-wrapper {
+      display: inline-block;
+      padding-bottom: 0 1em; }
+    .rsvp-tab .rsvp-form .submit-rsvp {
+      text-align: center;
+      margin-top: 5em; }
+  .rsvp-tab h2 {
+    text-align: center; }
 
 .loading-tab div {
   text-align: center; }
@@ -6501,51 +6396,39 @@ input.invalid {
 .lazyloaded {
   opacity: 1;
   transition: opacity 300ms; }
-.grid-sizer,
-.grid-item {
-  width: 6vw;
-  /*margin-bottom: -11px;*/ }
-
-.grid-item:hover img {
-  opacity: .5;
-  /*margin-top: -11px;*/
-  /*margin-bottom: -11px;*/ }
-
-.grid {
-  width: 12vw;
-  display: block;
-  max-height: 64vh;
-  overflow: auto;
-  box-shadow: inset 0 -25px 50px -35px black; }
-
 .gallery {
   margin: 0 auto;
   width: 80%; }
-
-.grid-main-item {
-  /*vertical-align: top;*/
-  /*display: inline-block;*/ }
-
-.grid-side-wrapper,
-.grid-main-wrapper {
-  display: inline-block; }
-
-.grid-side-wrapper {
-  text-align: right; }
-
-.grid-main-wrapper {
-  /*text-align: left;*/
-  vertical-align: top;
-  background-color: black;
-  display: inline-block;
-  min-height: 64vh; }
-
-.grid-main-wrapper img {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  min-height: 64vh;
-  max-height: 64vh; }
-
-.overflow-hidden {
-  overflow: hidden !important; }
+  .gallery .grid-side-wrapper,
+  .gallery .grid-main-wrapper {
+    display: inline-block; }
+  .gallery .grid-side-wrapper.col,
+  .gallery .grid-main-wrapper.col {
+    padding: 0; }
+  .gallery .grid-side-wrapper {
+    text-align: right; }
+    .gallery .grid-side-wrapper .grid {
+      width: 12vw;
+      display: block;
+      max-height: 64vh;
+      overflow: auto;
+      box-shadow: inset 0 -25px 50px -35px black; }
+      .gallery .grid-side-wrapper .grid .grid-sizer,
+      .gallery .grid-side-wrapper .grid .grid-item {
+        width: 6vw;
+        /*margin-bottom: -11px;*/ }
+      .gallery .grid-side-wrapper .grid .grid-item:hover img {
+        opacity: .5;
+        /*margin-top: -11px;*/
+        /*margin-bottom: -11px;*/ }
+  .gallery .grid-main-wrapper {
+    vertical-align: top;
+    background-color: black;
+    display: inline-block;
+    min-height: 64vh; }
+    .gallery .grid-main-wrapper img {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      min-height: 64vh;
+      max-height: 64vh; }

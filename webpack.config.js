@@ -75,7 +75,13 @@ module.exports = {
 
 
 
-      { test: /\.handlebars$/, loader: "handlebars-loader" }
+      {
+        test: /\.handlebars$/,
+        loader: "handlebars-loader",
+        query: {
+          runtime: 'handlebars/dist/handlebars.runtime.js',
+        }
+      }
       // { test: /\.handlebars$/, loader: __dirname + "/../../" }
 
 

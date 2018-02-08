@@ -1,37 +1,36 @@
-<form class="rsvp-form">
-  <b>{{firstname}} {{lastname}}</b>
-  <div class="row">
-    <div class="input-field s12">
-      <p>Will you be able to attend?</p>
-      <div class="radio-wrapper">
-        <input name="entree" type="radio" id="option5" />
-        <label for="option5">Yes</label>
-      </div>
-      <div class="radio-wrapper">
-        <input name="entree" type="radio" id="option6" />
-        <label for="option6">No</label>
-      </div>
+<b>{{firstname}} {{lastname}}</b>
+<input type=hidden name="personid" value="{{personid}}">
+<div class="attending-{{personid}} row">
+  <div class="input-field s12">
+    <p>Will you be able to attend?</p>
+    <div class="radio-wrapper">
+      <input name="attending-{{personid}}" type="radio" id="option1-{{personid}}" />
+      <label for="option1-{{personid}}">Yes</label>
+    </div>
+    <div class="radio-wrapper">
+      <input name="attending-{{personid}}" type="radio" id="option2-{{personid}}" />
+      <label for="option2-{{personid}}">No</label>
     </div>
   </div>
-  <div class="row closed">
-    <div class="input-field s12">
-      <p>Select your Entree</p>
-      <div class="radio-wrapper">
-        <input name="entree" type="radio" id="option1" />
-        <label for="option1">Steak</label>
-      </div>
-      <div class="radio-wrapper">
-        <input name="entree" type="radio" id="option2" />
-        <label for="option2">Salmon</label>
-      </div>
-      <div class="radio-wrapper">
-        <input name="entree" type="radio" id="option3"  />
-        <label for="option3">Chicken</label>
-      </div>
-      <div class="radio-wrapper">
-        <input name="entree" type="radio" id="option4" />
-        <label for="option4">Vegetarian</label>
-      </div>
+</div>
+<div class="entree-{{personid}} row closed">
+  <div class="input-field s12">
+    <p>Select your Entree</p>
+    <div class="radio-wrapper">
+      <input name="entree-{{personid}}" type="radio" id="option3-{{personid}}" />
+      <label for="option3-{{personid}}">Steak</label>
+    </div>
+    <div class="radio-wrapper">
+      <input name="entree-{{personid}}" type="radio" id="option4-{{personid}}" />
+      <label for="option4-{{personid}}">Salmon</label>
+    </div>
+    <div class="radio-wrapper">
+      <input name="entree-{{personid}}" type="radio" id="option5-{{personid}}"  />
+      <label for="option5-{{personid}}">Chicken</label>
+    </div>
+    <div class="radio-wrapper">
+      <input name="entree-{{personid}}" type="radio" id="option6-{{personid}}" />
+      <label for="option6-{{personid}}">Vegetarian</label>
     </div>
   </div>
-</form>
+</div>

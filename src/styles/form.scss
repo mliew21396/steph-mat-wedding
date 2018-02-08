@@ -1,0 +1,57 @@
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+.parties-tab,
+.rsvp-tab,
+.loading-tab {
+  display: none;
+}
+
+.name-tab {
+  display: block;
+
+  .find-my-party {
+    text-align: center;
+  }
+}
+
+.rsvp-tab {
+  width: 80%;
+  margin: 0 auto;
+
+  .rsvp-form {
+    margin-top: 4em;
+
+    .try-again-button {
+      text-align: center;
+    }
+
+    .radio-wrapper {
+      display: inline-block;
+      padding-bottom: 0 1em;
+    }
+
+    .submit-rsvp {
+      text-align: center;
+      margin-top: 5em;
+    }
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.loading-tab div {
+  text-align: center;
+}

@@ -4,6 +4,7 @@
   "description": "Mat and Steph's Wedding Site",
   "main": "webpack.config.js",
   "scripts": {
+    "build-base": "webpack",
     "build": "webpack -p",
     "watch": "webpack --watch"
   },

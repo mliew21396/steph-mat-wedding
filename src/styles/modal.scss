@@ -26,9 +26,34 @@
 
   background: white;
   box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
-}
-.closed {
-  display: none;
+
+  .modal-guts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+  }
+
+  .close-button {
+    position: absolute;
+
+    /* don't need to go crazy with z-index here, just sits over .modal-guts */
+    z-index: 100;
+
+    top: 10px;
+
+    /* needs to look OK with or without scrollbar */
+    right: 20px;
+
+    border: 0;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+  }
 }
 
 .modal-cover {
@@ -38,33 +63,9 @@
   width: 100%;
   height: 100%;
   z-index: 1000;
-
   background: rgba(0, 0, 0, 0.6);
 }
-.modal-guts {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  padding: 20px;
-}
 
-.modal .close-button {
-  position: absolute;
-
-  /* don't need to go crazy with z-index here, just sits over .modal-guts */
-  z-index: 100;
-
-  top: 10px;
-
-  /* needs to look OK with or without scrollbar */
-  right: 20px;
-
-  border: 0;
-  background: black;
-  color: white;
-  padding: 5px 10px;
-  font-size: 1.3rem;
+.closed {
+  display: none;
 }
