@@ -1,9 +1,9 @@
 import './styles/materialize.min.css';
-import './styles/main.css';
-import './styles/modal.css';
-import './styles/form.css';
+import './styles/main.scss';
+import './styles/modal.scss';
+import './styles/form.scss';
 import './styles/imaging.scss';
-import './styles/masonry.css';
+import './styles/masonry.scss';
 import googleMaps from './js/googleMaps.js';
 import loadImages from './js/imaging.js';
 import masonry from './js/masonry.js';

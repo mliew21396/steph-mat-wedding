@@ -34,37 +34,18 @@ p,a {
     height: 100%;
     overflow: hidden;
     text-align: center;
-}
 
-.splash video {
-    /*position: absolute;
-    top: 50%;
-    left: 50%;*/
-    min-width: 100%;
-    /*min-height: 100%;
-    width: auto;
-    height: auto;*/
-    /*-webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background-image: url(../img/blue_chicago.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-transition: 1s opacity;
-    transition: 1s opacity;
-    display: inline-block;
-    vertical-align: baseline;*/
-}
+    .splash-img {
+        width: 100%;
+    }
 
-.splash .splash-img {
-    width: 100%;
-}
-
-.splash .down-arrow {
-    position: absolute;
-    top:90%;
-    left: 48.5%;
-    z-index: 100;
-    margin: auto;
+    .down-arrow {
+        position: absolute;
+        top:90%;
+        left: 48.5%;
+        z-index: 100;
+        margin: auto;
+    }
 }
 
 nav {
@@ -77,32 +58,34 @@ nav {
     align-items: center;
     top: 0;
     box-shadow: 0 1px 21px 8px rgba(0, 0, 0, .07);
+
+    a {
+        text-decoration: none;
+        margin: 0 1em 0 1em;
+    }
+
+    a:link{
+      color:black;
+    }
+
+    a:visited{
+      color:black;
+    }
+
+    a:hover{
+      color:maroon;
+    }
+
+    a[ id= "schedule" ]:target {
+        -webkit-transform: translateY( 0px);
+        transform: translateY( 0px );
+    }
 }
 
 nav.fixed {
     position: fixed;
     width: 100%;
     top:0;
-}
-
-nav a {
-    text-decoration: none;
-    margin: 0 1em 0 1em;
-}
-
-nav a:link{
-  color:black;
-}
-nav a:visited{
-  color:black;
-}
-nav a:hover{
-  color:maroon;
-}
-
-nav a[ id= "schedule" ]:target {
-    -webkit-transform: translateY( 0px);
-    transform: translateY( 0px );
 }
 
 @media (min-width: 550px) {
@@ -123,6 +106,11 @@ main {
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
+
+    section {
+        // padding: 5em;
+        width: 80%;
+    }
 }
 
 main.fixed-content {
@@ -133,48 +121,10 @@ main > * {
     text-align: center;
 }
 
-main section {
-    padding: 5em;
-}
-
-/*.modal-cover {
-    display:none;
-    opacity: .7;
-    background-color: black;
-    z-index: 100
-}
-
-.modal-cover.active {
-    display: block;
-    height: 100%;
-}*/
-
 .rule {
     width: 80%;
     border-bottom: 1px solid #ccc;
     margin: 0 auto 15px auto;
-}
-
-/*.rsvp-modal {
-    display: none;
-    position: absolute;
-    float: center;
-    z-index: 110;
-    background-color: white;
-    padding: 10em;
-    text-align: center;
-}*/
-
-.rsvp-modal.active {
-    display: block;
-}
-
-.rsvp-modal button {
-    margin: 0.5em;
-}
-
-.rsvp-modal input {
-    margin: 0.5em;
 }
 
 .day {
@@ -223,18 +173,4 @@ h3 {
 #photos img {
     /*width: 100px;*/
 
-}
-
-
-.primary-button {
-/*  border: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: lightgreen;
-  color: white;*/
-  padding: 10px 20px;
-  border-radius: 10px;
-  /*font-size: 21px;*/
 }
