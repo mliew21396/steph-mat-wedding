@@ -4,9 +4,6 @@ import imageConstants from './imageConstants.js';
 
 function loadImages() {
   "use strict";
-
-  // image.sizes = "(max-width: 400px) 100vw,(max-width: 960px) 75vw, 640px";
-
   // Splash
   createRenditions(imageConstants.splashImage.imageFile,
     imageConstants.splashImage.parentSelector,

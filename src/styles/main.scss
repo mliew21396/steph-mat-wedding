@@ -61,7 +61,11 @@ nav {
 
     a {
         text-decoration: none;
+<<<<<<< HEAD:src/styles/main.scss
         margin: 0 1em 0 1em;
+=======
+        margin: 0 0 0 1em;
+>>>>>>> fe791c652d84ea83ecb5bd85308508483b3a0614:src/styles/main.scss
     }
 
     a:link{
@@ -108,8 +112,14 @@ main {
     flex-direction: column;
 
     section {
+<<<<<<< HEAD:src/styles/main.scss
         // padding: 5em;
         width: 80%;
+=======
+        padding: 5em;
+        /*width: 80%;*/
+        /*margin: 0 auto;*/
+>>>>>>> fe791c652d84ea83ecb5bd85308508483b3a0614:src/styles/main.scss
     }
 }
 
@@ -152,9 +162,9 @@ h3 {
     overflow: hidden;
 }
 
-.travel {
+/*.travel {
     margin: 0 15%;
-}
+}*/
 
 .travel-data {
     text-align: left;
