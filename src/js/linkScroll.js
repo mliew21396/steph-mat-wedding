@@ -33,18 +33,6 @@ function linkScroll () {
     scrollHandler(registryTarget);
   });
 
-  // function assignListeners(sources, targets) {
-  //   for (var i = 0; i < sources.length; i++) {
-  //     processListeners(sources[i], i);
-  //   }
-  // }
-
-  // function processListeners(sections, count) {
-  //   for (var j = 0; j < sections.length; j++) {
-  //     console.log("lkj");
-  //   }
-  // }
-
   function scrollHandler(target) {
     event.preventDefault();
     scrollTo(document.documentElement, target.offsetTop, 500);

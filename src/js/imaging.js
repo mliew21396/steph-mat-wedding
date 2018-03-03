@@ -4,29 +4,35 @@ import imageConstants from './imageConstants.js';
 
 function loadImages() {
   "use strict";
-  // Splash
-  createRenditions(imageConstants.splashImage.imageFile,
-    imageConstants.splashImage.parentSelector,
-    imageConstants.splashImage.imageSizes);
-  createRenditions(imageConstants.splashArrow.imageFile, imageConstants.splashArrow.parentSelector, imageConstants.splashArrow.imageSizes, imageConstants.splashArrow.className);
   // Gallery
     // Side Image
   for (const key of Object.keys(imageConstants.gallerySideImages)) {
-      var imageFile = imageConstants.gallerySideImages[key].imageFile;
-      var imageSizes = imageConstants.gallerySideImages[key].imageSizes;
-      var parentSelector = imageConstants.gallerySideImages[key].parentSelector;
-      var className = imageConstants.gallerySideImages[key].className;
-      var mainImageSizes = imageConstants.gallerySideImages[key].mainImageSizes;
+    var sideImageFile = imageConstants.gallerySideImages[key].imageFile;
+    var sideImageSizes = imageConstants.gallerySideImages[key].imageSizes;
+    var sideParentSelector = imageConstants.gallerySideImages[key].parentSelector;
+    var sideClassName = imageConstants.gallerySideImages[key].className;
+    var sideMainImageSizes = imageConstants.gallerySideImages[key].mainImageSizes;
 
-      createMasonryRenditions(imageFile, parentSelector, imageSizes, className, mainImageSizes);
+    createMasonryRenditions(sideImageFile, sideParentSelector, sideImageSizes, sideClassName, sideMainImageSizes);
   }
-    //First Main Image
+    // First Main Image
   createRenditions(imageConstants.galleryMainImage.imageFile,imageConstants.galleryMainImage.parentSelector, imageConstants.galleryMainImage.imageSizes, imageConstants.galleryMainImage.className);
+    // Gallery Modal Image
+  for (const key of Object.keys(imageConstants.galleryModalImages)) {
+    var modalImageFile = imageConstants.galleryModalImages[key].imageFile;
+    var modalImageSizes = imageConstants.galleryModalImages[key].imageSizes;
+    var modalParentSelector = imageConstants.galleryModalImages[key].parentSelector;
+    var modalClassName = imageConstants.galleryModalImages[key].className;
+    var modalMainImageSizes = imageConstants.galleryModalImages[key].mainImageSizes;
+
+    createMasonryRenditions(modalImageFile, modalParentSelector, modalImageSizes, modalClassName, modalMainImageSizes);
+  }
+
   // Registry
   createRenditions(imageConstants.registryImage.imageFile, imageConstants.registryImage.parentSelector, imageConstants.registryImage.imageSizes);
 
   function createRenditions(imageFile, parentSelector, imageSizes, className) {
-    const responsiveImage = require("../img/" + imageFile);
+    const responsiveImage = require("../img/responsive/" + imageFile);
     var parentElement = document.querySelector(parentSelector);
     var image = document.createElement('img');
 
@@ -39,7 +45,7 @@ function loadImages() {
   }
 
   function createMasonryRenditions(imageFile, parentSelector, imageSizes, className, mainImageSizes) {
-    const responsiveImage = require("../img/" + imageFile);
+    const responsiveImage = require("../img/responsive/" + imageFile);
     var parentElement = document.querySelector(parentSelector);
     var imageWrapper = document.createElement('div');
     var image = document.createElement('img');

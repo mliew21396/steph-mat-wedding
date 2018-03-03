@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,8 +70,8 @@
 "use strict";
 
 
-var bind = __webpack_require__(6);
-var isBuffer = __webpack_require__(51);
+var bind = __webpack_require__(5);
+var isBuffer = __webpack_require__(49);
 
 /*global toString:true*/
 
@@ -719,7 +719,7 @@ return getSize;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var normalizeHeaderName = __webpack_require__(53);
+var normalizeHeaderName = __webpack_require__(51);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -735,10 +735,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(8);
+    adapter = __webpack_require__(7);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(8);
+    adapter = __webpack_require__(7);
   }
   return adapter;
 }
@@ -809,29 +809,27 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./Steph_Mat_Engagement_16.jpg": 23,
-	"./Steph_Mat_Engagement_66.jpg": 24,
-	"./Steph_Mat_Engagement_88.jpg": 25,
-	"./Steph_Mat_Engagement_89.jpg": 26,
-	"./Steph_Mat_Engagement_90.jpg": 27,
-	"./Steph_Mat_Engagement_91.jpg": 28,
-	"./Steph_Mat_Engagement_92.jpg": 29,
-	"./Steph_Mat_Engagement_93.jpg": 30,
-	"./Steph_Mat_Engagement_94.jpg": 31,
-	"./Steph_Mat_Engagement_95.jpg": 32,
-	"./Steph_Mat_Engagement_96.jpg": 33,
-	"./Steph_Mat_Engagement_97.jpg": 34,
-	"./Steph_Mat_Engagement_98.jpg": 35,
-	"./Steph_Mat_Engagement_99.jpg": 36,
-	"./dog_spinner.gif": 5,
-	"./white-arrow-down.png": 37
+	"./Steph_Mat_Engagement_16.jpg": 22,
+	"./Steph_Mat_Engagement_88.jpg": 23,
+	"./Steph_Mat_Engagement_89.jpg": 24,
+	"./Steph_Mat_Engagement_90.jpg": 25,
+	"./Steph_Mat_Engagement_91.jpg": 26,
+	"./Steph_Mat_Engagement_92.jpg": 27,
+	"./Steph_Mat_Engagement_93.jpg": 28,
+	"./Steph_Mat_Engagement_94.jpg": 29,
+	"./Steph_Mat_Engagement_95.jpg": 30,
+	"./Steph_Mat_Engagement_96.jpg": 31,
+	"./Steph_Mat_Engagement_97.jpg": 32,
+	"./Steph_Mat_Engagement_98.jpg": 33,
+	"./Steph_Mat_Engagement_99.jpg": 34,
+	"./white-arrow-down.png": 35
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -853,12 +851,6 @@ webpackContext.id = 4;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ab651acae2fe80c9a662614c76a68519.gif";
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
@@ -874,7 +866,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -1064,19 +1056,19 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var settle = __webpack_require__(54);
-var buildURL = __webpack_require__(56);
-var parseHeaders = __webpack_require__(57);
-var isURLSameOrigin = __webpack_require__(58);
-var createError = __webpack_require__(9);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(59);
+var settle = __webpack_require__(52);
+var buildURL = __webpack_require__(54);
+var parseHeaders = __webpack_require__(55);
+var isURLSameOrigin = __webpack_require__(56);
+var createError = __webpack_require__(8);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(57);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -1173,7 +1165,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(60);
+      var cookies = __webpack_require__(58);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -1249,16 +1241,16 @@ module.exports = function xhrAdapter(config) {
   });
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var enhanceError = __webpack_require__(55);
+var enhanceError = __webpack_require__(53);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -1277,7 +1269,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1289,7 +1281,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1315,31 +1307,33 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_materialize_min_css__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_materialize_min_css__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_materialize_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__styles_materialize_min_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_main_scss__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_main_scss__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_main_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_main_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_modal_scss__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_modal_scss__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_modal_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_modal_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_form_scss__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_form_scss__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_form_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_form_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_imaging_scss__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_imaging_scss__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_imaging_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__styles_imaging_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_masonry_scss__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_masonry_scss__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_masonry_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__styles_masonry_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_googleMaps_js__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_googleMaps_js__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_googleMaps_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__js_googleMaps_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__js_imaging_js__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__js_masonry_js__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__js_stickyNav_js__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__js_linkScroll_js__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__js_modal_js__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__js_form_js__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__js_imaging_js__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__js_masonry_js__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__js_stickyNav_js__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__js_linkScroll_js__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__js_modal_js__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__js_form_js__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__js_galleryModal_js__ = __webpack_require__(69);
+
 
 
 
@@ -1360,6 +1354,14 @@ Object(__WEBPACK_IMPORTED_MODULE_7__js_imaging_js__["a" /* default */])();
 Object(__WEBPACK_IMPORTED_MODULE_11__js_modal_js__["a" /* default */])();
 Object(__WEBPACK_IMPORTED_MODULE_12__js_form_js__["a" /* default */])();
 Object(__WEBPACK_IMPORTED_MODULE_8__js_masonry_js__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_13__js_galleryModal_js__["a" /* default */])();
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 13 */
@@ -1393,12 +1395,6 @@ Object(__WEBPACK_IMPORTED_MODULE_8__js_masonry_js__["a" /* default */])();
 
 /***/ }),
 /* 18 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 19 */
 /***/ (function(module, exports) {
 
 function initMaps() {
@@ -1515,37 +1511,43 @@ function initMaps() {
 window.initMaps = initMaps;
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lazySizes__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lazySizes__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lazySizes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lazySizes__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__ = __webpack_require__(21);
 
 
 
 
 function loadImages() {
   "use strict";
-  // Splash
-  createRenditions(__WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].splashImage.imageFile,
-    __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].splashImage.parentSelector,
-    __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].splashImage.imageSizes);
-  createRenditions(__WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].splashArrow.imageFile, __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].splashArrow.parentSelector, __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].splashArrow.imageSizes, __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].splashArrow.className);
   // Gallery
     // Side Image
   for (const key of Object.keys(__WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages)) {
-      var imageFile = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages[key].imageFile;
-      var imageSizes = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages[key].imageSizes;
-      var parentSelector = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages[key].parentSelector;
-      var className = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages[key].className;
-      var mainImageSizes = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages[key].mainImageSizes;
+    var sideImageFile = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages[key].imageFile;
+    var sideImageSizes = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages[key].imageSizes;
+    var sideParentSelector = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages[key].parentSelector;
+    var sideClassName = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages[key].className;
+    var sideMainImageSizes = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].gallerySideImages[key].mainImageSizes;
 
-      createMasonryRenditions(imageFile, parentSelector, imageSizes, className, mainImageSizes);
+    createMasonryRenditions(sideImageFile, sideParentSelector, sideImageSizes, sideClassName, sideMainImageSizes);
   }
-    //First Main Image
+    // First Main Image
   createRenditions(__WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].galleryMainImage.imageFile,__WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].galleryMainImage.parentSelector, __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].galleryMainImage.imageSizes, __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].galleryMainImage.className);
+    // Gallery Modal Image
+  for (const key of Object.keys(__WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].galleryModalImages)) {
+    var modalImageFile = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].galleryModalImages[key].imageFile;
+    var modalImageSizes = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].galleryModalImages[key].imageSizes;
+    var modalParentSelector = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].galleryModalImages[key].parentSelector;
+    var modalClassName = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].galleryModalImages[key].className;
+    var modalMainImageSizes = __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].galleryModalImages[key].mainImageSizes;
+
+    createMasonryRenditions(modalImageFile, modalParentSelector, modalImageSizes, modalClassName, modalMainImageSizes);
+  }
+
   // Registry
   createRenditions(__WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].registryImage.imageFile, __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].registryImage.parentSelector, __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].registryImage.imageSizes);
 
@@ -1594,7 +1596,7 @@ function loadImages() {
 /* harmony default export */ __webpack_exports__["a"] = (loadImages);
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports) {
 
 (function(window, factory) {
@@ -2297,7 +2299,7 @@ function loadImages() {
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2305,7 +2307,7 @@ var imageConstants = {
   splashImage: {
     "imageFile":"Steph_Mat_Engagement_66.jpg",
     "parentSelector": '.splash',
-    "imageSizes": "(max-width: 500px) 100vw,(max-width: 2000px) 100vw, 100px"
+    "imageSizes": "(min-width: 2000px) 100vw"
   },
   splashArrow: {
     "imageFile":"white-arrow-down.png",
@@ -2412,11 +2414,113 @@ var imageConstants = {
     }
   },
   galleryMainImage: {
-    // "imageFile":"Steph_Mat_Engagement_99.jpg",
     "imageFile":"Steph_Mat_Engagement_90.jpg",
     "parentSelector": '.grid-main-wrapper',
-    "imageSizes": "(max-width: 360px) 100vw,(max-width: 1200px) 40vw, 650px",
+    "imageSizes": "(max-width: 360px) 40vw,(max-width: 1200px) 80vw, 100px",
     "className": "grid-main-item"
+  },
+  // galleryModalTriggerImage: {
+  //   "imageFile":"Steph_Mat_Engagement_90.jpg",
+  //   "parentSelector": '.gallery-trigger',
+  //   "imageSizes": "(max-width: 360px) 40vw,(max-width: 1200px) 80vw, 100px"
+  // },
+  galleryModalImages: {
+    modalImage1: {
+      "imageFile":"Steph_Mat_Engagement_88.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides "
+    },
+    modalImage2: {
+      "imageFile":"Steph_Mat_Engagement_89.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage3: {
+      "imageFile":"Steph_Mat_Engagement_90.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 360px) 100vw,(max-width: 1200px) 40vw, 650px",
+      "className": "my-slides"
+    },
+    modalImage4: {
+      "imageFile":"Steph_Mat_Engagement_91.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage5: {
+      "imageFile":"Steph_Mat_Engagement_92.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage6: {
+      "imageFile":"Steph_Mat_Engagement_93.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage7: {
+      "imageFile":"Steph_Mat_Engagement_94.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage8: {
+      "imageFile":"Steph_Mat_Engagement_95.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage9: {
+      "imageFile":"Steph_Mat_Engagement_96.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage10: {
+      "imageFile":"Steph_Mat_Engagement_97.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage11: {
+      "imageFile":"Steph_Mat_Engagement_98.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 360px) 100vw,(max-width: 1200px) 40vw, 650px",
+      "className": "my-slides"
+    },
+    modalImage12: {
+      "imageFile":"Steph_Mat_Engagement_99.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    }
   },
   registryImage: {
     "imageFile":"Steph_Mat_Engagement_16.jpg",
@@ -2428,103 +2532,97 @@ var imageConstants = {
 /* harmony default export */ __webpack_exports__["a"] = (imageConstants);
 
 /***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_16-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_16-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_16-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_16-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_16-300.jpg",width:300,height:200},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_16-600.jpg",width:600,height:401},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_16-1200.jpg",width:1200,height:801},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_16-2000.jpg",width:2000,height:1335}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_16-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_16-300.jpg"},placeholder: undefined,width:300,height:200};
+
+/***/ }),
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "986563314b59f71b2557987d2a4de383-100.jpg 100w"+","+__webpack_require__.p + "45ddd7290218a68c2d74f8e60b786051-300.jpg 300w"+","+__webpack_require__.p + "9f035fc73b363fb91ff9c1da36992334-600.jpg 600w"+","+__webpack_require__.p + "cdaaeea056694688fb3350d285fca1fe-1200.jpg 1200w"+","+__webpack_require__.p + "f5468b67d17dbd6c30c1c300a97fc49c-2000.jpg 2000w",images:[{path:__webpack_require__.p + "986563314b59f71b2557987d2a4de383-100.jpg",width:100,height:67},{path:__webpack_require__.p + "45ddd7290218a68c2d74f8e60b786051-300.jpg",width:300,height:200},{path:__webpack_require__.p + "9f035fc73b363fb91ff9c1da36992334-600.jpg",width:600,height:401},{path:__webpack_require__.p + "cdaaeea056694688fb3350d285fca1fe-1200.jpg",width:1200,height:801},{path:__webpack_require__.p + "f5468b67d17dbd6c30c1c300a97fc49c-2000.jpg",width:2000,height:1335}],src:__webpack_require__.p + "986563314b59f71b2557987d2a4de383-100.jpg",toString:function(){return __webpack_require__.p + "986563314b59f71b2557987d2a4de383-100.jpg"},placeholder: undefined,width:100,height:67};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_88-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_88-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_88-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_88-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_88-300.jpg",width:300,height:449},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_88-600.jpg",width:600,height:899},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_88-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_88-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_88-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_88-300.jpg"},placeholder: undefined,width:300,height:449};
 
 /***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "d72bf14ace130c030a69be3b8a5c0d55-100.jpg 100w"+","+__webpack_require__.p + "14e924727cca90a5ad0e1c252cc410ef-300.jpg 300w"+","+__webpack_require__.p + "46a09ef0d16385862c4cadc3ac88126c-600.jpg 600w"+","+__webpack_require__.p + "635bb4a5f11201171e83c41d5a610bd6-1200.jpg 1200w"+","+__webpack_require__.p + "d0b3a10a4b70d0c997cec453e939d107-2000.jpg 2000w",images:[{path:__webpack_require__.p + "d72bf14ace130c030a69be3b8a5c0d55-100.jpg",width:100,height:67},{path:__webpack_require__.p + "14e924727cca90a5ad0e1c252cc410ef-300.jpg",width:300,height:200},{path:__webpack_require__.p + "46a09ef0d16385862c4cadc3ac88126c-600.jpg",width:600,height:401},{path:__webpack_require__.p + "635bb4a5f11201171e83c41d5a610bd6-1200.jpg",width:1200,height:801},{path:__webpack_require__.p + "d0b3a10a4b70d0c997cec453e939d107-2000.jpg",width:2000,height:1335}],src:__webpack_require__.p + "d72bf14ace130c030a69be3b8a5c0d55-100.jpg",toString:function(){return __webpack_require__.p + "d72bf14ace130c030a69be3b8a5c0d55-100.jpg"},placeholder: undefined,width:100,height:67};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_89-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_89-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_89-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_89-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_89-300.jpg",width:300,height:449},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_89-600.jpg",width:600,height:899},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_89-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_89-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_89-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_89-300.jpg"},placeholder: undefined,width:300,height:449};
 
 /***/ }),
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "72454edd6c4a96eab853c5d768ac72f1-100.jpg 100w"+","+__webpack_require__.p + "fbe03c8277087ed519672450f8f51027-300.jpg 300w"+","+__webpack_require__.p + "c68f36488ef408522b91e50ab0ddab44-600.jpg 600w"+","+__webpack_require__.p + "ff98c976f8f13b1f81f24f5897632d57-1200.jpg 1200w"+","+__webpack_require__.p + "5bddd60c77dc919e88b323d8f2fdfea4-2000.jpg 2000w",images:[{path:__webpack_require__.p + "72454edd6c4a96eab853c5d768ac72f1-100.jpg",width:100,height:150},{path:__webpack_require__.p + "fbe03c8277087ed519672450f8f51027-300.jpg",width:300,height:449},{path:__webpack_require__.p + "c68f36488ef408522b91e50ab0ddab44-600.jpg",width:600,height:899},{path:__webpack_require__.p + "ff98c976f8f13b1f81f24f5897632d57-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "5bddd60c77dc919e88b323d8f2fdfea4-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "72454edd6c4a96eab853c5d768ac72f1-100.jpg",toString:function(){return __webpack_require__.p + "72454edd6c4a96eab853c5d768ac72f1-100.jpg"},placeholder: undefined,width:100,height:150};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_90-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_90-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_90-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_90-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_90-300.jpg",width:300,height:200},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_90-600.jpg",width:600,height:401},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_90-1200.jpg",width:1200,height:801},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_90-2000.jpg",width:2000,height:1335}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_90-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_90-300.jpg"},placeholder: undefined,width:300,height:200};
 
 /***/ }),
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "51c9518c0e94a79d6bbe658c6dc37812-100.jpg 100w"+","+__webpack_require__.p + "e51a4f218cce16b543f8cb17f6b5670d-300.jpg 300w"+","+__webpack_require__.p + "62825a7b1d4c6918aee888a16ed8eb86-600.jpg 600w"+","+__webpack_require__.p + "f5b193eaf8cf7ca5416c18cb0725a595-1200.jpg 1200w"+","+__webpack_require__.p + "73c4049da0c943e0d0c2ecb3f794abe8-2000.jpg 2000w",images:[{path:__webpack_require__.p + "51c9518c0e94a79d6bbe658c6dc37812-100.jpg",width:100,height:150},{path:__webpack_require__.p + "e51a4f218cce16b543f8cb17f6b5670d-300.jpg",width:300,height:449},{path:__webpack_require__.p + "62825a7b1d4c6918aee888a16ed8eb86-600.jpg",width:600,height:899},{path:__webpack_require__.p + "f5b193eaf8cf7ca5416c18cb0725a595-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "73c4049da0c943e0d0c2ecb3f794abe8-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "51c9518c0e94a79d6bbe658c6dc37812-100.jpg",toString:function(){return __webpack_require__.p + "51c9518c0e94a79d6bbe658c6dc37812-100.jpg"},placeholder: undefined,width:100,height:150};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_91-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_91-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_91-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_91-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_91-300.jpg",width:300,height:449},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_91-600.jpg",width:600,height:899},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_91-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_91-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_91-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_91-300.jpg"},placeholder: undefined,width:300,height:449};
 
 /***/ }),
 /* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "80c6d4bbe4387e3dc4ee6fc898766010-100.jpg 100w"+","+__webpack_require__.p + "04f1ffcb9aadfe05f13611e4c7afef76-300.jpg 300w"+","+__webpack_require__.p + "5db09e18312a906f1c9a6c8a31f2b88d-600.jpg 600w"+","+__webpack_require__.p + "71a6012ff05d5197ac3daf12a826aa61-1200.jpg 1200w"+","+__webpack_require__.p + "a3138d43a22432d0abc908f6345beba0-2000.jpg 2000w",images:[{path:__webpack_require__.p + "80c6d4bbe4387e3dc4ee6fc898766010-100.jpg",width:100,height:67},{path:__webpack_require__.p + "04f1ffcb9aadfe05f13611e4c7afef76-300.jpg",width:300,height:200},{path:__webpack_require__.p + "5db09e18312a906f1c9a6c8a31f2b88d-600.jpg",width:600,height:401},{path:__webpack_require__.p + "71a6012ff05d5197ac3daf12a826aa61-1200.jpg",width:1200,height:801},{path:__webpack_require__.p + "a3138d43a22432d0abc908f6345beba0-2000.jpg",width:2000,height:1335}],src:__webpack_require__.p + "80c6d4bbe4387e3dc4ee6fc898766010-100.jpg",toString:function(){return __webpack_require__.p + "80c6d4bbe4387e3dc4ee6fc898766010-100.jpg"},placeholder: undefined,width:100,height:67};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_92-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_92-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_92-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_92-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_92-300.jpg",width:300,height:449},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_92-600.jpg",width:600,height:899},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_92-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_92-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_92-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_92-300.jpg"},placeholder: undefined,width:300,height:449};
 
 /***/ }),
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "034dd17125e5a0059834f5ab55e518e3-100.jpg 100w"+","+__webpack_require__.p + "90d5e0b3f3e35e55dfdc8a44b84352fe-300.jpg 300w"+","+__webpack_require__.p + "ae46f5a3cf5f1d2ebfc1541bd5a2edc6-600.jpg 600w"+","+__webpack_require__.p + "a4932c2e15eb29bf845ca73c8aefcd57-1200.jpg 1200w"+","+__webpack_require__.p + "4c333f9f449be70a022cdafb5365266c-2000.jpg 2000w",images:[{path:__webpack_require__.p + "034dd17125e5a0059834f5ab55e518e3-100.jpg",width:100,height:150},{path:__webpack_require__.p + "90d5e0b3f3e35e55dfdc8a44b84352fe-300.jpg",width:300,height:449},{path:__webpack_require__.p + "ae46f5a3cf5f1d2ebfc1541bd5a2edc6-600.jpg",width:600,height:899},{path:__webpack_require__.p + "a4932c2e15eb29bf845ca73c8aefcd57-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "4c333f9f449be70a022cdafb5365266c-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "034dd17125e5a0059834f5ab55e518e3-100.jpg",toString:function(){return __webpack_require__.p + "034dd17125e5a0059834f5ab55e518e3-100.jpg"},placeholder: undefined,width:100,height:150};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_93-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_93-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_93-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_93-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_93-300.jpg",width:300,height:449},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_93-600.jpg",width:600,height:899},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_93-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_93-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_93-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_93-300.jpg"},placeholder: undefined,width:300,height:449};
 
 /***/ }),
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "9a012de830ad06ea1751416be3c4c9e9-100.jpg 100w"+","+__webpack_require__.p + "60ea9b9b82145817564b2bae0a2f318c-300.jpg 300w"+","+__webpack_require__.p + "eb1626a51109bb4e2edae43d619ccc7e-600.jpg 600w"+","+__webpack_require__.p + "4986f0ad6eafc976cbe5ca707ecf7dae-1200.jpg 1200w"+","+__webpack_require__.p + "888205f0e8dd8e3cb1225e77cac8352e-2000.jpg 2000w",images:[{path:__webpack_require__.p + "9a012de830ad06ea1751416be3c4c9e9-100.jpg",width:100,height:150},{path:__webpack_require__.p + "60ea9b9b82145817564b2bae0a2f318c-300.jpg",width:300,height:449},{path:__webpack_require__.p + "eb1626a51109bb4e2edae43d619ccc7e-600.jpg",width:600,height:899},{path:__webpack_require__.p + "4986f0ad6eafc976cbe5ca707ecf7dae-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "888205f0e8dd8e3cb1225e77cac8352e-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "9a012de830ad06ea1751416be3c4c9e9-100.jpg",toString:function(){return __webpack_require__.p + "9a012de830ad06ea1751416be3c4c9e9-100.jpg"},placeholder: undefined,width:100,height:150};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_94-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_94-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_94-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_94-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_94-300.jpg",width:300,height:449},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_94-600.jpg",width:600,height:899},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_94-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_94-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_94-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_94-300.jpg"},placeholder: undefined,width:300,height:449};
 
 /***/ }),
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "0b70fbab5efce8d745d15647bd7a97e9-100.jpg 100w"+","+__webpack_require__.p + "a2ccba88a263214ebd956f784d95bf3e-300.jpg 300w"+","+__webpack_require__.p + "50eb9039dff216703109b2b557c5dbe4-600.jpg 600w"+","+__webpack_require__.p + "170a2d442a2c3fa4d5f8038dc964fb70-1200.jpg 1200w"+","+__webpack_require__.p + "409f3ba8896ed1bbdf7a2d6e351eb65d-2000.jpg 2000w",images:[{path:__webpack_require__.p + "0b70fbab5efce8d745d15647bd7a97e9-100.jpg",width:100,height:150},{path:__webpack_require__.p + "a2ccba88a263214ebd956f784d95bf3e-300.jpg",width:300,height:449},{path:__webpack_require__.p + "50eb9039dff216703109b2b557c5dbe4-600.jpg",width:600,height:899},{path:__webpack_require__.p + "170a2d442a2c3fa4d5f8038dc964fb70-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "409f3ba8896ed1bbdf7a2d6e351eb65d-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "0b70fbab5efce8d745d15647bd7a97e9-100.jpg",toString:function(){return __webpack_require__.p + "0b70fbab5efce8d745d15647bd7a97e9-100.jpg"},placeholder: undefined,width:100,height:150};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_95-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_95-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_95-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_95-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_95-300.jpg",width:300,height:449},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_95-600.jpg",width:600,height:899},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_95-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_95-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_95-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_95-300.jpg"},placeholder: undefined,width:300,height:449};
 
 /***/ }),
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "98bbc8900348563e84daf3a986b96efc-100.jpg 100w"+","+__webpack_require__.p + "f98d8a1f4d4d54abcb5276c01e061dcd-300.jpg 300w"+","+__webpack_require__.p + "8fff05e3e5a40442d8a1787f224d1977-600.jpg 600w"+","+__webpack_require__.p + "7a0d8bbfca962c693fb6dd74ed7c9d98-1200.jpg 1200w"+","+__webpack_require__.p + "137a769aa2974f550855bfd30c6bcc4c-2000.jpg 2000w",images:[{path:__webpack_require__.p + "98bbc8900348563e84daf3a986b96efc-100.jpg",width:100,height:150},{path:__webpack_require__.p + "f98d8a1f4d4d54abcb5276c01e061dcd-300.jpg",width:300,height:449},{path:__webpack_require__.p + "8fff05e3e5a40442d8a1787f224d1977-600.jpg",width:600,height:899},{path:__webpack_require__.p + "7a0d8bbfca962c693fb6dd74ed7c9d98-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "137a769aa2974f550855bfd30c6bcc4c-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "98bbc8900348563e84daf3a986b96efc-100.jpg",toString:function(){return __webpack_require__.p + "98bbc8900348563e84daf3a986b96efc-100.jpg"},placeholder: undefined,width:100,height:150};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_96-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_96-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_96-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_96-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_96-300.jpg",width:300,height:449},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_96-600.jpg",width:600,height:899},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_96-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_96-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_96-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_96-300.jpg"},placeholder: undefined,width:300,height:449};
 
 /***/ }),
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "5addc43231e06fc9a430ecfb8fd7798d-100.jpg 100w"+","+__webpack_require__.p + "a61cd6cec6ba95d94cb10109a270ea9e-300.jpg 300w"+","+__webpack_require__.p + "ce6d4d653eeed1dfcbd40f651580453d-600.jpg 600w"+","+__webpack_require__.p + "415d6df42ce517c1f38f2e3e32ab7020-1200.jpg 1200w"+","+__webpack_require__.p + "ec50fc3613006c8251d064353fef3918-2000.jpg 2000w",images:[{path:__webpack_require__.p + "5addc43231e06fc9a430ecfb8fd7798d-100.jpg",width:100,height:150},{path:__webpack_require__.p + "a61cd6cec6ba95d94cb10109a270ea9e-300.jpg",width:300,height:449},{path:__webpack_require__.p + "ce6d4d653eeed1dfcbd40f651580453d-600.jpg",width:600,height:899},{path:__webpack_require__.p + "415d6df42ce517c1f38f2e3e32ab7020-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "ec50fc3613006c8251d064353fef3918-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "5addc43231e06fc9a430ecfb8fd7798d-100.jpg",toString:function(){return __webpack_require__.p + "5addc43231e06fc9a430ecfb8fd7798d-100.jpg"},placeholder: undefined,width:100,height:150};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_97-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_97-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_97-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_97-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_97-300.jpg",width:300,height:449},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_97-600.jpg",width:600,height:899},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_97-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_97-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_97-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_97-300.jpg"},placeholder: undefined,width:300,height:449};
 
 /***/ }),
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "808317381b11f929128a77e241fd88fa-100.jpg 100w"+","+__webpack_require__.p + "66fa01053d0949a0ae4b7f0b4dbed852-300.jpg 300w"+","+__webpack_require__.p + "62e34afee6f6f286a41cdd44462727d7-600.jpg 600w"+","+__webpack_require__.p + "975fdbb6b1bd010596bcd872250fe67e-1200.jpg 1200w"+","+__webpack_require__.p + "abb9581beb66ca269204f71f82988877-2000.jpg 2000w",images:[{path:__webpack_require__.p + "808317381b11f929128a77e241fd88fa-100.jpg",width:100,height:150},{path:__webpack_require__.p + "66fa01053d0949a0ae4b7f0b4dbed852-300.jpg",width:300,height:449},{path:__webpack_require__.p + "62e34afee6f6f286a41cdd44462727d7-600.jpg",width:600,height:899},{path:__webpack_require__.p + "975fdbb6b1bd010596bcd872250fe67e-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "abb9581beb66ca269204f71f82988877-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "808317381b11f929128a77e241fd88fa-100.jpg",toString:function(){return __webpack_require__.p + "808317381b11f929128a77e241fd88fa-100.jpg"},placeholder: undefined,width:100,height:150};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_98-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_98-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_98-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_98-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_98-300.jpg",width:300,height:200},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_98-600.jpg",width:600,height:401},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_98-1200.jpg",width:1200,height:801},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_98-2000.jpg",width:2000,height:1335}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_98-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_98-300.jpg"},placeholder: undefined,width:300,height:200};
 
 /***/ }),
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "89ac390c419b631b818aa56660204038-100.jpg 100w"+","+__webpack_require__.p + "da1f6c9930ed1d797fc0cb19833a6569-300.jpg 300w"+","+__webpack_require__.p + "1b937a2e1c3cf125cf0f4bca10098174-600.jpg 600w"+","+__webpack_require__.p + "5f0f7a18e223e1d33583b0d50126dfa8-1200.jpg 1200w"+","+__webpack_require__.p + "159b117add398e9ad755bf0f40c85f0a-2000.jpg 2000w",images:[{path:__webpack_require__.p + "89ac390c419b631b818aa56660204038-100.jpg",width:100,height:150},{path:__webpack_require__.p + "da1f6c9930ed1d797fc0cb19833a6569-300.jpg",width:300,height:449},{path:__webpack_require__.p + "1b937a2e1c3cf125cf0f4bca10098174-600.jpg",width:600,height:899},{path:__webpack_require__.p + "5f0f7a18e223e1d33583b0d50126dfa8-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "159b117add398e9ad755bf0f40c85f0a-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "89ac390c419b631b818aa56660204038-100.jpg",toString:function(){return __webpack_require__.p + "89ac390c419b631b818aa56660204038-100.jpg"},placeholder: undefined,width:100,height:150};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_99-300.jpg 300w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_99-600.jpg 600w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_99-1200.jpg 1200w"+","+__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_99-2000.jpg 2000w",images:[{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_99-300.jpg",width:300,height:449},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_99-600.jpg",width:600,height:899},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_99-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_99-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "img/responsive/Steph_Mat_Engagement_99-300.jpg",toString:function(){return __webpack_require__.p + "img/responsive/Steph_Mat_Engagement_99-300.jpg"},placeholder: undefined,width:300,height:449};
 
 /***/ }),
 /* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {srcSet:__webpack_require__.p + "adae7bd1c07f44eff53fa24d9ca3c5c4-100.jpg 100w"+","+__webpack_require__.p + "81332763fe753c0236b0139fa59f819a-300.jpg 300w"+","+__webpack_require__.p + "a012faab1383f54436436472eccc63f4-600.jpg 600w"+","+__webpack_require__.p + "2ba6a4c5653bd6a5f2164b26a63db648-1200.jpg 1200w"+","+__webpack_require__.p + "30aa2e3aaaba5adc4f46987436383df2-2000.jpg 2000w",images:[{path:__webpack_require__.p + "adae7bd1c07f44eff53fa24d9ca3c5c4-100.jpg",width:100,height:67},{path:__webpack_require__.p + "81332763fe753c0236b0139fa59f819a-300.jpg",width:300,height:200},{path:__webpack_require__.p + "a012faab1383f54436436472eccc63f4-600.jpg",width:600,height:401},{path:__webpack_require__.p + "2ba6a4c5653bd6a5f2164b26a63db648-1200.jpg",width:1200,height:801},{path:__webpack_require__.p + "30aa2e3aaaba5adc4f46987436383df2-2000.jpg",width:2000,height:1335}],src:__webpack_require__.p + "adae7bd1c07f44eff53fa24d9ca3c5c4-100.jpg",toString:function(){return __webpack_require__.p + "adae7bd1c07f44eff53fa24d9ca3c5c4-100.jpg"},placeholder: undefined,width:100,height:67};
+module.exports = {srcSet:__webpack_require__.p + "img/responsive/white-arrow-down-256.png 256w",images:[{path:__webpack_require__.p + "img/responsive/white-arrow-down-256.png",width:256,height:256}],src:__webpack_require__.p + "img/responsive/white-arrow-down-256.png",toString:function(){return __webpack_require__.p + "img/responsive/white-arrow-down-256.png"},placeholder: undefined,width:256,height:256};
 
 /***/ }),
 /* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = {srcSet:__webpack_require__.p + "4835d1f936a3a9d5d69157b7c110645d-100.jpg 100w"+","+__webpack_require__.p + "6a471480075634e2f13e83e373db9ca5-300.jpg 300w"+","+__webpack_require__.p + "b4dc8954baeb7ab9b53cae49de19258a-600.jpg 600w"+","+__webpack_require__.p + "bf092530a1d8196cd3ac178e69328904-1200.jpg 1200w"+","+__webpack_require__.p + "41d3744ecf008324913ce0135e082b18-2000.jpg 2000w",images:[{path:__webpack_require__.p + "4835d1f936a3a9d5d69157b7c110645d-100.jpg",width:100,height:150},{path:__webpack_require__.p + "6a471480075634e2f13e83e373db9ca5-300.jpg",width:300,height:449},{path:__webpack_require__.p + "b4dc8954baeb7ab9b53cae49de19258a-600.jpg",width:600,height:899},{path:__webpack_require__.p + "bf092530a1d8196cd3ac178e69328904-1200.jpg",width:1200,height:1798},{path:__webpack_require__.p + "41d3744ecf008324913ce0135e082b18-2000.jpg",width:2000,height:2996}],src:__webpack_require__.p + "4835d1f936a3a9d5d69157b7c110645d-100.jpg",toString:function(){return __webpack_require__.p + "4835d1f936a3a9d5d69157b7c110645d-100.jpg"},placeholder: undefined,width:100,height:150};
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = {srcSet:__webpack_require__.p + "6665e8b7095c05dad23e13b632e1f4a9-100.png 100w"+","+__webpack_require__.p + "b3d0f6af3a542608a16979cfccade2a6-256.png 256w",images:[{path:__webpack_require__.p + "6665e8b7095c05dad23e13b632e1f4a9-100.png",width:100,height:100},{path:__webpack_require__.p + "b3d0f6af3a542608a16979cfccade2a6-256.png",width:256,height:256}],src:__webpack_require__.p + "6665e8b7095c05dad23e13b632e1f4a9-100.png",toString:function(){return __webpack_require__.p + "6665e8b7095c05dad23e13b632e1f4a9-100.png"},placeholder: undefined,width:100,height:100};
-
-/***/ }),
-/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_masonry_layout__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_masonry_layout__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_masonry_layout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_masonry_layout__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_imagesLoaded__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_imagesLoaded__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_imagesLoaded___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_imagesLoaded__);
 
 
@@ -2560,7 +2658,7 @@ function masonry() {
 /* harmony default export */ __webpack_exports__["a"] = (masonry);
 
 /***/ }),
-/* 39 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2577,7 +2675,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-        __webpack_require__(40),
+        __webpack_require__(38),
         __webpack_require__(2)
       ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
@@ -2807,7 +2905,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 40 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2825,8 +2923,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
         __webpack_require__(1),
         __webpack_require__(2),
-        __webpack_require__(41),
-        __webpack_require__(43)
+        __webpack_require__(39),
+        __webpack_require__(41)
       ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( EvEmitter, getSize, utils, Item ) {
         return factory( window, EvEmitter, getSize, utils, Item);
       }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -3751,7 +3849,7 @@ return Outlayer;
 
 
 /***/ }),
-/* 41 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -3768,7 +3866,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(42)
+      __webpack_require__(40)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( matchesSelector ) {
       return factory( window, matchesSelector );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -3999,7 +4097,7 @@ return utils;
 
 
 /***/ }),
-/* 42 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -4062,7 +4160,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 
 /***/ }),
-/* 43 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -4623,7 +4721,7 @@ return Item;
 
 
 /***/ }),
-/* 44 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -5007,7 +5105,7 @@ return ImagesLoaded;
 
 
 /***/ }),
-/* 45 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5032,7 +5130,7 @@ function stickyNav() {
 /* harmony default export */ __webpack_exports__["a"] = (stickyNav);
 
 /***/ }),
-/* 46 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5071,18 +5169,6 @@ function linkScroll () {
     scrollHandler(registryTarget);
   });
 
-  // function assignListeners(sources, targets) {
-  //   for (var i = 0; i < sources.length; i++) {
-  //     processListeners(sources[i], i);
-  //   }
-  // }
-
-  // function processListeners(sections, count) {
-  //   for (var j = 0; j < sections.length; j++) {
-  //     console.log("lkj");
-  //   }
-  // }
-
   function scrollHandler(target) {
     event.preventDefault();
     scrollTo(document.documentElement, target.offsetTop, 500);
@@ -5104,7 +5190,7 @@ function linkScroll () {
 /* harmony default export */ __webpack_exports__["a"] = (linkScroll);
 
 /***/ }),
-/* 47 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5112,14 +5198,23 @@ function modal() {
   "use strict";
   var body = document.querySelector("body");
   var modal = document.querySelector("#modal");
+  var galleryModal = document.querySelector("#gallery-modal");
   var modalCover = document.querySelector("#modal-cover");
   var closeButton = document.querySelector("#close-button");
   var openButton = document.querySelector("#open-button");
+  var galleryTrigger = document.querySelector(".gallery-trigger");
+  var nameTab = document.querySelector(".name-tab");
+  var rsvpsTab = document.querySelector(".rsvp-tab");
+  var loadingTab = document.querySelector(".loading-tab");
 
   modalCover.addEventListener("click", function() {
-    modal.classList.toggle("closed");
+    if (!modal.classList.contains('closed')) {
+      modal.classList.toggle("closed");
+    }
     modalCover.classList.toggle("closed");
     body.style.overflow = "visible";
+    resetGalleryModal();
+    resetFormTabs();
   });
 
   openButton.addEventListener("click", function() {
@@ -5127,16 +5222,43 @@ function modal() {
     modalCover.classList.toggle("closed");
     body.style.overflow = "hidden";
   });
+
+  galleryTrigger.addEventListener("click", function() {
+    galleryModal.classList.toggle("closed");
+    modalCover.classList.toggle("closed");
+    body.style.overflow = "hidden";
+  });
+
+  function resetGalleryModal() {
+    if (!galleryModal.classList.contains('closed')) {
+      galleryModal.classList.toggle("closed");
+    }
+  }
+
+  function resetFormTabs() {
+    if (nameTab.style.display == 'none') {
+      nameTab.style.display = 'block';
+      // nameTab.classList.toggle('closed');
+    }
+    if (rsvpsTab.style.display == 'block') {
+      rsvpsTab.style.display = 'none';
+      // rsvpsTab.classList.toggle('closed');
+    }
+    if (loadingTab.style.display == 'block') {
+      loadingTab.style.display = 'none';
+      // loadingTab.classList.toggle('closed');
+    }
+  }
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (modal);
 
 /***/ }),
-/* 48 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 
 
@@ -5153,8 +5275,7 @@ function form() {
   setup();
 
   function setup() {
-    console.log('setup');
-    const loadingSpinner = __webpack_require__(5);
+    const loadingSpinner = __webpack_require__(66);
     loadingImage.src = loadingSpinner;
 
     rsvpsForm.addEventListener('submit', function (event) {
@@ -5179,7 +5300,9 @@ function form() {
       getPersonByName(firstName, lastName);
 
       loadingTab.style.display = "block";
+      // loadingTab.classList.toggle('closed');
       nameTab.style.display = "none";
+      // nameTab.classList.toggle('closed');
       event.preventDefault();
     });
 
@@ -5199,7 +5322,6 @@ function form() {
   }
 
   function getPersonByName(firstName, lastName) {
-    console.log('getPersonByName');
     var urlBase = 'https://dr63u9frob.execute-api.us-east-1.amazonaws.com/prod/persons';
     var fullUrl = urlBase +
                   "?firstname=" + firstName.value +
@@ -5218,13 +5340,11 @@ function form() {
         }
       })
       .catch(function (error) {
-        console.log(error);
         renderRSVPsError();
       });
   }
 
   function renderAlreadyRsvpedDisplay() {
-    console.log('renderAlreadyRsvpedDisplay');
     var titleMessage = document.createElement('p');
     var closeButtonWrapper = document.createElement('div');
     var closeButton = document.createElement('button');
@@ -5232,15 +5352,19 @@ function form() {
     var modalCover = document.querySelector("#modal-cover");
 
     loadingTab.style.display = 'none';
+    // loadingTab.classList.toggle('closed');
     titleMessage.textContent += "You've already RSVPed. If you need to reach out, contact us at stephmat2018@gmail.com.";
     rsvpsTab.style.display = 'block';
+    // rsvpsTab.classList.toggle('closed');
     closeButtonWrapper.appendChild(closeButton);
     closeButtonWrapper.className = 'already-rsvped-button';
     closeButton.innerHTML = "Close";
 
     closeButton.addEventListener('click', function () {
       nameTab.style.display = "block";
+      // nameTab.classList.toggle('closed');
       rsvpsTab.style.display = "none";
+      // rsvpsTab.classList.toggle('closed');
 
       modal.classList.toggle("closed");
       modalCover.classList.toggle("closed");
@@ -5252,44 +5376,46 @@ function form() {
   }
 
   function getPartyByPerson(partyId) {
-    console.log('getPartyByPerson');
     var urlBase = 'https://dr63u9frob.execute-api.us-east-1.amazonaws.com/prod/parties/';
     var fullUrl = urlBase + partyId;
 
     __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(fullUrl)
       .then(function (response) {
-        console.log("getPartyByPerson success");
         loadingTab.style.display = "none";
+        // loadingTab.classList.toggle('closed');
         rsvpsTab.style.display = "block";
+        // rsvpsTab.classList.toggle('closed');
         renderRSVPs(response);
       })
       .catch(function (error) {
-        console.log("getPartyByPerson error");
-        console.log(error);
         renderRSVPsError();
       });
   }
 
   function isPartyValid(response) {
-    return !(response.data.length == 0);
+    var isEmpty = (response.data.length == 0);
+    return !isEmpty;
   }
 
   function renderTryAgainDisplay() {
-    console.log("renderTryAgainDisplay");
     var titleMessage = document.createElement('p');
     var tryAgainButtonWrapper = document.createElement('div');
     var tryAgainButton = document.createElement('button');
 
     loadingTab.style.display = "none";
+    // loadingTab.classList.toggle('closed');
     titleMessage.textContent += "No party found with entered name. Did you misspell? If not, contact us at stephmat2018@gmail.com";
     rsvpsTab.style.display = "block";
+    // rsvpsTab.classList.toggle('closed');
     tryAgainButtonWrapper.appendChild(tryAgainButton);
     tryAgainButtonWrapper.className = "try-again-button";
     tryAgainButton.innerHTML = "Search Again";
 
     tryAgainButton.addEventListener('click', function () {
       nameTab.style.display = "block";
+      // nameTab.classList.toggle('closed');
       rsvpsTab.style.display = "none";
+      // rsvpsTab.classList.toggle('closed');
       while (rsvpsForm.firstChild) {
         rsvpsForm.removeChild(rsvpsForm.firstChild);
       }
@@ -5300,7 +5426,6 @@ function form() {
   }
 
   function renderRSVPs(response) {
-    console.log("renderRSVPs");
     if (response.data.party.length != 0) {
       var title = document.createElement('h2');
       title.textContent += "Party of " + parseInt(response.data.party.length);
@@ -5343,7 +5468,6 @@ function form() {
   }
 
   function createRsvpValidationListener(formInput) {
-    console.log('createRsvpValidationListener');
     formInput.addEventListener('change', function(event) {
       if (isRsvpValid()) {
         enableSubmitButton();
@@ -5354,7 +5478,6 @@ function form() {
   }
 
   function isRsvpValid() {
-    console.log('isRsvpValid');
     var rsvpInputFieldWrappers = rsvpsForm.querySelectorAll('.row:not(.closed)');
 
     for (var i=0; i < rsvpInputFieldWrappers.length; i++) {
@@ -5366,7 +5489,6 @@ function form() {
   }
 
   function isRsvpInputFieldWrapperValid(rsvpInputFieldWrapper) {
-    console.log('isRsvpInputFieldWrapperValid');
     var rsvpInputFields = rsvpInputFieldWrapper.querySelectorAll('.input-field');
 
     for (var j=0; j < rsvpInputFields.length; j++) {
@@ -5378,7 +5500,6 @@ function form() {
   }
 
   function isRsvpInputFieldValid(rsvpInputField) {
-    console.log('isRsvpInputFieldValid');
     var rsvpInputs = rsvpInputField.querySelectorAll('input');
 
     for (var k=0; k < rsvpInputs.length; k++) {
@@ -5398,17 +5519,13 @@ function form() {
   }
 
   function postPersonRSVP(person) {
-    console.log('postPersonRSVP');
     var urlBase = 'https://dr63u9frob.execute-api.us-east-1.amazonaws.com/prod/persons/';
     var fullUrl = urlBase + person.person_id;
 
     __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(fullUrl, createPostBody(person))
     .then(function (response) {
-      console.log("success post");
     })
     .catch(function (error) {
-      console.log("error post");
-      console.log(error);
     });
   }
 
@@ -5435,19 +5552,19 @@ function form() {
   }
 
   function renderPersonRSVPInputs(person) {
-    console.log("renderPersonRSVPInputs");
     var div = document.createElement('div');
-    var rsvpTemplate = __webpack_require__(68);
+    var rsvpTemplate = __webpack_require__(67);
     var context = {
                     firstname: toTitleCase(person.first_name),
                     lastname: toTitleCase(person.last_name),
-                    personid: person.person_id
+                    personid: person.person_id,
+                    child: person.child
                   };
 
     div.innerHTML = rsvpTemplate(context);
     rsvpsForm.appendChild(div);
 
-    createPersonRsvpInputsListeners(person)
+    createPersonRsvpInputsListeners(person);
   }
 
   function createPersonRsvpInputsListeners(person) {
@@ -5475,28 +5592,30 @@ function form() {
     errorMessage.textContent += "There was a connection error. Please try again later.";
     rsvpsTab.appendChild(errorMessage);
     loadingTab.style.display = "none";
+    // loadingTab.classList.toggle('closed');
     rsvpsTab.style.display = "block";
+    // rsvpsTab.classList.toggle('closed');
   }
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (form);
 
 /***/ }),
-/* 49 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(50);
+module.exports = __webpack_require__(48);
 
 /***/ }),
-/* 50 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var bind = __webpack_require__(6);
-var Axios = __webpack_require__(52);
+var bind = __webpack_require__(5);
+var Axios = __webpack_require__(50);
 var defaults = __webpack_require__(3);
 
 /**
@@ -5530,15 +5649,15 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(11);
-axios.CancelToken = __webpack_require__(66);
-axios.isCancel = __webpack_require__(10);
+axios.Cancel = __webpack_require__(10);
+axios.CancelToken = __webpack_require__(64);
+axios.isCancel = __webpack_require__(9);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(67);
+axios.spread = __webpack_require__(65);
 
 module.exports = axios;
 
@@ -5547,7 +5666,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 51 */
+/* 49 */
 /***/ (function(module, exports) {
 
 /*!
@@ -5574,7 +5693,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 52 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5582,8 +5701,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(3);
 var utils = __webpack_require__(0);
-var InterceptorManager = __webpack_require__(61);
-var dispatchRequest = __webpack_require__(62);
+var InterceptorManager = __webpack_require__(59);
+var dispatchRequest = __webpack_require__(60);
 
 /**
  * Create a new instance of Axios
@@ -5660,7 +5779,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 53 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5679,13 +5798,13 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 54 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var createError = __webpack_require__(9);
+var createError = __webpack_require__(8);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -5712,7 +5831,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 55 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5740,7 +5859,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 56 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5815,7 +5934,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 57 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5875,7 +5994,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 58 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5950,7 +6069,7 @@ module.exports = (
 
 
 /***/ }),
-/* 59 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5993,7 +6112,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 60 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6053,7 +6172,7 @@ module.exports = (
 
 
 /***/ }),
-/* 61 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6112,18 +6231,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 62 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var transformData = __webpack_require__(63);
-var isCancel = __webpack_require__(10);
+var transformData = __webpack_require__(61);
+var isCancel = __webpack_require__(9);
 var defaults = __webpack_require__(3);
-var isAbsoluteURL = __webpack_require__(64);
-var combineURLs = __webpack_require__(65);
+var isAbsoluteURL = __webpack_require__(62);
+var combineURLs = __webpack_require__(63);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -6205,7 +6324,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 63 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6232,7 +6351,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 64 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6253,7 +6372,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 65 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6274,13 +6393,13 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 66 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Cancel = __webpack_require__(11);
+var Cancel = __webpack_require__(10);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -6338,7 +6457,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 67 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6372,13 +6491,57 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 68 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Handlebars = __webpack_require__(69);
+module.exports = __webpack_require__.p + "ab651acae2fe80c9a662614c76a68519.gif";
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Handlebars = __webpack_require__(68);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
-module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "      <div class=\"radio-wrapper\">\n        <input name=\"entree-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\" type=\"radio\" id=\"option3-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\" checked=\"checked\" />\n        <label for=\"option3-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\">Chicken Fingers</label>\n      </div>\n";
+},"3":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "      <div class=\"radio-wrapper\">\n        <input name=\"entree-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\" type=\"radio\" id=\"option3-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\" />\n        <label for=\"option3-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\">Steak</label>\n      </div>\n      <div class=\"radio-wrapper\">\n        <input name=\"entree-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\" type=\"radio\" id=\"option4-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\" />\n        <label for=\"option4-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\">Salmon</label>\n      </div>\n      <div class=\"radio-wrapper\">\n        <input name=\"entree-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\" type=\"radio\" id=\"option5-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\"  />\n        <label for=\"option5-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\">Chicken</label>\n      </div>\n      <div class=\"radio-wrapper\">\n        <input name=\"entree-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\" type=\"radio\" id=\"option6-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\" />\n        <label for=\"option6-"
+    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
+    + "\">Vegetarian</label>\n      </div>\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
   return "<b>"
     + alias4(((helper = (helper = helpers.firstname || (depth0 != null ? depth0.firstname : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"firstname","hash":{},"data":data}) : helper)))
@@ -6402,35 +6565,13 @@ module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,"
     + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
     + "\">No</label>\n    </div>\n  </div>\n</div>\n<div class=\"entree-"
     + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + " row closed\">\n  <div class=\"input-field s12\">\n    <p>Select your Entree</p>\n    <div class=\"radio-wrapper\">\n      <input name=\"entree-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\" type=\"radio\" id=\"option3-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\" />\n      <label for=\"option3-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\">Steak</label>\n    </div>\n    <div class=\"radio-wrapper\">\n      <input name=\"entree-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\" type=\"radio\" id=\"option4-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\" />\n      <label for=\"option4-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\">Salmon</label>\n    </div>\n    <div class=\"radio-wrapper\">\n      <input name=\"entree-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\" type=\"radio\" id=\"option5-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\"  />\n      <label for=\"option5-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\">Chicken</label>\n    </div>\n    <div class=\"radio-wrapper\">\n      <input name=\"entree-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\" type=\"radio\" id=\"option6-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\" />\n      <label for=\"option6-"
-    + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
-    + "\">Vegetarian</label>\n    </div>\n  </div>\n</div>";
+    + " row closed\">\n  <div class=\"input-field s12\">\n    <p>Select your Entree</p>\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.child : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.program(3, data, 0),"data":data})) != null ? stack1 : "")
+    + "  </div>\n</div>";
 },"useData":true});
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**!
@@ -7901,6 +8042,2760 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
+
+/***/ }),
+/* 69 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hammerjs__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hammerjs__);
+
+
+function galleryModal() {
+	var galleryItemsWrapper = document.querySelector('#gallery-modal .modal-guts');
+	var slideIndex = 1;
+
+	setup();
+
+	function setup() {
+		bindListeners();
+		showSlides(slideIndex);
+	}
+
+	function bindListeners() {
+		var nextControl = document.querySelector('.next-control');
+		var previousControl = document.querySelector('.previous-control');
+		var galleryImages = document.querySelectorAll('.my-slides');
+		for (var i = galleryImages.length - 1; i >= 0; i--) {
+			var mc = new Hammer(galleryImages[i]);
+			mc.add( new Hammer.Swipe({ velocity: 0.3, threshold: 1000 }) );
+
+			mc.on('panleft panright tap click', function(event) {
+				if (event.type == 'panleft' || event.type == 'tap' || event.type == 'click') {
+					plusSlides(1);
+				} else if (event.type == 'panright') {
+					plusSlides(-1);
+				}
+			});
+		}
+
+		nextControl.addEventListener('click', function() {
+			plusSlides(1);
+		});
+
+		previousControl.addEventListener('click', function() {
+			plusSlides(-1);
+		});
+	}
+
+	function plusSlides(newSlideIndex) {
+		showSlides(slideIndex += newSlideIndex);
+	}
+	
+
+	function showSlides(newSlideIndex) {
+		var i;
+		var slides = document.getElementsByClassName("my-slides");
+
+		if (newSlideIndex > slides.length) {
+			slideIndex = 1;
+		}
+		if (newSlideIndex < 1) {
+			slideIndex = slides.length;
+		}
+		for (i = 0; i < slides.length; i++) {
+			// slides[i].style.display = "none";
+			slides[i].classList.add("closed");
+		}
+		// slides[slideIndex-1].style.display = "block";
+		updateSlideCount(slideIndex, slides.length);
+		slides[slideIndex-1].classList.toggle("closed");
+	}
+
+	function updateSlideCount(slideIndex, totalSlides) {
+		var slideCount = document.querySelector('.slide-count');
+		slideCount.innerHTML = parseInt(slideIndex) + '/' + parseInt(totalSlides);
+	}
+}
+
+
+/* harmony default export */ __webpack_exports__["a"] = (galleryModal);
+
+/***/ }),
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;/*! Hammer.JS - v2.0.7 - 2016-04-22
+ * http://hammerjs.github.io/
+ *
+ * Copyright (c) 2016 Jorik Tangelder;
+ * Licensed under the MIT license */
+(function(window, document, exportName, undefined) {
+  'use strict';
+
+var VENDOR_PREFIXES = ['', 'webkit', 'Moz', 'MS', 'ms', 'o'];
+var TEST_ELEMENT = document.createElement('div');
+
+var TYPE_FUNCTION = 'function';
+
+var round = Math.round;
+var abs = Math.abs;
+var now = Date.now;
+
+/**
+ * set a timeout with a given scope
+ * @param {Function} fn
+ * @param {Number} timeout
+ * @param {Object} context
+ * @returns {number}
+ */
+function setTimeoutContext(fn, timeout, context) {
+    return setTimeout(bindFn(fn, context), timeout);
+}
+
+/**
+ * if the argument is an array, we want to execute the fn on each entry
+ * if it aint an array we don't want to do a thing.
+ * this is used by all the methods that accept a single and array argument.
+ * @param {*|Array} arg
+ * @param {String} fn
+ * @param {Object} [context]
+ * @returns {Boolean}
+ */
+function invokeArrayArg(arg, fn, context) {
+    if (Array.isArray(arg)) {
+        each(arg, context[fn], context);
+        return true;
+    }
+    return false;
+}
+
+/**
+ * walk objects and arrays
+ * @param {Object} obj
+ * @param {Function} iterator
+ * @param {Object} context
+ */
+function each(obj, iterator, context) {
+    var i;
+
+    if (!obj) {
+        return;
+    }
+
+    if (obj.forEach) {
+        obj.forEach(iterator, context);
+    } else if (obj.length !== undefined) {
+        i = 0;
+        while (i < obj.length) {
+            iterator.call(context, obj[i], i, obj);
+            i++;
+        }
+    } else {
+        for (i in obj) {
+            obj.hasOwnProperty(i) && iterator.call(context, obj[i], i, obj);
+        }
+    }
+}
+
+/**
+ * wrap a method with a deprecation warning and stack trace
+ * @param {Function} method
+ * @param {String} name
+ * @param {String} message
+ * @returns {Function} A new function wrapping the supplied method.
+ */
+function deprecate(method, name, message) {
+    var deprecationMessage = 'DEPRECATED METHOD: ' + name + '\n' + message + ' AT \n';
+    return function() {
+        var e = new Error('get-stack-trace');
+        var stack = e && e.stack ? e.stack.replace(/^[^\(]+?[\n$]/gm, '')
+            .replace(/^\s+at\s+/gm, '')
+            .replace(/^Object.<anonymous>\s*\(/gm, '{anonymous}()@') : 'Unknown Stack Trace';
+
+        var log = window.console && (window.console.warn || window.console.log);
+        if (log) {
+            log.call(window.console, deprecationMessage, stack);
+        }
+        return method.apply(this, arguments);
+    };
+}
+
+/**
+ * extend object.
+ * means that properties in dest will be overwritten by the ones in src.
+ * @param {Object} target
+ * @param {...Object} objects_to_assign
+ * @returns {Object} target
+ */
+var assign;
+if (typeof Object.assign !== 'function') {
+    assign = function assign(target) {
+        if (target === undefined || target === null) {
+            throw new TypeError('Cannot convert undefined or null to object');
+        }
+
+        var output = Object(target);
+        for (var index = 1; index < arguments.length; index++) {
+            var source = arguments[index];
+            if (source !== undefined && source !== null) {
+                for (var nextKey in source) {
+                    if (source.hasOwnProperty(nextKey)) {
+                        output[nextKey] = source[nextKey];
+                    }
+                }
+            }
+        }
+        return output;
+    };
+} else {
+    assign = Object.assign;
+}
+
+/**
+ * extend object.
+ * means that properties in dest will be overwritten by the ones in src.
+ * @param {Object} dest
+ * @param {Object} src
+ * @param {Boolean} [merge=false]
+ * @returns {Object} dest
+ */
+var extend = deprecate(function extend(dest, src, merge) {
+    var keys = Object.keys(src);
+    var i = 0;
+    while (i < keys.length) {
+        if (!merge || (merge && dest[keys[i]] === undefined)) {
+            dest[keys[i]] = src[keys[i]];
+        }
+        i++;
+    }
+    return dest;
+}, 'extend', 'Use `assign`.');
+
+/**
+ * merge the values from src in the dest.
+ * means that properties that exist in dest will not be overwritten by src
+ * @param {Object} dest
+ * @param {Object} src
+ * @returns {Object} dest
+ */
+var merge = deprecate(function merge(dest, src) {
+    return extend(dest, src, true);
+}, 'merge', 'Use `assign`.');
+
+/**
+ * simple class inheritance
+ * @param {Function} child
+ * @param {Function} base
+ * @param {Object} [properties]
+ */
+function inherit(child, base, properties) {
+    var baseP = base.prototype,
+        childP;
+
+    childP = child.prototype = Object.create(baseP);
+    childP.constructor = child;
+    childP._super = baseP;
+
+    if (properties) {
+        assign(childP, properties);
+    }
+}
+
+/**
+ * simple function bind
+ * @param {Function} fn
+ * @param {Object} context
+ * @returns {Function}
+ */
+function bindFn(fn, context) {
+    return function boundFn() {
+        return fn.apply(context, arguments);
+    };
+}
+
+/**
+ * let a boolean value also be a function that must return a boolean
+ * this first item in args will be used as the context
+ * @param {Boolean|Function} val
+ * @param {Array} [args]
+ * @returns {Boolean}
+ */
+function boolOrFn(val, args) {
+    if (typeof val == TYPE_FUNCTION) {
+        return val.apply(args ? args[0] || undefined : undefined, args);
+    }
+    return val;
+}
+
+/**
+ * use the val2 when val1 is undefined
+ * @param {*} val1
+ * @param {*} val2
+ * @returns {*}
+ */
+function ifUndefined(val1, val2) {
+    return (val1 === undefined) ? val2 : val1;
+}
+
+/**
+ * addEventListener with multiple events at once
+ * @param {EventTarget} target
+ * @param {String} types
+ * @param {Function} handler
+ */
+function addEventListeners(target, types, handler) {
+    each(splitStr(types), function(type) {
+        target.addEventListener(type, handler, false);
+    });
+}
+
+/**
+ * removeEventListener with multiple events at once
+ * @param {EventTarget} target
+ * @param {String} types
+ * @param {Function} handler
+ */
+function removeEventListeners(target, types, handler) {
+    each(splitStr(types), function(type) {
+        target.removeEventListener(type, handler, false);
+    });
+}
+
+/**
+ * find if a node is in the given parent
+ * @method hasParent
+ * @param {HTMLElement} node
+ * @param {HTMLElement} parent
+ * @return {Boolean} found
+ */
+function hasParent(node, parent) {
+    while (node) {
+        if (node == parent) {
+            return true;
+        }
+        node = node.parentNode;
+    }
+    return false;
+}
+
+/**
+ * small indexOf wrapper
+ * @param {String} str
+ * @param {String} find
+ * @returns {Boolean} found
+ */
+function inStr(str, find) {
+    return str.indexOf(find) > -1;
+}
+
+/**
+ * split string on whitespace
+ * @param {String} str
+ * @returns {Array} words
+ */
+function splitStr(str) {
+    return str.trim().split(/\s+/g);
+}
+
+/**
+ * find if a array contains the object using indexOf or a simple polyFill
+ * @param {Array} src
+ * @param {String} find
+ * @param {String} [findByKey]
+ * @return {Boolean|Number} false when not found, or the index
+ */
+function inArray(src, find, findByKey) {
+    if (src.indexOf && !findByKey) {
+        return src.indexOf(find);
+    } else {
+        var i = 0;
+        while (i < src.length) {
+            if ((findByKey && src[i][findByKey] == find) || (!findByKey && src[i] === find)) {
+                return i;
+            }
+            i++;
+        }
+        return -1;
+    }
+}
+
+/**
+ * convert array-like objects to real arrays
+ * @param {Object} obj
+ * @returns {Array}
+ */
+function toArray(obj) {
+    return Array.prototype.slice.call(obj, 0);
+}
+
+/**
+ * unique array with objects based on a key (like 'id') or just by the array's value
+ * @param {Array} src [{id:1},{id:2},{id:1}]
+ * @param {String} [key]
+ * @param {Boolean} [sort=False]
+ * @returns {Array} [{id:1},{id:2}]
+ */
+function uniqueArray(src, key, sort) {
+    var results = [];
+    var values = [];
+    var i = 0;
+
+    while (i < src.length) {
+        var val = key ? src[i][key] : src[i];
+        if (inArray(values, val) < 0) {
+            results.push(src[i]);
+        }
+        values[i] = val;
+        i++;
+    }
+
+    if (sort) {
+        if (!key) {
+            results = results.sort();
+        } else {
+            results = results.sort(function sortUniqueArray(a, b) {
+                return a[key] > b[key];
+            });
+        }
+    }
+
+    return results;
+}
+
+/**
+ * get the prefixed property
+ * @param {Object} obj
+ * @param {String} property
+ * @returns {String|Undefined} prefixed
+ */
+function prefixed(obj, property) {
+    var prefix, prop;
+    var camelProp = property[0].toUpperCase() + property.slice(1);
+
+    var i = 0;
+    while (i < VENDOR_PREFIXES.length) {
+        prefix = VENDOR_PREFIXES[i];
+        prop = (prefix) ? prefix + camelProp : property;
+
+        if (prop in obj) {
+            return prop;
+        }
+        i++;
+    }
+    return undefined;
+}
+
+/**
+ * get a unique id
+ * @returns {number} uniqueId
+ */
+var _uniqueId = 1;
+function uniqueId() {
+    return _uniqueId++;
+}
+
+/**
+ * get the window object of an element
+ * @param {HTMLElement} element
+ * @returns {DocumentView|Window}
+ */
+function getWindowForElement(element) {
+    var doc = element.ownerDocument || element;
+    return (doc.defaultView || doc.parentWindow || window);
+}
+
+var MOBILE_REGEX = /mobile|tablet|ip(ad|hone|od)|android/i;
+
+var SUPPORT_TOUCH = ('ontouchstart' in window);
+var SUPPORT_POINTER_EVENTS = prefixed(window, 'PointerEvent') !== undefined;
+var SUPPORT_ONLY_TOUCH = SUPPORT_TOUCH && MOBILE_REGEX.test(navigator.userAgent);
+
+var INPUT_TYPE_TOUCH = 'touch';
+var INPUT_TYPE_PEN = 'pen';
+var INPUT_TYPE_MOUSE = 'mouse';
+var INPUT_TYPE_KINECT = 'kinect';
+
+var COMPUTE_INTERVAL = 25;
+
+var INPUT_START = 1;
+var INPUT_MOVE = 2;
+var INPUT_END = 4;
+var INPUT_CANCEL = 8;
+
+var DIRECTION_NONE = 1;
+var DIRECTION_LEFT = 2;
+var DIRECTION_RIGHT = 4;
+var DIRECTION_UP = 8;
+var DIRECTION_DOWN = 16;
+
+var DIRECTION_HORIZONTAL = DIRECTION_LEFT | DIRECTION_RIGHT;
+var DIRECTION_VERTICAL = DIRECTION_UP | DIRECTION_DOWN;
+var DIRECTION_ALL = DIRECTION_HORIZONTAL | DIRECTION_VERTICAL;
+
+var PROPS_XY = ['x', 'y'];
+var PROPS_CLIENT_XY = ['clientX', 'clientY'];
+
+/**
+ * create new input type manager
+ * @param {Manager} manager
+ * @param {Function} callback
+ * @returns {Input}
+ * @constructor
+ */
+function Input(manager, callback) {
+    var self = this;
+    this.manager = manager;
+    this.callback = callback;
+    this.element = manager.element;
+    this.target = manager.options.inputTarget;
+
+    // smaller wrapper around the handler, for the scope and the enabled state of the manager,
+    // so when disabled the input events are completely bypassed.
+    this.domHandler = function(ev) {
+        if (boolOrFn(manager.options.enable, [manager])) {
+            self.handler(ev);
+        }
+    };
+
+    this.init();
+
+}
+
+Input.prototype = {
+    /**
+     * should handle the inputEvent data and trigger the callback
+     * @virtual
+     */
+    handler: function() { },
+
+    /**
+     * bind the events
+     */
+    init: function() {
+        this.evEl && addEventListeners(this.element, this.evEl, this.domHandler);
+        this.evTarget && addEventListeners(this.target, this.evTarget, this.domHandler);
+        this.evWin && addEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
+    },
+
+    /**
+     * unbind the events
+     */
+    destroy: function() {
+        this.evEl && removeEventListeners(this.element, this.evEl, this.domHandler);
+        this.evTarget && removeEventListeners(this.target, this.evTarget, this.domHandler);
+        this.evWin && removeEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
+    }
+};
+
+/**
+ * create new input type manager
+ * called by the Manager constructor
+ * @param {Hammer} manager
+ * @returns {Input}
+ */
+function createInputInstance(manager) {
+    var Type;
+    var inputClass = manager.options.inputClass;
+
+    if (inputClass) {
+        Type = inputClass;
+    } else if (SUPPORT_POINTER_EVENTS) {
+        Type = PointerEventInput;
+    } else if (SUPPORT_ONLY_TOUCH) {
+        Type = TouchInput;
+    } else if (!SUPPORT_TOUCH) {
+        Type = MouseInput;
+    } else {
+        Type = TouchMouseInput;
+    }
+    return new (Type)(manager, inputHandler);
+}
+
+/**
+ * handle input events
+ * @param {Manager} manager
+ * @param {String} eventType
+ * @param {Object} input
+ */
+function inputHandler(manager, eventType, input) {
+    var pointersLen = input.pointers.length;
+    var changedPointersLen = input.changedPointers.length;
+    var isFirst = (eventType & INPUT_START && (pointersLen - changedPointersLen === 0));
+    var isFinal = (eventType & (INPUT_END | INPUT_CANCEL) && (pointersLen - changedPointersLen === 0));
+
+    input.isFirst = !!isFirst;
+    input.isFinal = !!isFinal;
+
+    if (isFirst) {
+        manager.session = {};
+    }
+
+    // source event is the normalized value of the domEvents
+    // like 'touchstart, mouseup, pointerdown'
+    input.eventType = eventType;
+
+    // compute scale, rotation etc
+    computeInputData(manager, input);
+
+    // emit secret event
+    manager.emit('hammer.input', input);
+
+    manager.recognize(input);
+    manager.session.prevInput = input;
+}
+
+/**
+ * extend the data with some usable properties like scale, rotate, velocity etc
+ * @param {Object} manager
+ * @param {Object} input
+ */
+function computeInputData(manager, input) {
+    var session = manager.session;
+    var pointers = input.pointers;
+    var pointersLength = pointers.length;
+
+    // store the first input to calculate the distance and direction
+    if (!session.firstInput) {
+        session.firstInput = simpleCloneInputData(input);
+    }
+
+    // to compute scale and rotation we need to store the multiple touches
+    if (pointersLength > 1 && !session.firstMultiple) {
+        session.firstMultiple = simpleCloneInputData(input);
+    } else if (pointersLength === 1) {
+        session.firstMultiple = false;
+    }
+
+    var firstInput = session.firstInput;
+    var firstMultiple = session.firstMultiple;
+    var offsetCenter = firstMultiple ? firstMultiple.center : firstInput.center;
+
+    var center = input.center = getCenter(pointers);
+    input.timeStamp = now();
+    input.deltaTime = input.timeStamp - firstInput.timeStamp;
+
+    input.angle = getAngle(offsetCenter, center);
+    input.distance = getDistance(offsetCenter, center);
+
+    computeDeltaXY(session, input);
+    input.offsetDirection = getDirection(input.deltaX, input.deltaY);
+
+    var overallVelocity = getVelocity(input.deltaTime, input.deltaX, input.deltaY);
+    input.overallVelocityX = overallVelocity.x;
+    input.overallVelocityY = overallVelocity.y;
+    input.overallVelocity = (abs(overallVelocity.x) > abs(overallVelocity.y)) ? overallVelocity.x : overallVelocity.y;
+
+    input.scale = firstMultiple ? getScale(firstMultiple.pointers, pointers) : 1;
+    input.rotation = firstMultiple ? getRotation(firstMultiple.pointers, pointers) : 0;
+
+    input.maxPointers = !session.prevInput ? input.pointers.length : ((input.pointers.length >
+        session.prevInput.maxPointers) ? input.pointers.length : session.prevInput.maxPointers);
+
+    computeIntervalInputData(session, input);
+
+    // find the correct target
+    var target = manager.element;
+    if (hasParent(input.srcEvent.target, target)) {
+        target = input.srcEvent.target;
+    }
+    input.target = target;
+}
+
+function computeDeltaXY(session, input) {
+    var center = input.center;
+    var offset = session.offsetDelta || {};
+    var prevDelta = session.prevDelta || {};
+    var prevInput = session.prevInput || {};
+
+    if (input.eventType === INPUT_START || prevInput.eventType === INPUT_END) {
+        prevDelta = session.prevDelta = {
+            x: prevInput.deltaX || 0,
+            y: prevInput.deltaY || 0
+        };
+
+        offset = session.offsetDelta = {
+            x: center.x,
+            y: center.y
+        };
+    }
+
+    input.deltaX = prevDelta.x + (center.x - offset.x);
+    input.deltaY = prevDelta.y + (center.y - offset.y);
+}
+
+/**
+ * velocity is calculated every x ms
+ * @param {Object} session
+ * @param {Object} input
+ */
+function computeIntervalInputData(session, input) {
+    var last = session.lastInterval || input,
+        deltaTime = input.timeStamp - last.timeStamp,
+        velocity, velocityX, velocityY, direction;
+
+    if (input.eventType != INPUT_CANCEL && (deltaTime > COMPUTE_INTERVAL || last.velocity === undefined)) {
+        var deltaX = input.deltaX - last.deltaX;
+        var deltaY = input.deltaY - last.deltaY;
+
+        var v = getVelocity(deltaTime, deltaX, deltaY);
+        velocityX = v.x;
+        velocityY = v.y;
+        velocity = (abs(v.x) > abs(v.y)) ? v.x : v.y;
+        direction = getDirection(deltaX, deltaY);
+
+        session.lastInterval = input;
+    } else {
+        // use latest velocity info if it doesn't overtake a minimum period
+        velocity = last.velocity;
+        velocityX = last.velocityX;
+        velocityY = last.velocityY;
+        direction = last.direction;
+    }
+
+    input.velocity = velocity;
+    input.velocityX = velocityX;
+    input.velocityY = velocityY;
+    input.direction = direction;
+}
+
+/**
+ * create a simple clone from the input used for storage of firstInput and firstMultiple
+ * @param {Object} input
+ * @returns {Object} clonedInputData
+ */
+function simpleCloneInputData(input) {
+    // make a simple copy of the pointers because we will get a reference if we don't
+    // we only need clientXY for the calculations
+    var pointers = [];
+    var i = 0;
+    while (i < input.pointers.length) {
+        pointers[i] = {
+            clientX: round(input.pointers[i].clientX),
+            clientY: round(input.pointers[i].clientY)
+        };
+        i++;
+    }
+
+    return {
+        timeStamp: now(),
+        pointers: pointers,
+        center: getCenter(pointers),
+        deltaX: input.deltaX,
+        deltaY: input.deltaY
+    };
+}
+
+/**
+ * get the center of all the pointers
+ * @param {Array} pointers
+ * @return {Object} center contains `x` and `y` properties
+ */
+function getCenter(pointers) {
+    var pointersLength = pointers.length;
+
+    // no need to loop when only one touch
+    if (pointersLength === 1) {
+        return {
+            x: round(pointers[0].clientX),
+            y: round(pointers[0].clientY)
+        };
+    }
+
+    var x = 0, y = 0, i = 0;
+    while (i < pointersLength) {
+        x += pointers[i].clientX;
+        y += pointers[i].clientY;
+        i++;
+    }
+
+    return {
+        x: round(x / pointersLength),
+        y: round(y / pointersLength)
+    };
+}
+
+/**
+ * calculate the velocity between two points. unit is in px per ms.
+ * @param {Number} deltaTime
+ * @param {Number} x
+ * @param {Number} y
+ * @return {Object} velocity `x` and `y`
+ */
+function getVelocity(deltaTime, x, y) {
+    return {
+        x: x / deltaTime || 0,
+        y: y / deltaTime || 0
+    };
+}
+
+/**
+ * get the direction between two points
+ * @param {Number} x
+ * @param {Number} y
+ * @return {Number} direction
+ */
+function getDirection(x, y) {
+    if (x === y) {
+        return DIRECTION_NONE;
+    }
+
+    if (abs(x) >= abs(y)) {
+        return x < 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
+    }
+    return y < 0 ? DIRECTION_UP : DIRECTION_DOWN;
+}
+
+/**
+ * calculate the absolute distance between two points
+ * @param {Object} p1 {x, y}
+ * @param {Object} p2 {x, y}
+ * @param {Array} [props] containing x and y keys
+ * @return {Number} distance
+ */
+function getDistance(p1, p2, props) {
+    if (!props) {
+        props = PROPS_XY;
+    }
+    var x = p2[props[0]] - p1[props[0]],
+        y = p2[props[1]] - p1[props[1]];
+
+    return Math.sqrt((x * x) + (y * y));
+}
+
+/**
+ * calculate the angle between two coordinates
+ * @param {Object} p1
+ * @param {Object} p2
+ * @param {Array} [props] containing x and y keys
+ * @return {Number} angle
+ */
+function getAngle(p1, p2, props) {
+    if (!props) {
+        props = PROPS_XY;
+    }
+    var x = p2[props[0]] - p1[props[0]],
+        y = p2[props[1]] - p1[props[1]];
+    return Math.atan2(y, x) * 180 / Math.PI;
+}
+
+/**
+ * calculate the rotation degrees between two pointersets
+ * @param {Array} start array of pointers
+ * @param {Array} end array of pointers
+ * @return {Number} rotation
+ */
+function getRotation(start, end) {
+    return getAngle(end[1], end[0], PROPS_CLIENT_XY) + getAngle(start[1], start[0], PROPS_CLIENT_XY);
+}
+
+/**
+ * calculate the scale factor between two pointersets
+ * no scale is 1, and goes down to 0 when pinched together, and bigger when pinched out
+ * @param {Array} start array of pointers
+ * @param {Array} end array of pointers
+ * @return {Number} scale
+ */
+function getScale(start, end) {
+    return getDistance(end[0], end[1], PROPS_CLIENT_XY) / getDistance(start[0], start[1], PROPS_CLIENT_XY);
+}
+
+var MOUSE_INPUT_MAP = {
+    mousedown: INPUT_START,
+    mousemove: INPUT_MOVE,
+    mouseup: INPUT_END
+};
+
+var MOUSE_ELEMENT_EVENTS = 'mousedown';
+var MOUSE_WINDOW_EVENTS = 'mousemove mouseup';
+
+/**
+ * Mouse events input
+ * @constructor
+ * @extends Input
+ */
+function MouseInput() {
+    this.evEl = MOUSE_ELEMENT_EVENTS;
+    this.evWin = MOUSE_WINDOW_EVENTS;
+
+    this.pressed = false; // mousedown state
+
+    Input.apply(this, arguments);
+}
+
+inherit(MouseInput, Input, {
+    /**
+     * handle mouse events
+     * @param {Object} ev
+     */
+    handler: function MEhandler(ev) {
+        var eventType = MOUSE_INPUT_MAP[ev.type];
+
+        // on start we want to have the left mouse button down
+        if (eventType & INPUT_START && ev.button === 0) {
+            this.pressed = true;
+        }
+
+        if (eventType & INPUT_MOVE && ev.which !== 1) {
+            eventType = INPUT_END;
+        }
+
+        // mouse must be down
+        if (!this.pressed) {
+            return;
+        }
+
+        if (eventType & INPUT_END) {
+            this.pressed = false;
+        }
+
+        this.callback(this.manager, eventType, {
+            pointers: [ev],
+            changedPointers: [ev],
+            pointerType: INPUT_TYPE_MOUSE,
+            srcEvent: ev
+        });
+    }
+});
+
+var POINTER_INPUT_MAP = {
+    pointerdown: INPUT_START,
+    pointermove: INPUT_MOVE,
+    pointerup: INPUT_END,
+    pointercancel: INPUT_CANCEL,
+    pointerout: INPUT_CANCEL
+};
+
+// in IE10 the pointer types is defined as an enum
+var IE10_POINTER_TYPE_ENUM = {
+    2: INPUT_TYPE_TOUCH,
+    3: INPUT_TYPE_PEN,
+    4: INPUT_TYPE_MOUSE,
+    5: INPUT_TYPE_KINECT // see https://twitter.com/jacobrossi/status/480596438489890816
+};
+
+var POINTER_ELEMENT_EVENTS = 'pointerdown';
+var POINTER_WINDOW_EVENTS = 'pointermove pointerup pointercancel';
+
+// IE10 has prefixed support, and case-sensitive
+if (window.MSPointerEvent && !window.PointerEvent) {
+    POINTER_ELEMENT_EVENTS = 'MSPointerDown';
+    POINTER_WINDOW_EVENTS = 'MSPointerMove MSPointerUp MSPointerCancel';
+}
+
+/**
+ * Pointer events input
+ * @constructor
+ * @extends Input
+ */
+function PointerEventInput() {
+    this.evEl = POINTER_ELEMENT_EVENTS;
+    this.evWin = POINTER_WINDOW_EVENTS;
+
+    Input.apply(this, arguments);
+
+    this.store = (this.manager.session.pointerEvents = []);
+}
+
+inherit(PointerEventInput, Input, {
+    /**
+     * handle mouse events
+     * @param {Object} ev
+     */
+    handler: function PEhandler(ev) {
+        var store = this.store;
+        var removePointer = false;
+
+        var eventTypeNormalized = ev.type.toLowerCase().replace('ms', '');
+        var eventType = POINTER_INPUT_MAP[eventTypeNormalized];
+        var pointerType = IE10_POINTER_TYPE_ENUM[ev.pointerType] || ev.pointerType;
+
+        var isTouch = (pointerType == INPUT_TYPE_TOUCH);
+
+        // get index of the event in the store
+        var storeIndex = inArray(store, ev.pointerId, 'pointerId');
+
+        // start and mouse must be down
+        if (eventType & INPUT_START && (ev.button === 0 || isTouch)) {
+            if (storeIndex < 0) {
+                store.push(ev);
+                storeIndex = store.length - 1;
+            }
+        } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
+            removePointer = true;
+        }
+
+        // it not found, so the pointer hasn't been down (so it's probably a hover)
+        if (storeIndex < 0) {
+            return;
+        }
+
+        // update the event in the store
+        store[storeIndex] = ev;
+
+        this.callback(this.manager, eventType, {
+            pointers: store,
+            changedPointers: [ev],
+            pointerType: pointerType,
+            srcEvent: ev
+        });
+
+        if (removePointer) {
+            // remove from the store
+            store.splice(storeIndex, 1);
+        }
+    }
+});
+
+var SINGLE_TOUCH_INPUT_MAP = {
+    touchstart: INPUT_START,
+    touchmove: INPUT_MOVE,
+    touchend: INPUT_END,
+    touchcancel: INPUT_CANCEL
+};
+
+var SINGLE_TOUCH_TARGET_EVENTS = 'touchstart';
+var SINGLE_TOUCH_WINDOW_EVENTS = 'touchstart touchmove touchend touchcancel';
+
+/**
+ * Touch events input
+ * @constructor
+ * @extends Input
+ */
+function SingleTouchInput() {
+    this.evTarget = SINGLE_TOUCH_TARGET_EVENTS;
+    this.evWin = SINGLE_TOUCH_WINDOW_EVENTS;
+    this.started = false;
+
+    Input.apply(this, arguments);
+}
+
+inherit(SingleTouchInput, Input, {
+    handler: function TEhandler(ev) {
+        var type = SINGLE_TOUCH_INPUT_MAP[ev.type];
+
+        // should we handle the touch events?
+        if (type === INPUT_START) {
+            this.started = true;
+        }
+
+        if (!this.started) {
+            return;
+        }
+
+        var touches = normalizeSingleTouches.call(this, ev, type);
+
+        // when done, reset the started state
+        if (type & (INPUT_END | INPUT_CANCEL) && touches[0].length - touches[1].length === 0) {
+            this.started = false;
+        }
+
+        this.callback(this.manager, type, {
+            pointers: touches[0],
+            changedPointers: touches[1],
+            pointerType: INPUT_TYPE_TOUCH,
+            srcEvent: ev
+        });
+    }
+});
+
+/**
+ * @this {TouchInput}
+ * @param {Object} ev
+ * @param {Number} type flag
+ * @returns {undefined|Array} [all, changed]
+ */
+function normalizeSingleTouches(ev, type) {
+    var all = toArray(ev.touches);
+    var changed = toArray(ev.changedTouches);
+
+    if (type & (INPUT_END | INPUT_CANCEL)) {
+        all = uniqueArray(all.concat(changed), 'identifier', true);
+    }
+
+    return [all, changed];
+}
+
+var TOUCH_INPUT_MAP = {
+    touchstart: INPUT_START,
+    touchmove: INPUT_MOVE,
+    touchend: INPUT_END,
+    touchcancel: INPUT_CANCEL
+};
+
+var TOUCH_TARGET_EVENTS = 'touchstart touchmove touchend touchcancel';
+
+/**
+ * Multi-user touch events input
+ * @constructor
+ * @extends Input
+ */
+function TouchInput() {
+    this.evTarget = TOUCH_TARGET_EVENTS;
+    this.targetIds = {};
+
+    Input.apply(this, arguments);
+}
+
+inherit(TouchInput, Input, {
+    handler: function MTEhandler(ev) {
+        var type = TOUCH_INPUT_MAP[ev.type];
+        var touches = getTouches.call(this, ev, type);
+        if (!touches) {
+            return;
+        }
+
+        this.callback(this.manager, type, {
+            pointers: touches[0],
+            changedPointers: touches[1],
+            pointerType: INPUT_TYPE_TOUCH,
+            srcEvent: ev
+        });
+    }
+});
+
+/**
+ * @this {TouchInput}
+ * @param {Object} ev
+ * @param {Number} type flag
+ * @returns {undefined|Array} [all, changed]
+ */
+function getTouches(ev, type) {
+    var allTouches = toArray(ev.touches);
+    var targetIds = this.targetIds;
+
+    // when there is only one touch, the process can be simplified
+    if (type & (INPUT_START | INPUT_MOVE) && allTouches.length === 1) {
+        targetIds[allTouches[0].identifier] = true;
+        return [allTouches, allTouches];
+    }
+
+    var i,
+        targetTouches,
+        changedTouches = toArray(ev.changedTouches),
+        changedTargetTouches = [],
+        target = this.target;
+
+    // get target touches from touches
+    targetTouches = allTouches.filter(function(touch) {
+        return hasParent(touch.target, target);
+    });
+
+    // collect touches
+    if (type === INPUT_START) {
+        i = 0;
+        while (i < targetTouches.length) {
+            targetIds[targetTouches[i].identifier] = true;
+            i++;
+        }
+    }
+
+    // filter changed touches to only contain touches that exist in the collected target ids
+    i = 0;
+    while (i < changedTouches.length) {
+        if (targetIds[changedTouches[i].identifier]) {
+            changedTargetTouches.push(changedTouches[i]);
+        }
+
+        // cleanup removed touches
+        if (type & (INPUT_END | INPUT_CANCEL)) {
+            delete targetIds[changedTouches[i].identifier];
+        }
+        i++;
+    }
+
+    if (!changedTargetTouches.length) {
+        return;
+    }
+
+    return [
+        // merge targetTouches with changedTargetTouches so it contains ALL touches, including 'end' and 'cancel'
+        uniqueArray(targetTouches.concat(changedTargetTouches), 'identifier', true),
+        changedTargetTouches
+    ];
+}
+
+/**
+ * Combined touch and mouse input
+ *
+ * Touch has a higher priority then mouse, and while touching no mouse events are allowed.
+ * This because touch devices also emit mouse events while doing a touch.
+ *
+ * @constructor
+ * @extends Input
+ */
+
+var DEDUP_TIMEOUT = 2500;
+var DEDUP_DISTANCE = 25;
+
+function TouchMouseInput() {
+    Input.apply(this, arguments);
+
+    var handler = bindFn(this.handler, this);
+    this.touch = new TouchInput(this.manager, handler);
+    this.mouse = new MouseInput(this.manager, handler);
+
+    this.primaryTouch = null;
+    this.lastTouches = [];
+}
+
+inherit(TouchMouseInput, Input, {
+    /**
+     * handle mouse and touch events
+     * @param {Hammer} manager
+     * @param {String} inputEvent
+     * @param {Object} inputData
+     */
+    handler: function TMEhandler(manager, inputEvent, inputData) {
+        var isTouch = (inputData.pointerType == INPUT_TYPE_TOUCH),
+            isMouse = (inputData.pointerType == INPUT_TYPE_MOUSE);
+
+        if (isMouse && inputData.sourceCapabilities && inputData.sourceCapabilities.firesTouchEvents) {
+            return;
+        }
+
+        // when we're in a touch event, record touches to  de-dupe synthetic mouse event
+        if (isTouch) {
+            recordTouches.call(this, inputEvent, inputData);
+        } else if (isMouse && isSyntheticEvent.call(this, inputData)) {
+            return;
+        }
+
+        this.callback(manager, inputEvent, inputData);
+    },
+
+    /**
+     * remove the event listeners
+     */
+    destroy: function destroy() {
+        this.touch.destroy();
+        this.mouse.destroy();
+    }
+});
+
+function recordTouches(eventType, eventData) {
+    if (eventType & INPUT_START) {
+        this.primaryTouch = eventData.changedPointers[0].identifier;
+        setLastTouch.call(this, eventData);
+    } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
+        setLastTouch.call(this, eventData);
+    }
+}
+
+function setLastTouch(eventData) {
+    var touch = eventData.changedPointers[0];
+
+    if (touch.identifier === this.primaryTouch) {
+        var lastTouch = {x: touch.clientX, y: touch.clientY};
+        this.lastTouches.push(lastTouch);
+        var lts = this.lastTouches;
+        var removeLastTouch = function() {
+            var i = lts.indexOf(lastTouch);
+            if (i > -1) {
+                lts.splice(i, 1);
+            }
+        };
+        setTimeout(removeLastTouch, DEDUP_TIMEOUT);
+    }
+}
+
+function isSyntheticEvent(eventData) {
+    var x = eventData.srcEvent.clientX, y = eventData.srcEvent.clientY;
+    for (var i = 0; i < this.lastTouches.length; i++) {
+        var t = this.lastTouches[i];
+        var dx = Math.abs(x - t.x), dy = Math.abs(y - t.y);
+        if (dx <= DEDUP_DISTANCE && dy <= DEDUP_DISTANCE) {
+            return true;
+        }
+    }
+    return false;
+}
+
+var PREFIXED_TOUCH_ACTION = prefixed(TEST_ELEMENT.style, 'touchAction');
+var NATIVE_TOUCH_ACTION = PREFIXED_TOUCH_ACTION !== undefined;
+
+// magical touchAction value
+var TOUCH_ACTION_COMPUTE = 'compute';
+var TOUCH_ACTION_AUTO = 'auto';
+var TOUCH_ACTION_MANIPULATION = 'manipulation'; // not implemented
+var TOUCH_ACTION_NONE = 'none';
+var TOUCH_ACTION_PAN_X = 'pan-x';
+var TOUCH_ACTION_PAN_Y = 'pan-y';
+var TOUCH_ACTION_MAP = getTouchActionProps();
+
+/**
+ * Touch Action
+ * sets the touchAction property or uses the js alternative
+ * @param {Manager} manager
+ * @param {String} value
+ * @constructor
+ */
+function TouchAction(manager, value) {
+    this.manager = manager;
+    this.set(value);
+}
+
+TouchAction.prototype = {
+    /**
+     * set the touchAction value on the element or enable the polyfill
+     * @param {String} value
+     */
+    set: function(value) {
+        // find out the touch-action by the event handlers
+        if (value == TOUCH_ACTION_COMPUTE) {
+            value = this.compute();
+        }
+
+        if (NATIVE_TOUCH_ACTION && this.manager.element.style && TOUCH_ACTION_MAP[value]) {
+            this.manager.element.style[PREFIXED_TOUCH_ACTION] = value;
+        }
+        this.actions = value.toLowerCase().trim();
+    },
+
+    /**
+     * just re-set the touchAction value
+     */
+    update: function() {
+        this.set(this.manager.options.touchAction);
+    },
+
+    /**
+     * compute the value for the touchAction property based on the recognizer's settings
+     * @returns {String} value
+     */
+    compute: function() {
+        var actions = [];
+        each(this.manager.recognizers, function(recognizer) {
+            if (boolOrFn(recognizer.options.enable, [recognizer])) {
+                actions = actions.concat(recognizer.getTouchAction());
+            }
+        });
+        return cleanTouchActions(actions.join(' '));
+    },
+
+    /**
+     * this method is called on each input cycle and provides the preventing of the browser behavior
+     * @param {Object} input
+     */
+    preventDefaults: function(input) {
+        var srcEvent = input.srcEvent;
+        var direction = input.offsetDirection;
+
+        // if the touch action did prevented once this session
+        if (this.manager.session.prevented) {
+            srcEvent.preventDefault();
+            return;
+        }
+
+        var actions = this.actions;
+        var hasNone = inStr(actions, TOUCH_ACTION_NONE) && !TOUCH_ACTION_MAP[TOUCH_ACTION_NONE];
+        var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_Y];
+        var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_X];
+
+        if (hasNone) {
+            //do not prevent defaults if this is a tap gesture
+
+            var isTapPointer = input.pointers.length === 1;
+            var isTapMovement = input.distance < 2;
+            var isTapTouchTime = input.deltaTime < 250;
+
+            if (isTapPointer && isTapMovement && isTapTouchTime) {
+                return;
+            }
+        }
+
+        if (hasPanX && hasPanY) {
+            // `pan-x pan-y` means browser handles all scrolling/panning, do not prevent
+            return;
+        }
+
+        if (hasNone ||
+            (hasPanY && direction & DIRECTION_HORIZONTAL) ||
+            (hasPanX && direction & DIRECTION_VERTICAL)) {
+            return this.preventSrc(srcEvent);
+        }
+    },
+
+    /**
+     * call preventDefault to prevent the browser's default behavior (scrolling in most cases)
+     * @param {Object} srcEvent
+     */
+    preventSrc: function(srcEvent) {
+        this.manager.session.prevented = true;
+        srcEvent.preventDefault();
+    }
+};
+
+/**
+ * when the touchActions are collected they are not a valid value, so we need to clean things up. *
+ * @param {String} actions
+ * @returns {*}
+ */
+function cleanTouchActions(actions) {
+    // none
+    if (inStr(actions, TOUCH_ACTION_NONE)) {
+        return TOUCH_ACTION_NONE;
+    }
+
+    var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X);
+    var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y);
+
+    // if both pan-x and pan-y are set (different recognizers
+    // for different directions, e.g. horizontal pan but vertical swipe?)
+    // we need none (as otherwise with pan-x pan-y combined none of these
+    // recognizers will work, since the browser would handle all panning
+    if (hasPanX && hasPanY) {
+        return TOUCH_ACTION_NONE;
+    }
+
+    // pan-x OR pan-y
+    if (hasPanX || hasPanY) {
+        return hasPanX ? TOUCH_ACTION_PAN_X : TOUCH_ACTION_PAN_Y;
+    }
+
+    // manipulation
+    if (inStr(actions, TOUCH_ACTION_MANIPULATION)) {
+        return TOUCH_ACTION_MANIPULATION;
+    }
+
+    return TOUCH_ACTION_AUTO;
+}
+
+function getTouchActionProps() {
+    if (!NATIVE_TOUCH_ACTION) {
+        return false;
+    }
+    var touchMap = {};
+    var cssSupports = window.CSS && window.CSS.supports;
+    ['auto', 'manipulation', 'pan-y', 'pan-x', 'pan-x pan-y', 'none'].forEach(function(val) {
+
+        // If css.supports is not supported but there is native touch-action assume it supports
+        // all values. This is the case for IE 10 and 11.
+        touchMap[val] = cssSupports ? window.CSS.supports('touch-action', val) : true;
+    });
+    return touchMap;
+}
+
+/**
+ * Recognizer flow explained; *
+ * All recognizers have the initial state of POSSIBLE when a input session starts.
+ * The definition of a input session is from the first input until the last input, with all it's movement in it. *
+ * Example session for mouse-input: mousedown -> mousemove -> mouseup
+ *
+ * On each recognizing cycle (see Manager.recognize) the .recognize() method is executed
+ * which determines with state it should be.
+ *
+ * If the recognizer has the state FAILED, CANCELLED or RECOGNIZED (equals ENDED), it is reset to
+ * POSSIBLE to give it another change on the next cycle.
+ *
+ *               Possible
+ *                  |
+ *            +-----+---------------+
+ *            |                     |
+ *      +-----+-----+               |
+ *      |           |               |
+ *   Failed      Cancelled          |
+ *                          +-------+------+
+ *                          |              |
+ *                      Recognized       Began
+ *                                         |
+ *                                      Changed
+ *                                         |
+ *                                  Ended/Recognized
+ */
+var STATE_POSSIBLE = 1;
+var STATE_BEGAN = 2;
+var STATE_CHANGED = 4;
+var STATE_ENDED = 8;
+var STATE_RECOGNIZED = STATE_ENDED;
+var STATE_CANCELLED = 16;
+var STATE_FAILED = 32;
+
+/**
+ * Recognizer
+ * Every recognizer needs to extend from this class.
+ * @constructor
+ * @param {Object} options
+ */
+function Recognizer(options) {
+    this.options = assign({}, this.defaults, options || {});
+
+    this.id = uniqueId();
+
+    this.manager = null;
+
+    // default is enable true
+    this.options.enable = ifUndefined(this.options.enable, true);
+
+    this.state = STATE_POSSIBLE;
+
+    this.simultaneous = {};
+    this.requireFail = [];
+}
+
+Recognizer.prototype = {
+    /**
+     * @virtual
+     * @type {Object}
+     */
+    defaults: {},
+
+    /**
+     * set options
+     * @param {Object} options
+     * @return {Recognizer}
+     */
+    set: function(options) {
+        assign(this.options, options);
+
+        // also update the touchAction, in case something changed about the directions/enabled state
+        this.manager && this.manager.touchAction.update();
+        return this;
+    },
+
+    /**
+     * recognize simultaneous with an other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    recognizeWith: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'recognizeWith', this)) {
+            return this;
+        }
+
+        var simultaneous = this.simultaneous;
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        if (!simultaneous[otherRecognizer.id]) {
+            simultaneous[otherRecognizer.id] = otherRecognizer;
+            otherRecognizer.recognizeWith(this);
+        }
+        return this;
+    },
+
+    /**
+     * drop the simultaneous link. it doesnt remove the link on the other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    dropRecognizeWith: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'dropRecognizeWith', this)) {
+            return this;
+        }
+
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        delete this.simultaneous[otherRecognizer.id];
+        return this;
+    },
+
+    /**
+     * recognizer can only run when an other is failing
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    requireFailure: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'requireFailure', this)) {
+            return this;
+        }
+
+        var requireFail = this.requireFail;
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        if (inArray(requireFail, otherRecognizer) === -1) {
+            requireFail.push(otherRecognizer);
+            otherRecognizer.requireFailure(this);
+        }
+        return this;
+    },
+
+    /**
+     * drop the requireFailure link. it does not remove the link on the other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    dropRequireFailure: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'dropRequireFailure', this)) {
+            return this;
+        }
+
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        var index = inArray(this.requireFail, otherRecognizer);
+        if (index > -1) {
+            this.requireFail.splice(index, 1);
+        }
+        return this;
+    },
+
+    /**
+     * has require failures boolean
+     * @returns {boolean}
+     */
+    hasRequireFailures: function() {
+        return this.requireFail.length > 0;
+    },
+
+    /**
+     * if the recognizer can recognize simultaneous with an other recognizer
+     * @param {Recognizer} otherRecognizer
+     * @returns {Boolean}
+     */
+    canRecognizeWith: function(otherRecognizer) {
+        return !!this.simultaneous[otherRecognizer.id];
+    },
+
+    /**
+     * You should use `tryEmit` instead of `emit` directly to check
+     * that all the needed recognizers has failed before emitting.
+     * @param {Object} input
+     */
+    emit: function(input) {
+        var self = this;
+        var state = this.state;
+
+        function emit(event) {
+            self.manager.emit(event, input);
+        }
+
+        // 'panstart' and 'panmove'
+        if (state < STATE_ENDED) {
+            emit(self.options.event + stateStr(state));
+        }
+
+        emit(self.options.event); // simple 'eventName' events
+
+        if (input.additionalEvent) { // additional event(panleft, panright, pinchin, pinchout...)
+            emit(input.additionalEvent);
+        }
+
+        // panend and pancancel
+        if (state >= STATE_ENDED) {
+            emit(self.options.event + stateStr(state));
+        }
+    },
+
+    /**
+     * Check that all the require failure recognizers has failed,
+     * if true, it emits a gesture event,
+     * otherwise, setup the state to FAILED.
+     * @param {Object} input
+     */
+    tryEmit: function(input) {
+        if (this.canEmit()) {
+            return this.emit(input);
+        }
+        // it's failing anyway
+        this.state = STATE_FAILED;
+    },
+
+    /**
+     * can we emit?
+     * @returns {boolean}
+     */
+    canEmit: function() {
+        var i = 0;
+        while (i < this.requireFail.length) {
+            if (!(this.requireFail[i].state & (STATE_FAILED | STATE_POSSIBLE))) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    },
+
+    /**
+     * update the recognizer
+     * @param {Object} inputData
+     */
+    recognize: function(inputData) {
+        // make a new copy of the inputData
+        // so we can change the inputData without messing up the other recognizers
+        var inputDataClone = assign({}, inputData);
+
+        // is is enabled and allow recognizing?
+        if (!boolOrFn(this.options.enable, [this, inputDataClone])) {
+            this.reset();
+            this.state = STATE_FAILED;
+            return;
+        }
+
+        // reset when we've reached the end
+        if (this.state & (STATE_RECOGNIZED | STATE_CANCELLED | STATE_FAILED)) {
+            this.state = STATE_POSSIBLE;
+        }
+
+        this.state = this.process(inputDataClone);
+
+        // the recognizer has recognized a gesture
+        // so trigger an event
+        if (this.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED | STATE_CANCELLED)) {
+            this.tryEmit(inputDataClone);
+        }
+    },
+
+    /**
+     * return the state of the recognizer
+     * the actual recognizing happens in this method
+     * @virtual
+     * @param {Object} inputData
+     * @returns {Const} STATE
+     */
+    process: function(inputData) { }, // jshint ignore:line
+
+    /**
+     * return the preferred touch-action
+     * @virtual
+     * @returns {Array}
+     */
+    getTouchAction: function() { },
+
+    /**
+     * called when the gesture isn't allowed to recognize
+     * like when another is being recognized or it is disabled
+     * @virtual
+     */
+    reset: function() { }
+};
+
+/**
+ * get a usable string, used as event postfix
+ * @param {Const} state
+ * @returns {String} state
+ */
+function stateStr(state) {
+    if (state & STATE_CANCELLED) {
+        return 'cancel';
+    } else if (state & STATE_ENDED) {
+        return 'end';
+    } else if (state & STATE_CHANGED) {
+        return 'move';
+    } else if (state & STATE_BEGAN) {
+        return 'start';
+    }
+    return '';
+}
+
+/**
+ * direction cons to string
+ * @param {Const} direction
+ * @returns {String}
+ */
+function directionStr(direction) {
+    if (direction == DIRECTION_DOWN) {
+        return 'down';
+    } else if (direction == DIRECTION_UP) {
+        return 'up';
+    } else if (direction == DIRECTION_LEFT) {
+        return 'left';
+    } else if (direction == DIRECTION_RIGHT) {
+        return 'right';
+    }
+    return '';
+}
+
+/**
+ * get a recognizer by name if it is bound to a manager
+ * @param {Recognizer|String} otherRecognizer
+ * @param {Recognizer} recognizer
+ * @returns {Recognizer}
+ */
+function getRecognizerByNameIfManager(otherRecognizer, recognizer) {
+    var manager = recognizer.manager;
+    if (manager) {
+        return manager.get(otherRecognizer);
+    }
+    return otherRecognizer;
+}
+
+/**
+ * This recognizer is just used as a base for the simple attribute recognizers.
+ * @constructor
+ * @extends Recognizer
+ */
+function AttrRecognizer() {
+    Recognizer.apply(this, arguments);
+}
+
+inherit(AttrRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof AttrRecognizer
+     */
+    defaults: {
+        /**
+         * @type {Number}
+         * @default 1
+         */
+        pointers: 1
+    },
+
+    /**
+     * Used to check if it the recognizer receives valid input, like input.distance > 10.
+     * @memberof AttrRecognizer
+     * @param {Object} input
+     * @returns {Boolean} recognized
+     */
+    attrTest: function(input) {
+        var optionPointers = this.options.pointers;
+        return optionPointers === 0 || input.pointers.length === optionPointers;
+    },
+
+    /**
+     * Process the input and return the state for the recognizer
+     * @memberof AttrRecognizer
+     * @param {Object} input
+     * @returns {*} State
+     */
+    process: function(input) {
+        var state = this.state;
+        var eventType = input.eventType;
+
+        var isRecognized = state & (STATE_BEGAN | STATE_CHANGED);
+        var isValid = this.attrTest(input);
+
+        // on cancel input and we've recognized before, return STATE_CANCELLED
+        if (isRecognized && (eventType & INPUT_CANCEL || !isValid)) {
+            return state | STATE_CANCELLED;
+        } else if (isRecognized || isValid) {
+            if (eventType & INPUT_END) {
+                return state | STATE_ENDED;
+            } else if (!(state & STATE_BEGAN)) {
+                return STATE_BEGAN;
+            }
+            return state | STATE_CHANGED;
+        }
+        return STATE_FAILED;
+    }
+});
+
+/**
+ * Pan
+ * Recognized when the pointer is down and moved in the allowed direction.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function PanRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+
+    this.pX = null;
+    this.pY = null;
+}
+
+inherit(PanRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof PanRecognizer
+     */
+    defaults: {
+        event: 'pan',
+        threshold: 10,
+        pointers: 1,
+        direction: DIRECTION_ALL
+    },
+
+    getTouchAction: function() {
+        var direction = this.options.direction;
+        var actions = [];
+        if (direction & DIRECTION_HORIZONTAL) {
+            actions.push(TOUCH_ACTION_PAN_Y);
+        }
+        if (direction & DIRECTION_VERTICAL) {
+            actions.push(TOUCH_ACTION_PAN_X);
+        }
+        return actions;
+    },
+
+    directionTest: function(input) {
+        var options = this.options;
+        var hasMoved = true;
+        var distance = input.distance;
+        var direction = input.direction;
+        var x = input.deltaX;
+        var y = input.deltaY;
+
+        // lock to axis?
+        if (!(direction & options.direction)) {
+            if (options.direction & DIRECTION_HORIZONTAL) {
+                direction = (x === 0) ? DIRECTION_NONE : (x < 0) ? DIRECTION_LEFT : DIRECTION_RIGHT;
+                hasMoved = x != this.pX;
+                distance = Math.abs(input.deltaX);
+            } else {
+                direction = (y === 0) ? DIRECTION_NONE : (y < 0) ? DIRECTION_UP : DIRECTION_DOWN;
+                hasMoved = y != this.pY;
+                distance = Math.abs(input.deltaY);
+            }
+        }
+        input.direction = direction;
+        return hasMoved && distance > options.threshold && direction & options.direction;
+    },
+
+    attrTest: function(input) {
+        return AttrRecognizer.prototype.attrTest.call(this, input) &&
+            (this.state & STATE_BEGAN || (!(this.state & STATE_BEGAN) && this.directionTest(input)));
+    },
+
+    emit: function(input) {
+
+        this.pX = input.deltaX;
+        this.pY = input.deltaY;
+
+        var direction = directionStr(input.direction);
+
+        if (direction) {
+            input.additionalEvent = this.options.event + direction;
+        }
+        this._super.emit.call(this, input);
+    }
+});
+
+/**
+ * Pinch
+ * Recognized when two or more pointers are moving toward (zoom-in) or away from each other (zoom-out).
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function PinchRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(PinchRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof PinchRecognizer
+     */
+    defaults: {
+        event: 'pinch',
+        threshold: 0,
+        pointers: 2
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_NONE];
+    },
+
+    attrTest: function(input) {
+        return this._super.attrTest.call(this, input) &&
+            (Math.abs(input.scale - 1) > this.options.threshold || this.state & STATE_BEGAN);
+    },
+
+    emit: function(input) {
+        if (input.scale !== 1) {
+            var inOut = input.scale < 1 ? 'in' : 'out';
+            input.additionalEvent = this.options.event + inOut;
+        }
+        this._super.emit.call(this, input);
+    }
+});
+
+/**
+ * Press
+ * Recognized when the pointer is down for x ms without any movement.
+ * @constructor
+ * @extends Recognizer
+ */
+function PressRecognizer() {
+    Recognizer.apply(this, arguments);
+
+    this._timer = null;
+    this._input = null;
+}
+
+inherit(PressRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof PressRecognizer
+     */
+    defaults: {
+        event: 'press',
+        pointers: 1,
+        time: 251, // minimal time of the pointer to be pressed
+        threshold: 9 // a minimal movement is ok, but keep it low
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_AUTO];
+    },
+
+    process: function(input) {
+        var options = this.options;
+        var validPointers = input.pointers.length === options.pointers;
+        var validMovement = input.distance < options.threshold;
+        var validTime = input.deltaTime > options.time;
+
+        this._input = input;
+
+        // we only allow little movement
+        // and we've reached an end event, so a tap is possible
+        if (!validMovement || !validPointers || (input.eventType & (INPUT_END | INPUT_CANCEL) && !validTime)) {
+            this.reset();
+        } else if (input.eventType & INPUT_START) {
+            this.reset();
+            this._timer = setTimeoutContext(function() {
+                this.state = STATE_RECOGNIZED;
+                this.tryEmit();
+            }, options.time, this);
+        } else if (input.eventType & INPUT_END) {
+            return STATE_RECOGNIZED;
+        }
+        return STATE_FAILED;
+    },
+
+    reset: function() {
+        clearTimeout(this._timer);
+    },
+
+    emit: function(input) {
+        if (this.state !== STATE_RECOGNIZED) {
+            return;
+        }
+
+        if (input && (input.eventType & INPUT_END)) {
+            this.manager.emit(this.options.event + 'up', input);
+        } else {
+            this._input.timeStamp = now();
+            this.manager.emit(this.options.event, this._input);
+        }
+    }
+});
+
+/**
+ * Rotate
+ * Recognized when two or more pointer are moving in a circular motion.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function RotateRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(RotateRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof RotateRecognizer
+     */
+    defaults: {
+        event: 'rotate',
+        threshold: 0,
+        pointers: 2
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_NONE];
+    },
+
+    attrTest: function(input) {
+        return this._super.attrTest.call(this, input) &&
+            (Math.abs(input.rotation) > this.options.threshold || this.state & STATE_BEGAN);
+    }
+});
+
+/**
+ * Swipe
+ * Recognized when the pointer is moving fast (velocity), with enough distance in the allowed direction.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function SwipeRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(SwipeRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof SwipeRecognizer
+     */
+    defaults: {
+        event: 'swipe',
+        threshold: 10,
+        velocity: 0.3,
+        direction: DIRECTION_HORIZONTAL | DIRECTION_VERTICAL,
+        pointers: 1
+    },
+
+    getTouchAction: function() {
+        return PanRecognizer.prototype.getTouchAction.call(this);
+    },
+
+    attrTest: function(input) {
+        var direction = this.options.direction;
+        var velocity;
+
+        if (direction & (DIRECTION_HORIZONTAL | DIRECTION_VERTICAL)) {
+            velocity = input.overallVelocity;
+        } else if (direction & DIRECTION_HORIZONTAL) {
+            velocity = input.overallVelocityX;
+        } else if (direction & DIRECTION_VERTICAL) {
+            velocity = input.overallVelocityY;
+        }
+
+        return this._super.attrTest.call(this, input) &&
+            direction & input.offsetDirection &&
+            input.distance > this.options.threshold &&
+            input.maxPointers == this.options.pointers &&
+            abs(velocity) > this.options.velocity && input.eventType & INPUT_END;
+    },
+
+    emit: function(input) {
+        var direction = directionStr(input.offsetDirection);
+        if (direction) {
+            this.manager.emit(this.options.event + direction, input);
+        }
+
+        this.manager.emit(this.options.event, input);
+    }
+});
+
+/**
+ * A tap is ecognized when the pointer is doing a small tap/click. Multiple taps are recognized if they occur
+ * between the given interval and position. The delay option can be used to recognize multi-taps without firing
+ * a single tap.
+ *
+ * The eventData from the emitted event contains the property `tapCount`, which contains the amount of
+ * multi-taps being recognized.
+ * @constructor
+ * @extends Recognizer
+ */
+function TapRecognizer() {
+    Recognizer.apply(this, arguments);
+
+    // previous time and center,
+    // used for tap counting
+    this.pTime = false;
+    this.pCenter = false;
+
+    this._timer = null;
+    this._input = null;
+    this.count = 0;
+}
+
+inherit(TapRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof PinchRecognizer
+     */
+    defaults: {
+        event: 'tap',
+        pointers: 1,
+        taps: 1,
+        interval: 300, // max time between the multi-tap taps
+        time: 250, // max time of the pointer to be down (like finger on the screen)
+        threshold: 9, // a minimal movement is ok, but keep it low
+        posThreshold: 10 // a multi-tap can be a bit off the initial position
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_MANIPULATION];
+    },
+
+    process: function(input) {
+        var options = this.options;
+
+        var validPointers = input.pointers.length === options.pointers;
+        var validMovement = input.distance < options.threshold;
+        var validTouchTime = input.deltaTime < options.time;
+
+        this.reset();
+
+        if ((input.eventType & INPUT_START) && (this.count === 0)) {
+            return this.failTimeout();
+        }
+
+        // we only allow little movement
+        // and we've reached an end event, so a tap is possible
+        if (validMovement && validTouchTime && validPointers) {
+            if (input.eventType != INPUT_END) {
+                return this.failTimeout();
+            }
+
+            var validInterval = this.pTime ? (input.timeStamp - this.pTime < options.interval) : true;
+            var validMultiTap = !this.pCenter || getDistance(this.pCenter, input.center) < options.posThreshold;
+
+            this.pTime = input.timeStamp;
+            this.pCenter = input.center;
+
+            if (!validMultiTap || !validInterval) {
+                this.count = 1;
+            } else {
+                this.count += 1;
+            }
+
+            this._input = input;
+
+            // if tap count matches we have recognized it,
+            // else it has began recognizing...
+            var tapCount = this.count % options.taps;
+            if (tapCount === 0) {
+                // no failing requirements, immediately trigger the tap event
+                // or wait as long as the multitap interval to trigger
+                if (!this.hasRequireFailures()) {
+                    return STATE_RECOGNIZED;
+                } else {
+                    this._timer = setTimeoutContext(function() {
+                        this.state = STATE_RECOGNIZED;
+                        this.tryEmit();
+                    }, options.interval, this);
+                    return STATE_BEGAN;
+                }
+            }
+        }
+        return STATE_FAILED;
+    },
+
+    failTimeout: function() {
+        this._timer = setTimeoutContext(function() {
+            this.state = STATE_FAILED;
+        }, this.options.interval, this);
+        return STATE_FAILED;
+    },
+
+    reset: function() {
+        clearTimeout(this._timer);
+    },
+
+    emit: function() {
+        if (this.state == STATE_RECOGNIZED) {
+            this._input.tapCount = this.count;
+            this.manager.emit(this.options.event, this._input);
+        }
+    }
+});
+
+/**
+ * Simple way to create a manager with a default set of recognizers.
+ * @param {HTMLElement} element
+ * @param {Object} [options]
+ * @constructor
+ */
+function Hammer(element, options) {
+    options = options || {};
+    options.recognizers = ifUndefined(options.recognizers, Hammer.defaults.preset);
+    return new Manager(element, options);
+}
+
+/**
+ * @const {string}
+ */
+Hammer.VERSION = '2.0.7';
+
+/**
+ * default settings
+ * @namespace
+ */
+Hammer.defaults = {
+    /**
+     * set if DOM events are being triggered.
+     * But this is slower and unused by simple implementations, so disabled by default.
+     * @type {Boolean}
+     * @default false
+     */
+    domEvents: false,
+
+    /**
+     * The value for the touchAction property/fallback.
+     * When set to `compute` it will magically set the correct value based on the added recognizers.
+     * @type {String}
+     * @default compute
+     */
+    touchAction: TOUCH_ACTION_COMPUTE,
+
+    /**
+     * @type {Boolean}
+     * @default true
+     */
+    enable: true,
+
+    /**
+     * EXPERIMENTAL FEATURE -- can be removed/changed
+     * Change the parent input target element.
+     * If Null, then it is being set the to main element.
+     * @type {Null|EventTarget}
+     * @default null
+     */
+    inputTarget: null,
+
+    /**
+     * force an input class
+     * @type {Null|Function}
+     * @default null
+     */
+    inputClass: null,
+
+    /**
+     * Default recognizer setup when calling `Hammer()`
+     * When creating a new Manager these will be skipped.
+     * @type {Array}
+     */
+    preset: [
+        // RecognizerClass, options, [recognizeWith, ...], [requireFailure, ...]
+        [RotateRecognizer, {enable: false}],
+        [PinchRecognizer, {enable: false}, ['rotate']],
+        [SwipeRecognizer, {direction: DIRECTION_HORIZONTAL}],
+        [PanRecognizer, {direction: DIRECTION_HORIZONTAL}, ['swipe']],
+        [TapRecognizer],
+        [TapRecognizer, {event: 'doubletap', taps: 2}, ['tap']],
+        [PressRecognizer]
+    ],
+
+    /**
+     * Some CSS properties can be used to improve the working of Hammer.
+     * Add them to this method and they will be set when creating a new Manager.
+     * @namespace
+     */
+    cssProps: {
+        /**
+         * Disables text selection to improve the dragging gesture. Mainly for desktop browsers.
+         * @type {String}
+         * @default 'none'
+         */
+        userSelect: 'none',
+
+        /**
+         * Disable the Windows Phone grippers when pressing an element.
+         * @type {String}
+         * @default 'none'
+         */
+        touchSelect: 'none',
+
+        /**
+         * Disables the default callout shown when you touch and hold a touch target.
+         * On iOS, when you touch and hold a touch target such as a link, Safari displays
+         * a callout containing information about the link. This property allows you to disable that callout.
+         * @type {String}
+         * @default 'none'
+         */
+        touchCallout: 'none',
+
+        /**
+         * Specifies whether zooming is enabled. Used by IE10>
+         * @type {String}
+         * @default 'none'
+         */
+        contentZooming: 'none',
+
+        /**
+         * Specifies that an entire element should be draggable instead of its contents. Mainly for desktop browsers.
+         * @type {String}
+         * @default 'none'
+         */
+        userDrag: 'none',
+
+        /**
+         * Overrides the highlight color shown when the user taps a link or a JavaScript
+         * clickable element in iOS. This property obeys the alpha value, if specified.
+         * @type {String}
+         * @default 'rgba(0,0,0,0)'
+         */
+        tapHighlightColor: 'rgba(0,0,0,0)'
+    }
+};
+
+var STOP = 1;
+var FORCED_STOP = 2;
+
+/**
+ * Manager
+ * @param {HTMLElement} element
+ * @param {Object} [options]
+ * @constructor
+ */
+function Manager(element, options) {
+    this.options = assign({}, Hammer.defaults, options || {});
+
+    this.options.inputTarget = this.options.inputTarget || element;
+
+    this.handlers = {};
+    this.session = {};
+    this.recognizers = [];
+    this.oldCssProps = {};
+
+    this.element = element;
+    this.input = createInputInstance(this);
+    this.touchAction = new TouchAction(this, this.options.touchAction);
+
+    toggleCssProps(this, true);
+
+    each(this.options.recognizers, function(item) {
+        var recognizer = this.add(new (item[0])(item[1]));
+        item[2] && recognizer.recognizeWith(item[2]);
+        item[3] && recognizer.requireFailure(item[3]);
+    }, this);
+}
+
+Manager.prototype = {
+    /**
+     * set options
+     * @param {Object} options
+     * @returns {Manager}
+     */
+    set: function(options) {
+        assign(this.options, options);
+
+        // Options that need a little more setup
+        if (options.touchAction) {
+            this.touchAction.update();
+        }
+        if (options.inputTarget) {
+            // Clean up existing event listeners and reinitialize
+            this.input.destroy();
+            this.input.target = options.inputTarget;
+            this.input.init();
+        }
+        return this;
+    },
+
+    /**
+     * stop recognizing for this session.
+     * This session will be discarded, when a new [input]start event is fired.
+     * When forced, the recognizer cycle is stopped immediately.
+     * @param {Boolean} [force]
+     */
+    stop: function(force) {
+        this.session.stopped = force ? FORCED_STOP : STOP;
+    },
+
+    /**
+     * run the recognizers!
+     * called by the inputHandler function on every movement of the pointers (touches)
+     * it walks through all the recognizers and tries to detect the gesture that is being made
+     * @param {Object} inputData
+     */
+    recognize: function(inputData) {
+        var session = this.session;
+        if (session.stopped) {
+            return;
+        }
+
+        // run the touch-action polyfill
+        this.touchAction.preventDefaults(inputData);
+
+        var recognizer;
+        var recognizers = this.recognizers;
+
+        // this holds the recognizer that is being recognized.
+        // so the recognizer's state needs to be BEGAN, CHANGED, ENDED or RECOGNIZED
+        // if no recognizer is detecting a thing, it is set to `null`
+        var curRecognizer = session.curRecognizer;
+
+        // reset when the last recognizer is recognized
+        // or when we're in a new session
+        if (!curRecognizer || (curRecognizer && curRecognizer.state & STATE_RECOGNIZED)) {
+            curRecognizer = session.curRecognizer = null;
+        }
+
+        var i = 0;
+        while (i < recognizers.length) {
+            recognizer = recognizers[i];
+
+            // find out if we are allowed try to recognize the input for this one.
+            // 1.   allow if the session is NOT forced stopped (see the .stop() method)
+            // 2.   allow if we still haven't recognized a gesture in this session, or the this recognizer is the one
+            //      that is being recognized.
+            // 3.   allow if the recognizer is allowed to run simultaneous with the current recognized recognizer.
+            //      this can be setup with the `recognizeWith()` method on the recognizer.
+            if (session.stopped !== FORCED_STOP && ( // 1
+                    !curRecognizer || recognizer == curRecognizer || // 2
+                    recognizer.canRecognizeWith(curRecognizer))) { // 3
+                recognizer.recognize(inputData);
+            } else {
+                recognizer.reset();
+            }
+
+            // if the recognizer has been recognizing the input as a valid gesture, we want to store this one as the
+            // current active recognizer. but only if we don't already have an active recognizer
+            if (!curRecognizer && recognizer.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED)) {
+                curRecognizer = session.curRecognizer = recognizer;
+            }
+            i++;
+        }
+    },
+
+    /**
+     * get a recognizer by its event name.
+     * @param {Recognizer|String} recognizer
+     * @returns {Recognizer|Null}
+     */
+    get: function(recognizer) {
+        if (recognizer instanceof Recognizer) {
+            return recognizer;
+        }
+
+        var recognizers = this.recognizers;
+        for (var i = 0; i < recognizers.length; i++) {
+            if (recognizers[i].options.event == recognizer) {
+                return recognizers[i];
+            }
+        }
+        return null;
+    },
+
+    /**
+     * add a recognizer to the manager
+     * existing recognizers with the same event name will be removed
+     * @param {Recognizer} recognizer
+     * @returns {Recognizer|Manager}
+     */
+    add: function(recognizer) {
+        if (invokeArrayArg(recognizer, 'add', this)) {
+            return this;
+        }
+
+        // remove existing
+        var existing = this.get(recognizer.options.event);
+        if (existing) {
+            this.remove(existing);
+        }
+
+        this.recognizers.push(recognizer);
+        recognizer.manager = this;
+
+        this.touchAction.update();
+        return recognizer;
+    },
+
+    /**
+     * remove a recognizer by name or instance
+     * @param {Recognizer|String} recognizer
+     * @returns {Manager}
+     */
+    remove: function(recognizer) {
+        if (invokeArrayArg(recognizer, 'remove', this)) {
+            return this;
+        }
+
+        recognizer = this.get(recognizer);
+
+        // let's make sure this recognizer exists
+        if (recognizer) {
+            var recognizers = this.recognizers;
+            var index = inArray(recognizers, recognizer);
+
+            if (index !== -1) {
+                recognizers.splice(index, 1);
+                this.touchAction.update();
+            }
+        }
+
+        return this;
+    },
+
+    /**
+     * bind event
+     * @param {String} events
+     * @param {Function} handler
+     * @returns {EventEmitter} this
+     */
+    on: function(events, handler) {
+        if (events === undefined) {
+            return;
+        }
+        if (handler === undefined) {
+            return;
+        }
+
+        var handlers = this.handlers;
+        each(splitStr(events), function(event) {
+            handlers[event] = handlers[event] || [];
+            handlers[event].push(handler);
+        });
+        return this;
+    },
+
+    /**
+     * unbind event, leave emit blank to remove all handlers
+     * @param {String} events
+     * @param {Function} [handler]
+     * @returns {EventEmitter} this
+     */
+    off: function(events, handler) {
+        if (events === undefined) {
+            return;
+        }
+
+        var handlers = this.handlers;
+        each(splitStr(events), function(event) {
+            if (!handler) {
+                delete handlers[event];
+            } else {
+                handlers[event] && handlers[event].splice(inArray(handlers[event], handler), 1);
+            }
+        });
+        return this;
+    },
+
+    /**
+     * emit event to the listeners
+     * @param {String} event
+     * @param {Object} data
+     */
+    emit: function(event, data) {
+        // we also want to trigger dom events
+        if (this.options.domEvents) {
+            triggerDomEvent(event, data);
+        }
+
+        // no handlers, so skip it all
+        var handlers = this.handlers[event] && this.handlers[event].slice();
+        if (!handlers || !handlers.length) {
+            return;
+        }
+
+        data.type = event;
+        data.preventDefault = function() {
+            data.srcEvent.preventDefault();
+        };
+
+        var i = 0;
+        while (i < handlers.length) {
+            handlers[i](data);
+            i++;
+        }
+    },
+
+    /**
+     * destroy the manager and unbinds all events
+     * it doesn't unbind dom events, that is the user own responsibility
+     */
+    destroy: function() {
+        this.element && toggleCssProps(this, false);
+
+        this.handlers = {};
+        this.session = {};
+        this.input.destroy();
+        this.element = null;
+    }
+};
+
+/**
+ * add/remove the css properties as defined in manager.options.cssProps
+ * @param {Manager} manager
+ * @param {Boolean} add
+ */
+function toggleCssProps(manager, add) {
+    var element = manager.element;
+    if (!element.style) {
+        return;
+    }
+    var prop;
+    each(manager.options.cssProps, function(value, name) {
+        prop = prefixed(element.style, name);
+        if (add) {
+            manager.oldCssProps[prop] = element.style[prop];
+            element.style[prop] = value;
+        } else {
+            element.style[prop] = manager.oldCssProps[prop] || '';
+        }
+    });
+    if (!add) {
+        manager.oldCssProps = {};
+    }
+}
+
+/**
+ * trigger dom event
+ * @param {String} event
+ * @param {Object} data
+ */
+function triggerDomEvent(event, data) {
+    var gestureEvent = document.createEvent('Event');
+    gestureEvent.initEvent(event, true, true);
+    gestureEvent.gesture = data;
+    data.target.dispatchEvent(gestureEvent);
+}
+
+assign(Hammer, {
+    INPUT_START: INPUT_START,
+    INPUT_MOVE: INPUT_MOVE,
+    INPUT_END: INPUT_END,
+    INPUT_CANCEL: INPUT_CANCEL,
+
+    STATE_POSSIBLE: STATE_POSSIBLE,
+    STATE_BEGAN: STATE_BEGAN,
+    STATE_CHANGED: STATE_CHANGED,
+    STATE_ENDED: STATE_ENDED,
+    STATE_RECOGNIZED: STATE_RECOGNIZED,
+    STATE_CANCELLED: STATE_CANCELLED,
+    STATE_FAILED: STATE_FAILED,
+
+    DIRECTION_NONE: DIRECTION_NONE,
+    DIRECTION_LEFT: DIRECTION_LEFT,
+    DIRECTION_RIGHT: DIRECTION_RIGHT,
+    DIRECTION_UP: DIRECTION_UP,
+    DIRECTION_DOWN: DIRECTION_DOWN,
+    DIRECTION_HORIZONTAL: DIRECTION_HORIZONTAL,
+    DIRECTION_VERTICAL: DIRECTION_VERTICAL,
+    DIRECTION_ALL: DIRECTION_ALL,
+
+    Manager: Manager,
+    Input: Input,
+    TouchAction: TouchAction,
+
+    TouchInput: TouchInput,
+    MouseInput: MouseInput,
+    PointerEventInput: PointerEventInput,
+    TouchMouseInput: TouchMouseInput,
+    SingleTouchInput: SingleTouchInput,
+
+    Recognizer: Recognizer,
+    AttrRecognizer: AttrRecognizer,
+    Tap: TapRecognizer,
+    Pan: PanRecognizer,
+    Swipe: SwipeRecognizer,
+    Pinch: PinchRecognizer,
+    Rotate: RotateRecognizer,
+    Press: PressRecognizer,
+
+    on: addEventListeners,
+    off: removeEventListeners,
+    each: each,
+    merge: merge,
+    extend: extend,
+    assign: assign,
+    inherit: inherit,
+    bindFn: bindFn,
+    prefixed: prefixed
+});
+
+// this prevents errors when Hammer is loaded in the presence of an AMD
+//  style loader but by script tag, not by the loader.
+var freeGlobal = (typeof window !== 'undefined' ? window : (typeof self !== 'undefined' ? self : {})); // jshint ignore:line
+freeGlobal.Hammer = Hammer;
+
+if (true) {
+    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
+        return Hammer;
+    }).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+} else if (typeof module != 'undefined' && module.exports) {
+    module.exports = Hammer;
+} else {
+    window[exportName] = Hammer;
+}
+
+})(window, document, 'Hammer');
+
 
 /***/ })
 /******/ ]);

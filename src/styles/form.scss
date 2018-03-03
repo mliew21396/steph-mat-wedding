@@ -1,4 +1,4 @@
-input {
+finput {
   padding: 10px;
   width: 100%;
   font-size: 17px;
@@ -6,7 +6,6 @@ input {
   border: 1px solid #aaaaaa;
 }
 
-/* Mark input boxes that gets an error on validation: */
 input.invalid {
   background-color: #ffdddd;
 }
@@ -54,4 +53,10 @@ input.invalid {
 
 .loading-tab div {
   text-align: center;
+
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+  }
 }

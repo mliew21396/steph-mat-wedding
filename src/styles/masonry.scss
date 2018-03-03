@@ -1,20 +1,16 @@
 .gallery {
   margin: 0 auto;
-  width: 80%;
 
   .grid-side-wrapper,
   .grid-main-wrapper {
     display: inline-block;
   }
 
-<<<<<<< HEAD
-=======
   .grid-side-wrapper.col,
   .grid-main-wrapper.col {
     padding: 0;
   }
 
->>>>>>> fe791c652d84ea83ecb5bd85308508483b3a0614
   .grid-side-wrapper {
     text-align: right;
 

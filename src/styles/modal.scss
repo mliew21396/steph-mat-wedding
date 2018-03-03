@@ -35,6 +35,53 @@
     height: 100%;
     overflow: auto;
     padding: 20px;
+
+    .previous-control,
+    .next-control {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .previous-control:hover,
+    .next-control:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .next-control {
+      right: 9px;
+      border-radius: 3px 0 0 3px;
+      transform: translate(-50%, -50%);
+    }
+    
+    .previous-control {
+      transform: translate(-50%, -50%);
+    }
+
+    .slide-count {
+      color: white;
+      position: absolute;
+      right: 1em;
+      bottom: 1em;
+    }
+
+    .my-slides {
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+      }
+    }
   }
 
   .close-button {
@@ -69,3 +116,8 @@
 .closed {
   display: none;
 }
+
+#gallery-modal {
+  background: black;
+}
+

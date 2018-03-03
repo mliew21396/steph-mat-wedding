@@ -11,6 +11,7 @@ import stickyNav from './js/stickyNav.js';
 import linkScroll from './js/linkScroll.js';
 import modal from './js/modal.js';
 import form from './js/form.js';
+import galleryModal from './js/galleryModal.js';
 
 stickyNav();
 linkScroll();
@@ -18,3 +19,4 @@ loadImages();
 modal();
 form();
 masonry();
+galleryModal();

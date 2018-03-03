@@ -2,7 +2,7 @@ var imageConstants = {
   splashImage: {
     "imageFile":"Steph_Mat_Engagement_66.jpg",
     "parentSelector": '.splash',
-    "imageSizes": "(max-width: 500px) 100vw,(max-width: 2000px) 100vw, 100px"
+    "imageSizes": "(min-width: 2000px) 100vw"
   },
   splashArrow: {
     "imageFile":"white-arrow-down.png",
@@ -109,11 +109,113 @@ var imageConstants = {
     }
   },
   galleryMainImage: {
-    // "imageFile":"Steph_Mat_Engagement_99.jpg",
     "imageFile":"Steph_Mat_Engagement_90.jpg",
     "parentSelector": '.grid-main-wrapper',
-    "imageSizes": "(max-width: 360px) 100vw,(max-width: 1200px) 40vw, 650px",
+    "imageSizes": "(max-width: 360px) 40vw,(max-width: 1200px) 80vw, 100px",
     "className": "grid-main-item"
+  },
+  // galleryModalTriggerImage: {
+  //   "imageFile":"Steph_Mat_Engagement_90.jpg",
+  //   "parentSelector": '.gallery-trigger',
+  //   "imageSizes": "(max-width: 360px) 40vw,(max-width: 1200px) 80vw, 100px"
+  // },
+  galleryModalImages: {
+    modalImage1: {
+      "imageFile":"Steph_Mat_Engagement_88.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides "
+    },
+    modalImage2: {
+      "imageFile":"Steph_Mat_Engagement_89.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage3: {
+      "imageFile":"Steph_Mat_Engagement_90.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 360px) 100vw,(max-width: 1200px) 40vw, 650px",
+      "className": "my-slides"
+    },
+    modalImage4: {
+      "imageFile":"Steph_Mat_Engagement_91.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage5: {
+      "imageFile":"Steph_Mat_Engagement_92.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage6: {
+      "imageFile":"Steph_Mat_Engagement_93.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage7: {
+      "imageFile":"Steph_Mat_Engagement_94.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage8: {
+      "imageFile":"Steph_Mat_Engagement_95.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage9: {
+      "imageFile":"Steph_Mat_Engagement_96.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage10: {
+      "imageFile":"Steph_Mat_Engagement_97.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    },
+    modalImage11: {
+      "imageFile":"Steph_Mat_Engagement_98.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 360px) 100vw,(max-width: 1200px) 40vw, 650px",
+      "className": "my-slides"
+    },
+    modalImage12: {
+      "imageFile":"Steph_Mat_Engagement_99.jpg",
+      "parentSelector": '#gallery-modal .modal-guts',
+      // "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
+      "className": "my-slides"
+    }
   },
   registryImage: {
     "imageFile":"Steph_Mat_Engagement_16.jpg",

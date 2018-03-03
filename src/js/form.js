@@ -13,7 +13,6 @@ function form() {
   setup();
 
   function setup() {
-    console.log('setup');
     const loadingSpinner = require("../img/" + "dog_spinner.gif");
     loadingImage.src = loadingSpinner;
 
@@ -39,7 +38,9 @@ function form() {
       getPersonByName(firstName, lastName);
 
       loadingTab.style.display = "block";
+      // loadingTab.classList.toggle('closed');
       nameTab.style.display = "none";
+      // nameTab.classList.toggle('closed');
       event.preventDefault();
     });
 
@@ -59,7 +60,6 @@ function form() {
   }
 
   function getPersonByName(firstName, lastName) {
-    console.log('getPersonByName');
     var urlBase = 'https://dr63u9frob.execute-api.us-east-1.amazonaws.com/prod/persons';
     var fullUrl = urlBase +
                   "?firstname=" + firstName.value +
@@ -78,13 +78,11 @@ function form() {
         }
       })
       .catch(function (error) {
-        console.log(error);
         renderRSVPsError();
       });
   }
 
   function renderAlreadyRsvpedDisplay() {
-    console.log('renderAlreadyRsvpedDisplay');
     var titleMessage = document.createElement('p');
     var closeButtonWrapper = document.createElement('div');
     var closeButton = document.createElement('button');
@@ -92,15 +90,19 @@ function form() {
     var modalCover = document.querySelector("#modal-cover");
 
     loadingTab.style.display = 'none';
+    // loadingTab.classList.toggle('closed');
     titleMessage.textContent += "You've already RSVPed. If you need to reach out, contact us at stephmat2018@gmail.com.";
     rsvpsTab.style.display = 'block';
+    // rsvpsTab.classList.toggle('closed');
     closeButtonWrapper.appendChild(closeButton);
     closeButtonWrapper.className = 'already-rsvped-button';
     closeButton.innerHTML = "Close";
 
     closeButton.addEventListener('click', function () {
       nameTab.style.display = "block";
+      // nameTab.classList.toggle('closed');
       rsvpsTab.style.display = "none";
+      // rsvpsTab.classList.toggle('closed');
 
       modal.classList.toggle("closed");
       modalCover.classList.toggle("closed");
@@ -112,44 +114,46 @@ function form() {
   }
 
   function getPartyByPerson(partyId) {
-    console.log('getPartyByPerson');
     var urlBase = 'https://dr63u9frob.execute-api.us-east-1.amazonaws.com/prod/parties/';
     var fullUrl = urlBase + partyId;
 
     axios.get(fullUrl)
       .then(function (response) {
-        console.log("getPartyByPerson success");
         loadingTab.style.display = "none";
+        // loadingTab.classList.toggle('closed');
         rsvpsTab.style.display = "block";
+        // rsvpsTab.classList.toggle('closed');
         renderRSVPs(response);
       })
       .catch(function (error) {
-        console.log("getPartyByPerson error");
-        console.log(error);
         renderRSVPsError();
       });
   }
 
   function isPartyValid(response) {
-    return !(response.data.length == 0);
+    var isEmpty = (response.data.length == 0);
+    return !isEmpty;
   }
 
   function renderTryAgainDisplay() {
-    console.log("renderTryAgainDisplay");
     var titleMessage = document.createElement('p');
     var tryAgainButtonWrapper = document.createElement('div');
     var tryAgainButton = document.createElement('button');
 
     loadingTab.style.display = "none";
+    // loadingTab.classList.toggle('closed');
     titleMessage.textContent += "No party found with entered name. Did you misspell? If not, contact us at stephmat2018@gmail.com";
     rsvpsTab.style.display = "block";
+    // rsvpsTab.classList.toggle('closed');
     tryAgainButtonWrapper.appendChild(tryAgainButton);
     tryAgainButtonWrapper.className = "try-again-button";
     tryAgainButton.innerHTML = "Search Again";
 
     tryAgainButton.addEventListener('click', function () {
       nameTab.style.display = "block";
+      // nameTab.classList.toggle('closed');
       rsvpsTab.style.display = "none";
+      // rsvpsTab.classList.toggle('closed');
       while (rsvpsForm.firstChild) {
         rsvpsForm.removeChild(rsvpsForm.firstChild);
       }
@@ -160,7 +164,6 @@ function form() {
   }
 
   function renderRSVPs(response) {
-    console.log("renderRSVPs");
     if (response.data.party.length != 0) {
       var title = document.createElement('h2');
       title.textContent += "Party of " + parseInt(response.data.party.length);
@@ -203,7 +206,6 @@ function form() {
   }
 
   function createRsvpValidationListener(formInput) {
-    console.log('createRsvpValidationListener');
     formInput.addEventListener('change', function(event) {
       if (isRsvpValid()) {
         enableSubmitButton();
@@ -214,7 +216,6 @@ function form() {
   }
 
   function isRsvpValid() {
-    console.log('isRsvpValid');
     var rsvpInputFieldWrappers = rsvpsForm.querySelectorAll('.row:not(.closed)');
 
     for (var i=0; i < rsvpInputFieldWrappers.length; i++) {
@@ -226,7 +227,6 @@ function form() {
   }
 
   function isRsvpInputFieldWrapperValid(rsvpInputFieldWrapper) {
-    console.log('isRsvpInputFieldWrapperValid');
     var rsvpInputFields = rsvpInputFieldWrapper.querySelectorAll('.input-field');
 
     for (var j=0; j < rsvpInputFields.length; j++) {
@@ -238,7 +238,6 @@ function form() {
   }
 
   function isRsvpInputFieldValid(rsvpInputField) {
-    console.log('isRsvpInputFieldValid');
     var rsvpInputs = rsvpInputField.querySelectorAll('input');
 
     for (var k=0; k < rsvpInputs.length; k++) {
@@ -258,17 +257,13 @@ function form() {
   }
 
   function postPersonRSVP(person) {
-    console.log('postPersonRSVP');
     var urlBase = 'https://dr63u9frob.execute-api.us-east-1.amazonaws.com/prod/persons/';
     var fullUrl = urlBase + person.person_id;
 
     axios.post(fullUrl, createPostBody(person))
     .then(function (response) {
-      console.log("success post");
     })
     .catch(function (error) {
-      console.log("error post");
-      console.log(error);
     });
   }
 
@@ -295,19 +290,19 @@ function form() {
   }
 
   function renderPersonRSVPInputs(person) {
-    console.log("renderPersonRSVPInputs");
     var div = document.createElement('div');
     var rsvpTemplate = require("../templates/rsvp.handlebars");
     var context = {
                     firstname: toTitleCase(person.first_name),
                     lastname: toTitleCase(person.last_name),
-                    personid: person.person_id
+                    personid: person.person_id,
+                    child: person.child
                   };
 
     div.innerHTML = rsvpTemplate(context);
     rsvpsForm.appendChild(div);
 
-    createPersonRsvpInputsListeners(person)
+    createPersonRsvpInputsListeners(person);
   }
 
   function createPersonRsvpInputsListeners(person) {
@@ -335,7 +330,9 @@ function form() {
     errorMessage.textContent += "There was a connection error. Please try again later.";
     rsvpsTab.appendChild(errorMessage);
     loadingTab.style.display = "none";
+    // loadingTab.classList.toggle('closed');
     rsvpsTab.style.display = "block";
+    // rsvpsTab.classList.toggle('closed');
   }
 }
 

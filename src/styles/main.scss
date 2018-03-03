@@ -15,28 +15,32 @@ body {
   src:  url('../fonts/Proxima-Nova-Regular.ttf') format('truetype')
 }
 
-/*@font-face {
-  font-family: "Roboto";
-  src:  url('../fonts/Roboto-Regular.ttf') format('truetype')
-}*/
-
 h1,h2,h3 {
     font-family: 'Sacramento';
 }
 
-p,a {
-    font-family:'Roboto'
+p,
+a {
+    font-family:'Roboto';
 }
 
+p {
+    font-size: 19px
+}
 
 .splash {
     position: relative;
     height: 100%;
     overflow: hidden;
     text-align: center;
+    background: url('../img/Steph_Mat_Engagement_66.jpg?normal') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
-    .splash-img {
-        width: 100%;
+    img {
+        height: 100%;
     }
 
     .down-arrow {
@@ -61,11 +65,7 @@ nav {
 
     a {
         text-decoration: none;
-<<<<<<< HEAD:src/styles/main.scss
-        margin: 0 1em 0 1em;
-=======
         margin: 0 0 0 1em;
->>>>>>> fe791c652d84ea83ecb5bd85308508483b3a0614:src/styles/main.scss
     }
 
     a:link{
@@ -112,75 +112,46 @@ main {
     flex-direction: column;
 
     section {
-<<<<<<< HEAD:src/styles/main.scss
-        // padding: 5em;
-        width: 80%;
-=======
-        padding: 5em;
-        /*width: 80%;*/
-        /*margin: 0 auto;*/
->>>>>>> fe791c652d84ea83ecb5bd85308508483b3a0614:src/styles/main.scss
+        padding: 5em 0;
     }
-}
 
-main.fixed-content {
-    margin-top: 5em;
+    .travel-data {
+        text-align: left;
+    }
+
+    #schedule {
+        h2,
+        h3 {
+            text-align: left;
+        }
+
+        .day {
+            text-align: left;
+            padding-bottom: 2em;
+        }
+
+        .time-container {
+            text-align: right;
+        }
+
+        .event {
+            text-align: left;
+        }
+
+        #ceremony-reception-map {
+            position: relative;
+            padding-bottom: 40%;
+            height: 0;
+            overflow: hidden;
+        }
+    }
 }
 
 main > * {
     text-align: center;
 }
 
-.rule {
-    width: 80%;
-    border-bottom: 1px solid #ccc;
-    margin: 0 auto 15px auto;
-}
 
-.day {
-    text-align: left;
-    padding-bottom: 2em;
-}
 
-.time-container {
-    text-align: right;
-}
 
-.event {
-    text-align: left;
-}
 
-#schedule h2,
-h3 {
-    text-align: left;
-}
-
-#ceremony-reception-map {
-    position: relative;
-    padding-bottom: 40%; // This is the aspect ratio
-    height: 0;
-    overflow: hidden;
-}
-
-/*.travel {
-    margin: 0 15%;
-}*/
-
-.travel-data {
-    text-align: left;
-}
-
-#rsvpModal {
-    display: block;
-    position: absolute;
-}
-
-.show {
-    display: block;
-}
-
-/*Pinterest-like Responsive Fluid Grid Layout*/
-#photos img {
-    /*width: 100px;*/
-
-}

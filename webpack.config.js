@@ -1,6 +1,8 @@
 var path = require('path');
 var ImageminPlugin = require('imagemin-webpack-plugin').default;
+var ImageminMozjpeg = require('imagemin-mozjpeg');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
   entry: './src/app.js',
@@ -16,13 +18,60 @@ module.exports = {
         use: 'jshint-loader'
       },
       {
-        test: /\.(jpe?g|png)$/i,
-        loader: 'responsive-loader',
-        options: {
-          sizes: [100, 300, 600, 1200, 2000],
-          adapter: require('responsive-loader/sharp')
-        }
+        test: /\.(png|jpg)$/i,
+          oneOf: [
+          {
+            resourceQuery: /normal/,
+            use: [
+              'file-loader?name=img/[name].[ext]&publicPath=./',
+              {
+                loader: 'image-webpack-loader',
+                options: {
+                  mozjpeg: {
+                    progressive: true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            // resourceQuery: /inline/, // foo.css?inline
+            loader: 'responsive-loader',
+            options: {
+              name: 'img/responsive/[name]-[width].[ext]',
+              sizes: [300, 600, 1200, 2000],
+              // sizes: [100, 2000],
+              adapter: require('responsive-loader/sharp')
+            }
+          },
+        ],
       },
+      // {
+      //   test: /\.(png|jpg)$/i,
+      //   resourceQuery: /responsive/,
+      //   loader: 'responsive-loader',
+      //   options: {
+      //     name: 'img/responsive/[name]-[width].[ext]',
+      //     sizes: [100, 300, 600, 1200, 2000],
+      //     adapter: require('responsive-loader/sharp'),
+      //   }
+      // },
+      // {
+      //   test: /Steph_Mat_Engagement_66\.jpg$/,
+      //   use: [
+      //     'file-loader',
+      //     {
+      //       loader: 'image-webpack-loader',
+      //       options: {
+      //         mozjpeg: {
+      //           progressive: true,
+      //           quality: 65
+      //         },
+      //         name: '[name].[ext]'
+      //       }  
+      //     }
+      //   ]
+      // },
       {
         test: /\.(gif)$/i,
         use: [
@@ -32,11 +81,35 @@ module.exports = {
             options: {
               gifsicle: {
                 interlaced: false,
-              }
+              },
+              name: 'img/[name].[ext]'
+              // publicPath: 'img/'
             }
           },
         ],
       },
+      // {test: /Steph_Mat_Engagement_66\.(jpeg)$/i, loader: "file-loader?name=/public/icons/[name].[ext]"},
+      // {
+      //   test: /Steph_Mat_Engagement_66\.(jpg)$/,
+      //   loader: 'url-loader'
+      // },
+      // {
+      //   test: /Steph_Mat_Engagement_66\.jpg$/,
+      //   use: [
+      //     'file-loader',
+      //     {
+      //       loader: 'image-webpack-loader',
+      //       options: {
+      //         mozjpeg: {
+      //           progressive: true,
+      //           quality: 65
+      //         },
+      //         name: '[name].[ext]'
+      //       }  
+      //     }
+      //   ]
+      // },
+      // loader: "file-loader?name=img/img-[hash:6].[ext]"
       // {
       //    test:/\.(s*)css$/,
       //    loaders:['style-loader','css-loader?url=false', 'sass-loader?sourceMap']
@@ -53,13 +126,20 @@ module.exports = {
         include: [
           path.resolve(__dirname, "./src/styles")
         ],
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           publicPath: '../../',
           use: [
             {
-              loader: 'css-loader'
+              loader: 'css-loader',
+              options: {
+                  minimize: true
+              }
             }, {
-              loader: 'sass-loader'
+              loader: 'sass-loader',
+              options: {
+                  minimize: true
+              }
             }
           ]
         })
@@ -70,11 +150,9 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf)(\?[a-z0-9=.]+)?$/,
+        exclude: /node_modules/,
         loader: 'url-loader?limit=100000'
       },
-
-
-
       {
         test: /\.handlebars$/,
         loader: "handlebars-loader",
@@ -83,41 +161,33 @@ module.exports = {
         }
       }
       // { test: /\.handlebars$/, loader: __dirname + "/../../" }
-
-
-
-      // {
-      //     test: /\.scss$/,
-      //     use: [{
-      //         loader: "style-loader" // creates style nodes from JS strings
-      //     }, {
-      //         loader: "css-loader" // translates CSS into CommonJS
-      //     }, {
-      //         loader: "sass-loader" // compiles Sass to CSS
-      //     }]
-      // }
-    // ],
-    // loaders: [
-    //   {
-    //     test: /\.css$/,
-    //     use: [
-    //       {
-    //         loader: 'style-loader'
-    //       }, {
-    //         loader: 'css-loader'
-    //       }
-    //     ]
-    //   }
     ]
   },
   plugins: [
     // Make sure that the plugin is after any plugins that add images
     new ImageminPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 100,
+          progressive: true
+        })
+      ]
+      // test: /\.(png|jpg|gif)$/
+      // jpegtran: {
+      //   quality: '95-100'
+      // }
+      // plugins: [
+      //   imageminMozjpeg({
+      //     quality: 100,
+      //     progressive: true
+      //   })
+      // ]
       // disable: process.env.NODE_ENV !== 'production', // Disable during development
-      pngquant: {
-        quality: '95-100'
-      }
+      // pngquant: {
+      //   quality: '95-100'
+      // }
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    new HardSourceWebpackPlugin()
   ]
 };

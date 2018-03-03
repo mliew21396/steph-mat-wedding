@@ -16,21 +16,28 @@
 <div class="entree-{{personid}} row closed">
   <div class="input-field s12">
     <p>Select your Entree</p>
-    <div class="radio-wrapper">
-      <input name="entree-{{personid}}" type="radio" id="option3-{{personid}}" />
-      <label for="option3-{{personid}}">Steak</label>
-    </div>
-    <div class="radio-wrapper">
-      <input name="entree-{{personid}}" type="radio" id="option4-{{personid}}" />
-      <label for="option4-{{personid}}">Salmon</label>
-    </div>
-    <div class="radio-wrapper">
-      <input name="entree-{{personid}}" type="radio" id="option5-{{personid}}"  />
-      <label for="option5-{{personid}}">Chicken</label>
-    </div>
-    <div class="radio-wrapper">
-      <input name="entree-{{personid}}" type="radio" id="option6-{{personid}}" />
-      <label for="option6-{{personid}}">Vegetarian</label>
-    </div>
+    {{#if child}}
+      <div class="radio-wrapper">
+        <input name="entree-{{personid}}" type="radio" id="option3-{{personid}}" checked="checked" />
+        <label for="option3-{{personid}}">Chicken Fingers</label>
+      </div>
+    {{else}}
+      <div class="radio-wrapper">
+        <input name="entree-{{personid}}" type="radio" id="option3-{{personid}}" />
+        <label for="option3-{{personid}}">Steak</label>
+      </div>
+      <div class="radio-wrapper">
+        <input name="entree-{{personid}}" type="radio" id="option4-{{personid}}" />
+        <label for="option4-{{personid}}">Salmon</label>
+      </div>
+      <div class="radio-wrapper">
+        <input name="entree-{{personid}}" type="radio" id="option5-{{personid}}"  />
+        <label for="option5-{{personid}}">Chicken</label>
+      </div>
+      <div class="radio-wrapper">
+        <input name="entree-{{personid}}" type="radio" id="option6-{{personid}}" />
+        <label for="option6-{{personid}}">Vegetarian</label>
+      </div>
+    {{/if}}
   </div>
 </div>
