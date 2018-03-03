@@ -5561,6 +5561,7 @@ function form() {
                     child: person.child
                   };
 
+    div.className = 'person';
     div.innerHTML = rsvpTemplate(context);
     rsvpsForm.appendChild(div);
 
@@ -6543,11 +6544,11 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<b>"
+  return "<h5><b>"
     + alias4(((helper = (helper = helpers.firstname || (depth0 != null ? depth0.firstname : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"firstname","hash":{},"data":data}) : helper)))
     + " "
     + alias4(((helper = (helper = helpers.lastname || (depth0 != null ? depth0.lastname : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"lastname","hash":{},"data":data}) : helper)))
-    + "</b>\n<input type=hidden name=\"personid\" value=\""
+    + "</b></h5>\n<input type=hidden name=\"personid\" value=\""
     + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))
     + "\">\n<div class=\"attending-"
     + alias4(((helper = (helper = helpers.personid || (depth0 != null ? depth0.personid : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"personid","hash":{},"data":data}) : helper)))

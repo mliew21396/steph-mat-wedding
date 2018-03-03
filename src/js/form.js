@@ -299,6 +299,7 @@ function form() {
                     child: person.child
                   };
 
+    div.className = 'person';
     div.innerHTML = rsvpTemplate(context);
     rsvpsForm.appendChild(div);
 
