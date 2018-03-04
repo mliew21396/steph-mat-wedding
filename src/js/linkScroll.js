@@ -6,6 +6,8 @@ function linkScroll () {
   var storyTarget= document.getElementById("story");
   var weddingDetailSources = document.querySelectorAll("a[href='#schedule']");
   var weddingDetailsTarget = document.getElementById("schedule");
+  var travelSources = document.querySelectorAll("a[href='#travel']");
+  var travelTarget = document.getElementById("travel");
   var photoSources = document.querySelectorAll("a[href='#photos']");
   var photosTarget = document.getElementById("photos");
   var registrySources = document.querySelectorAll("a[href='#registry']");
@@ -23,6 +25,10 @@ function linkScroll () {
 
   weddingDetailSources[0].addEventListener('click', function(e) {
     scrollHandler(weddingDetailsTarget);
+  });
+
+  travelSources[0].addEventListener('click', function(event) {
+    scrollHandler(travelTarget);
   });
 
   photoSources[0].addEventListener('click', function(event) {
