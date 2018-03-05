@@ -1548,9 +1548,6 @@ function loadImages() {
     createMasonryRenditions(modalImageFile, modalParentSelector, modalImageSizes, modalClassName, modalMainImageSizes);
   }
 
-  // Registry
-  createRenditions(__WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].registryImage.imageFile, __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].registryImage.parentSelector, __WEBPACK_IMPORTED_MODULE_1__imageConstants_js__["a" /* default */].registryImage.imageSizes);
-
   function createRenditions(imageFile, parentSelector, imageSizes, className) {
     const responsiveImage = __webpack_require__(4)("./" + imageFile);
     var parentElement = document.querySelector(parentSelector);
@@ -2521,11 +2518,6 @@ var imageConstants = {
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     }
-  },
-  registryImage: {
-    "imageFile":"Steph_Mat_Engagement_16.jpg",
-    "parentSelector": 'section#registry a',
-    "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px"
   }
 };
 

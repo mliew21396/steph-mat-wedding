@@ -216,11 +216,6 @@ var imageConstants = {
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     }
-  },
-  registryImage: {
-    "imageFile":"Steph_Mat_Engagement_16.jpg",
-    "parentSelector": 'section#registry a',
-    "imageSizes": "(max-width: 200px) 50vw,(max-width: 480px) 38vw, 100px"
   }
 };
 

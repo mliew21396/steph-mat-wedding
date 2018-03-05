@@ -28,9 +28,6 @@ function loadImages() {
     createMasonryRenditions(modalImageFile, modalParentSelector, modalImageSizes, modalClassName, modalMainImageSizes);
   }
 
-  // Registry
-  createRenditions(imageConstants.registryImage.imageFile, imageConstants.registryImage.parentSelector, imageConstants.registryImage.imageSizes);
-
   function createRenditions(imageFile, parentSelector, imageSizes, className) {
     const responsiveImage = require("../img/responsive/" + imageFile);
     var parentElement = document.querySelector(parentSelector);
