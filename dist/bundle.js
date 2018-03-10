@@ -1312,8 +1312,8 @@ module.exports = Cancel;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_materialize_min_css__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_materialize_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__styles_materialize_min_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_materialize_css_dist_css_materialize_min_css__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_materialize_css_dist_css_materialize_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_materialize_css_dist_css_materialize_min_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_main_scss__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_main_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_main_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_modal_scss__ = __webpack_require__(14);
@@ -1333,6 +1333,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__js_modal_js__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__js_form_js__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__js_galleryModal_js__ = __webpack_require__(69);
+// import './styles/materialize.min.css';
+// import 'materialize-css';
+// require('materialize-css/dist/css/materialize.min.css');
 
 
 
@@ -5200,6 +5203,7 @@ function modal() {
   var modalCover = document.querySelector("#modal-cover");
   var closeButton = document.querySelector("#close-button");
   var openButton = document.querySelector("#open-button");
+  var primaryInput = document.querySelector(".primary-input");
   var galleryTrigger = document.querySelector(".gallery-trigger");
   var nameTab = document.querySelector(".name-tab");
   var rsvpsTab = document.querySelector(".rsvp-tab");
@@ -5219,6 +5223,7 @@ function modal() {
     modal.classList.toggle("closed");
     modalCover.classList.toggle("closed");
     body.style.overflow = "hidden";
+    primaryInput.focus();
   });
 
   galleryTrigger.addEventListener("click", function() {
@@ -8047,7 +8052,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hammerjs__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hammerjs__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hammerjs__);
 
 
@@ -8059,7 +8064,7 @@ function galleryModal() {
 
 	function setup() {
 		bindListeners();
-		showSlides(slideIndex);
+		showSlide(slideIndex);
 	}
 
 	function bindListeners() {
@@ -8070,31 +8075,28 @@ function galleryModal() {
 			var mc = new Hammer(galleryImages[i]);
 			mc.add( new Hammer.Swipe({ velocity: 0.3, threshold: 1000 }) );
 
-			mc.on('panleft panright tap click', function(event) {
-				if (event.type == 'panleft' || event.type == 'tap' || event.type == 'click') {
-					plusSlides(1);
-				} else if (event.type == 'panright') {
-					plusSlides(-1);
-				}
-			});
+			mc.on('panleft panright tap click', changeSlide);
 		}
 
-		nextControl.addEventListener('click', function() {
-			plusSlides(1);
-		});
+		nextControl.addEventListener('click', renderNewSlide(1));
 
-		previousControl.addEventListener('click', function() {
-			plusSlides(-1);
-		});
+		previousControl.addEventListener('click', renderNewSlide(-1));
 	}
 
-	function plusSlides(newSlideIndex) {
-		showSlides(slideIndex += newSlideIndex);
+	function changeSlide(event) {
+		if (event.type == 'panleft' || event.type == 'tap' || event.type == 'click') {
+			renderNewSlide(1);
+		} else if (event.type == 'panright') {
+			renderNewSlide(-1);
+		}
+	}
+
+	function renderNewSlide(newSlideIndex) {
+		showSlide(slideIndex += newSlideIndex);
 	}
 	
 
-	function showSlides(newSlideIndex) {
-		var i;
+	function showSlide(newSlideIndex) {
 		var slides = document.getElementsByClassName("my-slides");
 
 		if (newSlideIndex > slides.length) {
@@ -8103,11 +8105,9 @@ function galleryModal() {
 		if (newSlideIndex < 1) {
 			slideIndex = slides.length;
 		}
-		for (i = 0; i < slides.length; i++) {
-			// slides[i].style.display = "none";
+		for (var i = 0; i < slides.length; i++) {
 			slides[i].classList.add("closed");
 		}
-		// slides[slideIndex-1].style.display = "block";
 		updateSlideCount(slideIndex, slides.length);
 		slides[slideIndex-1].classList.toggle("closed");
 	}
@@ -8122,32 +8122,7 @@ function galleryModal() {
 /* harmony default export */ __webpack_exports__["a"] = (galleryModal);
 
 /***/ }),
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */,
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */,
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */,
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*! Hammer.JS - v2.0.7 - 2016-04-22

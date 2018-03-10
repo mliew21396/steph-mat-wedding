@@ -8,7 +8,7 @@ function galleryModal() {
 
 	function setup() {
 		bindListeners();
-		showSlides(slideIndex);
+		showSlide(slideIndex);
 	}
 
 	function bindListeners() {
@@ -19,31 +19,28 @@ function galleryModal() {
 			var mc = new Hammer(galleryImages[i]);
 			mc.add( new Hammer.Swipe({ velocity: 0.3, threshold: 1000 }) );
 
-			mc.on('panleft panright tap click', function(event) {
-				if (event.type == 'panleft' || event.type == 'tap' || event.type == 'click') {
-					plusSlides(1);
-				} else if (event.type == 'panright') {
-					plusSlides(-1);
-				}
-			});
+			mc.on('panleft panright tap click', changeSlide);
 		}
 
-		nextControl.addEventListener('click', function() {
-			plusSlides(1);
-		});
+		nextControl.addEventListener('click', renderNewSlide(1));
 
-		previousControl.addEventListener('click', function() {
-			plusSlides(-1);
-		});
+		previousControl.addEventListener('click', renderNewSlide(-1));
 	}
 
-	function plusSlides(newSlideIndex) {
-		showSlides(slideIndex += newSlideIndex);
+	function changeSlide(event) {
+		if (event.type == 'panleft' || event.type == 'tap' || event.type == 'click') {
+			renderNewSlide(1);
+		} else if (event.type == 'panright') {
+			renderNewSlide(-1);
+		}
+	}
+
+	function renderNewSlide(newSlideIndex) {
+		showSlide(slideIndex += newSlideIndex);
 	}
 	
 
-	function showSlides(newSlideIndex) {
-		var i;
+	function showSlide(newSlideIndex) {
 		var slides = document.getElementsByClassName("my-slides");
 
 		if (newSlideIndex > slides.length) {
@@ -52,11 +49,9 @@ function galleryModal() {
 		if (newSlideIndex < 1) {
 			slideIndex = slides.length;
 		}
-		for (i = 0; i < slides.length; i++) {
-			// slides[i].style.display = "none";
+		for (var i = 0; i < slides.length; i++) {
 			slides[i].classList.add("closed");
 		}
-		// slides[slideIndex-1].style.display = "block";
 		updateSlideCount(slideIndex, slides.length);
 		slides[slideIndex-1].classList.toggle("closed");
 	}

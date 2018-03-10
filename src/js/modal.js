@@ -6,6 +6,7 @@ function modal() {
   var modalCover = document.querySelector("#modal-cover");
   var closeButton = document.querySelector("#close-button");
   var openButton = document.querySelector("#open-button");
+  var primaryInput = document.querySelector(".primary-input");
   var galleryTrigger = document.querySelector(".gallery-trigger");
   var nameTab = document.querySelector(".name-tab");
   var rsvpsTab = document.querySelector(".rsvp-tab");
@@ -25,6 +26,7 @@ function modal() {
     modal.classList.toggle("closed");
     modalCover.classList.toggle("closed");
     body.style.overflow = "hidden";
+    primaryInput.focus();
   });
 
   galleryTrigger.addEventListener("click", function() {
