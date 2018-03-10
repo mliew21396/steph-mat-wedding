@@ -1,6 +1,3 @@
-// import './styles/materialize.min.css';
-// import 'materialize-css';
-// require('materialize-css/dist/css/materialize.min.css');
 import 'materialize-css/dist/css/materialize.min.css';
 import './styles/main.scss';
 import './styles/modal.scss';

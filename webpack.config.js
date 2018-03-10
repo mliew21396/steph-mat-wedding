@@ -5,6 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/app.js',
   output: {
     filename: 'bundle.js',
@@ -12,10 +13,18 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.js$/, // Run the loader on all .js files
+      //   exclude: /node_modules/, // ignore all files in the node_modules folder
+      //   use: 'jshint-loader'
+      // },
       {
-        test: /\.js$/, // Run the loader on all .js files
-        exclude: /node_modules/, // ignore all files in the node_modules folder
-        use: 'jshint-loader'
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          // eslint options (if necessary)
+        }
       },
       {
         test: /\.(png|jpg)$/i,
@@ -63,7 +72,6 @@ module.exports = {
         test: /\.(s*)css$/,
         use: ExtractTextPlugin.extract({
           publicPath: '../../',
-          // use: ['css-loader', 'sass-loader']
           use: [
             {
               loader: 'css-loader',
@@ -81,7 +89,16 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf)(\?[a-z0-9=.]+)?$/,
-        loader: 'url-loader?limit=100000'
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              publicPath: './',
+              limit: 8192,
+              name: "./fonts/[hash].[ext]",
+            }
+          }
+        ]
       },
       {
         test: /\.handlebars$/,

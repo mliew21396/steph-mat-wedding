@@ -12,26 +12,25 @@
     "add": "^2.0.6",
     "axios": "^0.17.1",
     "css-loader": "^0.28.9",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "eslint": "^4.18.2",
+    "eslint-loader": "^2.0.0",
     "file-loader": "^1.1.6",
     "hammerjs": "^2.0.8",
     "handlebars": "^4.0.11",
-    "handlebars-loader": "^1.6.0",
-    "hard-source-webpack-plugin": "^0.5.18",
+    "handlebars-loader": "github:Waavi/handlebars-loader",
+    "hard-source-webpack-plugin": "^0.6",
     "image-webpack-loader": "^4.0.0",
     "imagemin-webpack-plugin": "^2.0.0",
     "imagesloaded": "^4.1.4",
-    "jshint": "^2.9.5",
-    "jshint-loader": "^0.8.4",
     "lazysizes": "^4.0.1",
     "masonry-layout": "^4.2.1",
     "materialize-css": "^0.100.2",
     "node-sass": "^4.7.2",
     "responsive-loader": "^1.1.0",
     "sass-loader": "^6.0.6",
-    "sharp": "^0.19.0",
+    "sharp": "^0.20.0",
     "url-loader": "^0.6.2",
-    "webpack": "^3.10.0",
+    "webpack": "^4.1.1",
     "webpack-bundle-analyzer": "^2.10.0",
     "yarn": "^1.3.2"
   },
@@ -44,5 +43,9 @@
   "bugs": {
     "url": "https://github.com/mliew21396/steph-mat-wedding/issues"
   },
-  "homepage": "https://github.com/mliew21396/steph-mat-wedding#readme"
+  "homepage": "https://github.com/mliew21396/steph-mat-wedding#readme",
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "webpack-cli": "^2.0.11"
+  }
 }
