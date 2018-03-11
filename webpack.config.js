@@ -13,11 +13,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.js$/, // Run the loader on all .js files
-      //   exclude: /node_modules/, // ignore all files in the node_modules folder
-      //   use: 'jshint-loader'
-      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -69,7 +64,21 @@ module.exports = {
         ],
       },
       {
-        test: /\.(s*)css$/,
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          publicPath: '../../',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                  minimize: true
+              }
+            }
+          ]
+        })
+      },
+      {
+        test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           publicPath: '../../',
           use: [
