@@ -25,6 +25,7 @@
     "lazysizes": "^4.0.1",
     "masonry-layout": "^4.2.1",
     "materialize-css": "^0.100.2",
+    "mini-css-extract-plugin": "^0.2.0",
     "node-sass": "^4.7.2",
     "responsive-loader": "^1.1.0",
     "sass-loader": "^6.0.6",

@@ -18,8 +18,24 @@
       width: 12vw;
       display: block;
       max-height: 64vh;
-      overflow: overlay;
+      // overflow: overlay;
       box-shadow: inset 0 -25px 50px -35px rgba(0, 0, 0, 1);
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        /* IE10+ CSS styles go here */
+        overflow: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+      }
+
+      @supports (-ms-accelerator:true) {
+        /* IE Edge 12+ CSS styles go here */ 
+        overflow: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio:0) {
+        overflow: overlay;
+      }
 
       .grid-sizer,
       .grid-item {

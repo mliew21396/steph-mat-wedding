@@ -1,7 +1,8 @@
 var path = require('path');
 var ImageminPlugin = require('imagemin-webpack-plugin').default;
 var ImageminMozjpeg = require('imagemin-mozjpeg');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+// var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
@@ -63,38 +64,75 @@ module.exports = {
           },
         ],
       },
+      // {
+      //   test: /\.css$/,
+      //   use: ExtractTextPlugin.extract({
+      //     publicPath: '../../',
+      //     use: [
+      //       {
+      //         loader: 'css-loader',
+      //         options: {
+      //             minimize: true
+      //         }
+      //       }
+      //     ]
+      //   })
+      // },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          publicPath: '../../',
-          use: [
+        use: [
+            MiniCssExtractPlugin.loader,
             {
-              loader: 'css-loader',
-              options: {
-                  minimize: true
-              }
-            }
-          ]
-        })
+                loader: 'css-loader',
+                options: {
+                    // minimize: true
+                }
+            },
+        ]
       },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     "css-loader"
+      //   ]
+      // },
+      // {
+      //   test: /\.scss$/,
+      //   use: ExtractTextPlugin.extract({
+      //     publicPath: '../../',
+      //     use: [
+      //       {
+      //         loader: 'css-loader',
+      //         options: {
+      //             minimize: true
+      //         }
+      //       }, {
+      //         loader: 'sass-loader',
+      //         options: {
+      //             minimize: true
+      //         }
+      //       }
+      //     ]
+      //   })
+      // },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          publicPath: '../../',
-          use: [
+        use: [
+            MiniCssExtractPlugin.loader,
             {
-              loader: 'css-loader',
-              options: {
-                  minimize: true
-              }
-            }, {
-              loader: 'sass-loader',
-              options: {
-                  minimize: true
-              }
+                loader: 'css-loader',
+                options: {
+                    // minimize: true
+                }
+            },
+            {
+                loader: 'sass-loader',
+                options: {
+                    // minimize: true
+                }
             }
-          ]
-        })
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf)(\?[a-z0-9=.]+)?$/,
@@ -128,7 +166,10 @@ module.exports = {
         })
       ]
     }),
-    new ExtractTextPlugin('style.css'),
+    // new ExtractTextPlugin('style.css'),
+    new MiniCssExtractPlugin({
+      filename: "style.css",
+    }),
     new HardSourceWebpackPlugin()
   ]
 };
