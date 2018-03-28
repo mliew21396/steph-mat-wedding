@@ -38,9 +38,7 @@ function form() {
       getPersonByName(firstName, lastName);
 
       loadingTab.style.display = "block";
-      // loadingTab.classList.toggle('closed');
       nameTab.style.display = "none";
-      // nameTab.classList.toggle('closed');
       event.preventDefault();
     });
 
@@ -90,19 +88,15 @@ function form() {
     var modalCover = document.querySelector("#modal-cover");
 
     loadingTab.style.display = 'none';
-    // loadingTab.classList.toggle('closed');
     titleMessage.textContent += "You've already RSVPed. If you need to reach out, contact us at stephmat2018@gmail.com.";
     rsvpsTab.style.display = 'block';
-    // rsvpsTab.classList.toggle('closed');
     closeButtonWrapper.appendChild(closeButton);
     closeButtonWrapper.className = 'already-rsvped-button';
     closeButton.innerHTML = "Close";
 
     closeButton.addEventListener('click', function () {
       nameTab.style.display = "block";
-      // nameTab.classList.toggle('closed');
       rsvpsTab.style.display = "none";
-      // rsvpsTab.classList.toggle('closed');
 
       modal.classList.toggle("closed");
       modalCover.classList.toggle("closed");
@@ -141,19 +135,15 @@ function form() {
     var tryAgainButton = document.createElement('button');
 
     loadingTab.style.display = "none";
-    // loadingTab.classList.toggle('closed');
     titleMessage.textContent += "No party found with entered name. Did you misspell? If not, contact us at stephmat2018@gmail.com";
     rsvpsTab.style.display = "block";
-    // rsvpsTab.classList.toggle('closed');
     tryAgainButtonWrapper.appendChild(tryAgainButton);
     tryAgainButtonWrapper.className = "try-again-button";
     tryAgainButton.innerHTML = "Search Again";
 
     tryAgainButton.addEventListener('click', function () {
       nameTab.style.display = "block";
-      // nameTab.classList.toggle('closed');
       rsvpsTab.style.display = "none";
-      // rsvpsTab.classList.toggle('closed');
       while (rsvpsForm.firstChild) {
         rsvpsForm.removeChild(rsvpsForm.firstChild);
       }
@@ -165,6 +155,10 @@ function form() {
 
   function renderRSVPs(response) {
     if (response.data.party.length != 0) {
+      while (rsvpsForm.firstChild) {
+          rsvpsForm.removeChild(rsvpsForm.firstChild);
+      }
+
       var title = document.createElement('h2');
       title.textContent += "Party of " + parseInt(response.data.party.length);
       rsvpsForm.appendChild(title);
@@ -227,7 +221,7 @@ function form() {
   }
 
   function isRsvpInputFieldWrapperValid(rsvpInputFieldWrapper) {
-    var rsvpInputFields = rsvpInputFieldWrapper.querySelectorAll('.input-field');
+    var rsvpInputFields = rsvpInputFieldWrapper.querySelectorAll('.field');
 
     for (var j=0; j < rsvpInputFields.length; j++) {
       if (!isRsvpInputFieldValid(rsvpInputFields[j])) {
@@ -285,11 +279,11 @@ function form() {
 
   function renderPersonsRsvpInputs(response) {
     response.data.party.forEach(function(person) {
-      renderPersonRSVPInputs(person);
+      renderPersonRsvpInputs(person);
     });
   }
 
-  function renderPersonRSVPInputs(person) {
+  function renderPersonRsvpInputs(person) {
     var div = document.createElement('div');
     var rsvpTemplate = require("../templates/rsvp.handlebars");
     var context = {
@@ -326,14 +320,14 @@ function form() {
   }
 
   function renderRSVPsError () {
-    var errorMessage = document.createElement('p');
+    var errorMessage = document.createElement('div');
+    errorMessage.classList.add('error');
+    errorMessage.textContent += 'There was a connection error. Please try again later.';
 
-    errorMessage.textContent += "There was a connection error. Please try again later.";
+    rsvpsTab.getElementsByClassName('error').remove();
     rsvpsTab.appendChild(errorMessage);
-    loadingTab.style.display = "none";
-    // loadingTab.classList.toggle('closed');
-    rsvpsTab.style.display = "block";
-    // rsvpsTab.classList.toggle('closed');
+    loadingTab.style.display = 'none';
+    rsvpsTab.style.display = 'block';
   }
 }
 
