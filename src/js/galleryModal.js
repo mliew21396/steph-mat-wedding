@@ -17,28 +17,35 @@ function galleryModal() {
 		var galleryImages = document.querySelectorAll('.my-slides');
 		for (var i = galleryImages.length - 1; i >= 0; i--) {
 			var mc = new Hammer(galleryImages[i]);
-			mc.add( new Hammer.Swipe({ velocity: 0.3, threshold: 1000 }) );
+			mc.add( new Hammer.Swipe({ velocity: 0.8, threshold: 1000 }) );
 
 			mc.on('panleft panright tap click', changeSlide);
 		}
+		var mcNext = new Hammer(nextControl);
+		mcNext.add( new Hammer.Swipe({ velocity: 0.8, threshold: 1000 }) );
+		mcNext.on('tap click', changeToNextSlide);
 
-		nextControl.addEventListener('click', renderNewSlide(1));
 
-		previousControl.addEventListener('click', renderNewSlide(-1));
+		var mcPrevious = new Hammer(previousControl);
+		mcPrevious.add( new Hammer.Swipe({ velocity: 0.8, threshold: 1000 }) );
+		mcPrevious.on('tap click', changeToPreviousSlide);
 	}
 
 	function changeSlide(event) {
 		if (event.type == 'panleft' || event.type == 'tap' || event.type == 'click') {
-			renderNewSlide(1);
+			changeToNextSlide();
 		} else if (event.type == 'panright') {
-			renderNewSlide(-1);
+			changeToPreviousSlide();
 		}
 	}
 
-	function renderNewSlide(newSlideIndex) {
-		showSlide(slideIndex += newSlideIndex);
+	function changeToNextSlide() {
+		showSlide(slideIndex += 1);
 	}
-	
+
+	function changeToPreviousSlide() {
+		showSlide(slideIndex += -1);
+	}
 
 	function showSlide(newSlideIndex) {
 		var slides = document.getElementsByClassName("my-slides");

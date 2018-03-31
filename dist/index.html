@@ -1,38 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Steph and Mat Are Getting Married!</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='vendors.css'>
+    <link rel='stylesheet' href='main.css'>
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
   </head>
   <body>
     <section class="splash">
       <a href="#home"></a>
     </section>
-    <nav role="navigation">
-      <a href="#home">HOME</a>
-      <a href="#story">STORY</a>
-      <a href="#schedule">SCHEDULE</a>
-      <a href="#travel">TRAVEL</a>
-      <a href="#photos">PHOTOS</a>
-      <a href="#registry">REGISTRY</a>
-    </nav>
+    <div class="nav-wrapper">
+      <nav role="navigation">
+        <a href="#home">RSVP</a>
+        <a href="#story">STORY</a>
+        <a href="#schedule">SCHEDULE</a>
+        <a href="#travel">ACCOMODATIONS</a>
+        <a href="#photos">PHOTOS</a>
+        <a href="#registry">REGISTRY</a>
+      </nav>
+    </div>
     <main>
       <div>
         <section id="home" class="container">
-          <h2>Date</h2>
-          <p>Saturday August 18, 2018</p>
-          <h2>Place</h2>
-          <p>Lincolnshire Marriott Resort</p>
-          <p>10 Marriott Dr, Lincolnshire, IL 60069</p>
-          <br></br>
-          <button id="open-button" class="btn rsvp-button">Click Here to RSVP</button>
-          <p>Please RSVP by June 1, 2018</p>
-          <b></b>
-          <h2>Dress Code</h2>
-          <p>Cocktail Attire / Dressy Casual</p>
+          <div class="row">
+            <div class="col s12 m4 l4 xl4">
+              <h3>Date</h3>
+              <p>Saturday August 18, 2018</p>
+            </div>
+            <div class="col s12 m4 l4 xl4">
+              <h3>Place</h3>
+              <p>
+                <span>Lincolnshire Marriott Resort</span>
+                <br>
+                <span>10 Marriott Dr, Lincolnshire, IL 60069</span>
+              </p>
+            </div>
+            <div class="col s12 m4 l4 xl4">
+              <h3>Dress Attire</h3>
+              <p>Semi-Formal</p>
+            </div>
+          </div>
+          <br>
+          <button id="rsvp-open-button" class="btn waves-effect waves-light btn-large rsvp-button">Click Here to RSVP</button>
+          <br>
+          <br>
           <h2>#Liewlyweds</h2>
         </section>
         <div class="divider"></div>
@@ -41,23 +55,37 @@
           <p>We met during our senior year at NU through a mutual friend. As hungry and frugal college students, a group of us met at Bar Louie for $1 burger Tuesdays. We quickly hit it off and made plans to hang out again.<p>
           <p>From there, we got to know each other through longboarding around campus, demolishing an entire tub of coffee ice cream in one sitting, sharing music playlists, and hanging out at the Lakefill. Our first “official” date was at Lincoln Park Zoo on a cold winter day-- we even ended up walking all the way downtown (and back...) but enjoyed each other’s company the whole time as we laughed and chatted.</p>
           <p>After graduation, we were in a long-distance relationship for 3 (!) years as Steph was in Chicago and Mat was in Madison, WI. Mat later moved back to Chicago and, in Oct 2016, proposed to Steph by Navy Pier. Throughout the 6 years of our relationship, we’ve been blessed with meeting each other’s families and old and new friends. We are so thankful and excited to celebrate our wedding with you all!</p>
-          <br></br>
+          <br>
           <h2>Wedding Party</h2>
           <div class="row">
             <div class="col s12 m6 l6 xl6">
               <h2>Bridesmaids</h2>
-              <h5>Jessie Lo - Maid of Honor</h5>
-              <h5>Melissa Hyre - Maid of Honor</h5>
-              <h5>Emily Chao</h5>
-              <h5>Olivia Wang</h5>
+              <p>Jessie Lo - Maid of Honor</p>
+              <div class="wedding-party jessie" style="background-image:url('img/wedding-party/jessie.jpg');"></div>
+              <br>
+              <p>Melissa Hyre - Maid of Honor</p>
+              <div class="wedding-party melissa" style="background-image:url('img/wedding-party/melissa.jpg');"></div>
+              <br>
+              <p>Emily Chao</p>
+              <div class="wedding-party emily" style="background-image:url('img/wedding-party/emily.jpg');"></div>
+              <br>
+              <p>Olivia Wang</p>
+              <div class="wedding-party olivia" style="background-image:url('img/wedding-party/olivia.jpg');"></div>
             </div>
             <div class="row">
               <div class="col s12 m6 l6 xl6">
                 <h2>Groomsmen</h2>
-                <h5>Allen Liew - Best Man</h5>
-                <h5>Alex Reinthal</h5>
-                <h5>Dan Chin</h5>
-                <h5>Josh Phipps</h5>
+                <p>Allen Liew - Best Man</p>
+                <div class="wedding-party allen" style="background-image:url('img/wedding-party/allen.jpg');"></div>
+                <br>
+                <p>Alex Reinthal</p>
+                <div class="wedding-party alex" style="background-image:url('img/wedding-party/alex.jpg');"></div>
+                <br>
+                <p>Dan Chin</p>
+                <div class="wedding-party long-distance" style="background-image:url('img/wedding-party/dan.jpg');"></div>
+                <br>
+                <p>Josh Phipps</p>
+                <div class="wedding-party josh" style="background-image:url('img/wedding-party/josh.jpg');"></div>
               </div>
             </div>
           </div>
@@ -66,64 +94,52 @@
         <section id="schedule" class="container">
           <h1>Schedule</h1>
           <div>
-              <div class="row">
-                <div class="schedule-info col s12 m12 l6 xl6">
-                  <div class="day">SATURDAY, AUGUST 18, 2018</div>
-                    <div class="row">
-                      <div class="time-container col s4">
-                        <p>11:00AM</p>
-                      </div>
-                      <div class="event col s8">
-                        <h5>Ceremony</h5>
-                        <p>The ceremony will take place outdoors on the concrete patio next to the Lakeside Pavilion.</p>
-                        <p>In case of inclement weather, the ceremony will be moved indoors within the hotel.</p>
-                      </div>
-                      <div class="time-container col s4">
-                        <p>11:30AM</p>
-                      </div>
-                      <div class="event col s8">
-                        <h5>Cocktail Hour</h5>
-                        <p>The cocktail hour will take place at the same location as the ceremony.</h5>
-                      </div>
-                      <div class="time-container col s4">
-                        <p>12:30 - 4:00PM</p>
-                      </div>
-                      <div class="event col s8">
-                        <h5>Reception</h5>
-                        <p>The reception will be in the Lakeside Pavilion. Lunch will be served, followed by dancing! Please take advantage of our open bar ;-)</p>
-                      </div>
-                      <div class="time-container col s4">
-                        <p>4:00 - 5:30PM</p>
-                      </div>
-                      <div class="event col s8">
-                        <h5>Informal After-Party</h5>
-                        <p>We recognize a lot of friends and family will be traveling in from out of town, so we'd love to use this time to catch up with you guys! Come and hang out with us at the hotel bar. Food and drinks will not be provided.</p>
-                      </div>
-                    </div>
+            <div class="row">
+              <div class="schedule-info col s12 m12 l6 xl6">
+                <div class="row">
+                  <div class="time-container col s2">
+                    <p>11:00AM</p>
+                  </div>
+                  <div class="event col s10">
+                    <p>Ceremony</p>
+                    <p><i>The ceremony will take place outdoors on the concrete patio next to the Lakeside Pavilion.</i></p>
+                    <p><i>In case of inclement weather, the ceremony will be moved indoors within the hotel.</i></p>
+                  </div>
+                  <div class="time-container col s2">
+                    <p>11:30AM</p>
+                  </div>
+                  <div class="event col s10">
+                    <p>Cocktail Hour</p>
+                    <p><i>The cocktail hour will take place at the same location as the ceremony.</i></p>
+                  </div>
+                  <div class="time-container col s2">
+                    <p>12:30PM</p>
+                  </div>
+                  <div class="event col s10">
+                    <p>Reception</p>
+                    <p><i>The reception will be in the Lakeside Pavilion. Lunch will be served, followed by dancing! Please take advantage of our open bar ;-)</i></p>
+                  </div>
+                  <div class="time-container col s2">
+                    <p>4:00PM</p>
+                  </div>
+                  <div class="event col s10">
+                    <p>Informal After-Party</p>
+                    <p><i>We recognize a lot of friends and family will be traveling in from out of town, so we'd love to use this time to catch up with you guys! Come and hang out with us at the hotel bar. Food and drinks will not be provided.</i></p>
+                  </div>
                 </div>
-                <div id="ceremony-reception-map" class="schedule-map col s12 m12 l6 xl6"></div>
-              </div>
+                </div>
+              <div id="ceremony-reception-map" class="schedule-map col s12 m12 l6 xl6"></div>
+            </div>
           </div>
         </section>
         <div class="divider"></div>
         <section id="travel" class="container">
-          <h1>Travel + Accomodations</h1>
+          <h1>Accomodations</h1>
           <div class="row">
             <div class="travel-data col s10 offset-s1">
-              <h5>O'Hare Airport (ORD)</h5>
-              <p>Take Interstate 294 North. Interstate 294 North will become Interstate 94 North. Exit at Half Day Road and turn left. Travel approximately 2.0 miles to Milwaukee Avenue and turn left again.</p>
-              <p>At the first traffic light, turn left into the Lincolnshire Marriott Resort entrance on Marriott Drive. Please make sure you are turning into the Marriott entrance and not the entrance for the Courtyard hotel.</p>
-            </div>
-            <div class="travel-data col s10 offset-s1">
-              <h5>Midway Airport (MDW)</h5>
-              <p>Travel 4.7 miles south on South Cicero Avenue toward West 59th Street. Turn right onto West 59th Street. Travel 3.3 miles and merge onto Interstate 294 North via the ramp to Wisconsin Partial Toll Road. Travel 38.0 miles and exit at Half Day Road. Travel approximately 2.0 miles to Milwaukee Avenue and turn left again.</p>
-              <p>At the first traffic light, turn left into the Lincolnshire Marriott Resort entrance on Marriott Drive. Please make sure you are turning into the Marriott entrance and not entrance for the Courtyard hotel.</p>
-            </div>
-            <div class="travel-data col s10 offset-s1">
-              <h2>Accomodations</h2>
-              <p>Most convenient option - Lincolnshire Marriott Resort which is where our wedding will be held.</p> 
-              <p><a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Lo%20Liew%20Wedding%5Echiln%60llwllwa%60114.00%60USD%60false%604%608/17/18%608/20/18%607/27/18&app=resvlink&stop_mobi=yes">Click here</a> to reserve a room with our wedding block under “Lo Liew Wedding” for a rate of $114/night. Our block rate will be available if you book by 7/27/2018. Complimentary on-site parking. This hotel does not provide shuttle service to/from the airports.</p>
-              <p>If you’d prefer, there are also many other hotel options that are very near our venue.</p>
+              <img src="img/marriott.jpg">
+              <p>Lincolnshire Marriott Resort which is where our wedding will be held.</p> 
+              <p><a target="_blank" href="https://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Lo-Liew%20Wedding%5ECHILN%60LLWLLWA%7CLLWLLWD%60114.00%60USD%60false%604%608/17/18%608/19/18%6007/27/2018&app=resvlink&stop_mobi=yes">Click here</a> to reserve a room with our wedding block under “Lo Liew Wedding” for a rate of $114/night. Our block rate will be available if you book by 7/27/2018. Complimentary on-site parking. This hotel does not provide shuttle service to/from the airports.</p>
             </div>
           </div>
         </section>
@@ -139,13 +155,14 @@
             </div>
             <div class="grid-main-wrapper col hide-on-med-and-down l10 xl10"></div>
             <!-- Small and Medium -->
-            <button id="open-button" class="btn gallery-trigger hide-on-large-only">Click Here to See Gallery</button>
+            <button class="btn gallery-trigger hide-on-large-only">Click Here to See Gallery</button>
           </div>
         </section>
         <div class="divider"></div>
         <section id="registry" class="container">
           <h1>Registry</h1>
-          <p>We’re so lucky and blessed to be able to spend our wedding day with all of our friends and family. Above all, your presence is truly all the present we need. If you’d like to give us a gift to celebrate, monetary contributions towards our home and honeymoon would be greatly appreciated. Thanks so much!</p>
+          <p>We’re so lucky and blessed to be able to spend our wedding day with all of our family and friends.</p> 
+          <p>Above all, your presence is truly all the present we need. If you’d like to give us a gift to celebrate, monetary contributions towards our home and honeymoon would be greatly appreciated. Thanks so much!</p>
         </section>
       </div>
     </main>
@@ -153,17 +170,17 @@
       <div class="modal-guts">
         <div class="name-tab">
           <form novalidate>
-            <p>Please enter your first and last name and your passcode to RSVP</p>
+            <p>Please enter your first and last name to RSVP</p>
             <br>
             <div class="row">
               <div class="input-field s12">
-                <input id="first-name" type="text" name="first-name" placeholder="Jon" class="primary-input validate" required aria-required="true">
+                <input id="first-name" type="text" name="first-name" placeholder="John" class="primary-input validate" required aria-required="true">
                 <label for="first-name" data-error="First Name cannot be empty." data-success="right" class="active" >First Name</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field s12">
-                <input name="last-name" placeholder="Snow" id="last-name" type="text" class="validate" required aria-required="true">
+                <input name="last-name" placeholder="Smith" id="last-name" type="text" class="validate" required aria-required="true">
                 <label for="last-name" class="active" data-error="Last Name cannot be empty.">Last Name</label>
               </div>
             </div>
@@ -180,6 +197,10 @@
             <img src="">
           </div>
         </div>
+        <div class="thank-you-tab closed">
+          <p>Thank you for your RSVP!</p>
+          <button class="waves-effect waves-light btn">Close</button>
+        </div>
       </div>
     </div>
     <div class="modal closed" id="gallery-modal">
@@ -190,7 +211,8 @@
       </div>
     </div>
     <div class="modal-cover closed" id="modal-cover"></div>
-    <script src="bundle.js"></script>
+    <script src="vendors.js"></script>
+    <script src="main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA43QCi_tR2iz1wszmC_e-pnvvfDzfjrOo&callback=initMaps" async defer></script>
   </body>
 </html>

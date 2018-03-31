@@ -1,0 +1,320 @@
+html,
+body {
+  background-color: #f6f6f6;
+  height: 100%;
+  width: 100%; }
+
+@font-face {
+  font-family: "Sacramento";
+  src: url(././fonts/8114f9fd7b2ed3f9cbaa40ab00066114.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url(././fonts/24beb08412cba31a3b4954f3b4bf8ba9.ttf) format("truetype"); }
+
+h1, h2, h3 {
+  font-family: 'Sacramento'; }
+
+p,
+a {
+  font-family: 'Roboto'; }
+
+p {
+  font-size: 19px; }
+
+.splash {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  background: url(./img/Steph_Mat_Engagement_66.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .splash img {
+    height: 100%; }
+  .splash .down-arrow {
+    position: absolute;
+    top: 90%;
+    left: 48.5%;
+    z-index: 100;
+    margin: auto; }
+
+.nav-wrapper {
+  height: 3em; }
+
+nav {
+  background-color: lightgray;
+  height: 3em;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  box-shadow: 0 1px 21px 8px rgba(0, 0, 0, 0.07); }
+  nav a {
+    text-decoration: none;
+    margin: 0 0 0 0.5em; }
+  nav a:link {
+    color: black; }
+  nav a:visited {
+    color: black; }
+  nav a:hover {
+    color: maroon; }
+  nav a[id="schedule"]:target {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); }
+
+nav.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0; }
+
+@media (min-width: 550px) {
+  nav a {
+    margin: 0 1em; } }
+
+@media (min-width: 960px) {
+  nav a {
+    margin: 0 4em 0 4em; } }
+
+main {
+  display: inline-block;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+  main section {
+    padding: 5em 0; }
+  main .wedding-party {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 10px; }
+  main .melissa,
+  main .allen,
+  main .emily {
+    background-position: center; }
+  main .travel-data {
+    text-align: left; }
+    main .travel-data img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%; }
+  main #schedule h2,
+  main #schedule h3 {
+    text-align: left; }
+  main #schedule .day {
+    text-align: left;
+    padding-bottom: 2em; }
+  main #schedule .time-container {
+    text-align: right; }
+  main #schedule .event {
+    text-align: left; }
+  main #schedule #ceremony-reception-map {
+    position: relative;
+    padding-bottom: 40%;
+    height: 0;
+    overflow: hidden; }
+
+main > * {
+  text-align: center; }
+
+.modal {
+  /* This way it could be display flex or grid or whatever also. */
+  display: block;
+  /* Probably need media queries here */
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  max-height: 100%;
+  position: fixed;
+  z-index: 1050;
+  left: 50%;
+  top: 50%;
+  margin: 0;
+  /* Use this for centering if unknown width/height */
+  transform: translate(-50%, -50%);
+  /* If known, negative margins are probably better (less chance of blurry text). */
+  /* margin: -200px 0 0 -200px; */
+  background: white;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9); }
+  .modal .modal-guts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 20px; }
+    .modal .modal-guts .previous-control,
+    .modal .modal-guts .next-control {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      color: white;
+      font-weight: bold;
+      font-size: 20px; }
+    .modal .modal-guts .previous-control:hover,
+    .modal .modal-guts .next-control:hover {
+      background-color: rgba(0, 0, 0, 0.8); }
+    .modal .modal-guts .next-control {
+      right: 9px;
+      border-radius: 3px 0 0 3px;
+      transform: translate(-50%, -50%); }
+    .modal .modal-guts .previous-control {
+      transform: translate(-50%, -50%); }
+    .modal .modal-guts .slide-count {
+      color: white;
+      position: absolute;
+      right: 1em;
+      bottom: 1em; }
+    .modal .modal-guts .my-slides {
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      position: relative; }
+      .modal .modal-guts .my-slides img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+  .modal .close-button {
+    position: absolute;
+    /* don't need to go crazy with z-index here, just sits over .modal-guts */
+    z-index: 100;
+    top: 10px;
+    /* needs to look OK with or without scrollbar */
+    right: 20px;
+    border: 0;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1.3rem; }
+
+.modal-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6); }
+
+.closed {
+  display: none; }
+
+#gallery-modal {
+  background: black; }
+
+finput {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa; }
+
+input.invalid {
+  background-color: #ffdddd; }
+
+.parties-tab,
+.rsvp-tab,
+.loading-tab {
+  display: none; }
+
+.name-tab {
+  display: block; }
+  .name-tab .find-my-party {
+    text-align: center; }
+
+.rsvp-tab {
+  width: 80%;
+  margin: 0 auto; }
+  .rsvp-tab .rsvp-form {
+    margin-top: 4em; }
+    .rsvp-tab .rsvp-form .already-rsvped-button {
+      text-align: center; }
+    .rsvp-tab .rsvp-form .person {
+      margin-bottom: 4em; }
+      .rsvp-tab .rsvp-form .person > div {
+        margin-bottom: 2em; }
+    .rsvp-tab .rsvp-form .try-again-button {
+      text-align: center; }
+    .rsvp-tab .rsvp-form .radio-wrapper {
+      display: inline-block;
+      padding-bottom: 0 1em; }
+      .rsvp-tab .rsvp-form .radio-wrapper label {
+        font-size: 19px; }
+    .rsvp-tab .rsvp-form .submit-rsvp {
+      text-align: center;
+      margin-top: 5em; }
+  .rsvp-tab h2 {
+    text-align: center; }
+
+.loading-tab div {
+  text-align: center; }
+  .loading-tab div img {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+.thank-you-tab {
+  text-align: center; }
+
+.lazyload,
+.lazyloading {
+  opacity: 0; }
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms; }
+
+.gallery {
+  margin: 0 auto; }
+  .gallery .grid-side-wrapper,
+  .gallery .grid-main-wrapper {
+    display: inline-block; }
+  .gallery .grid-side-wrapper.col,
+  .gallery .grid-main-wrapper.col {
+    padding: 0; }
+  .gallery .grid-side-wrapper {
+    text-align: right; }
+    .gallery .grid-side-wrapper .grid {
+      width: 12vw;
+      display: block;
+      max-height: 64vh;
+      box-shadow: inset 0 -25px 50px -35px black; }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .gallery .grid-side-wrapper .grid {
+          /* IE10+ CSS styles go here */
+          overflow: auto;
+          -ms-overflow-style: -ms-autohiding-scrollbar; } }
+      @supports (-ms-accelerator: true) {
+        .gallery .grid-side-wrapper .grid {
+          /* IE Edge 12+ CSS styles go here */
+          overflow: auto;
+          -ms-overflow-style: -ms-autohiding-scrollbar; } }
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .gallery .grid-side-wrapper .grid {
+          overflow: overlay; } }
+      .gallery .grid-side-wrapper .grid .grid-sizer,
+      .gallery .grid-side-wrapper .grid .grid-item {
+        width: 6vw; }
+      .gallery .grid-side-wrapper .grid .grid-item:hover img {
+        opacity: .5; }
+  .gallery .grid-main-wrapper {
+    vertical-align: top;
+    background-color: black;
+    display: inline-block;
+    min-height: 64vh; }
+    .gallery .grid-main-wrapper img {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      min-height: 64vh;
+      max-height: 64vh; }
+

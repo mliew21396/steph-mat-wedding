@@ -31,6 +31,10 @@ input.invalid {
   .rsvp-form {
     margin-top: 4em;
 
+    .already-rsvped-button {
+      text-align: center;
+    }
+
     .person {
       margin-bottom: 4em;
 
@@ -71,4 +75,8 @@ input.invalid {
     top: 50%;
     transform: translate(-50%, -50%)
   }
+}
+
+.thank-you-tab {
+  text-align: center;
 }

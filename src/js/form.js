@@ -1,6 +1,9 @@
 import axios from 'axios';
 
 function form() {
+  var modal = document.querySelector("#modal");
+  var modalCover = document.querySelector("#modal-cover");
+  var body = document.querySelector("body");
   var rsvpsForm = document.querySelector(".rsvp-form");
   var findMyPartyBtn = document.querySelector(".find-my-party button");
   var firstName = document.querySelector("#first-name");
@@ -9,6 +12,7 @@ function form() {
   var rsvpsTab = document.querySelector(".rsvp-tab");
   var loadingTab = document.querySelector(".loading-tab");
   var loadingImage = document.querySelector(".loading-tab img");
+  var thankYouTab = document.querySelector(".thank-you-tab");
 
   setup();
 
@@ -66,7 +70,7 @@ function form() {
     axios.get(fullUrl)
       .then(function (response) {
         if (isPartyValid(response)) {
-          if (response.data[0].attending != null) {
+          if (response.data[0].attending != undefined) {
             renderAlreadyRsvpedDisplay();
           } else {
             getPartyByPerson(response.data[0].party_id);
@@ -84,27 +88,34 @@ function form() {
     var titleMessage = document.createElement('p');
     var closeButtonWrapper = document.createElement('div');
     var closeButton = document.createElement('button');
-    var body = document.querySelector("body");
-    var modalCover = document.querySelector("#modal-cover");
+    closeButton.classList.add('waves-effect', 'waves-light', 'btn');
+
+    rsvpsForm.textContent = '';
 
     loadingTab.style.display = 'none';
-    titleMessage.textContent += "You've already RSVPed. If you need to reach out, contact us at stephmat2018@gmail.com.";
+    titleMessage.textContent += "You've already RSVPed. If you need to contact us, email at stephmat2018@gmail.com.";
     rsvpsTab.style.display = 'block';
     closeButtonWrapper.appendChild(closeButton);
     closeButtonWrapper.className = 'already-rsvped-button';
     closeButton.innerHTML = "Close";
+    closeButton.focus();
 
     closeButton.addEventListener('click', function () {
-      nameTab.style.display = "block";
-      rsvpsTab.style.display = "none";
-
-      modal.classList.toggle("closed");
-      modalCover.classList.toggle("closed");
-      body.style.overflow = "visible";
+      closeFormModal();
     });
 
     rsvpsForm.appendChild(titleMessage);
     rsvpsForm.appendChild(closeButtonWrapper);
+  }
+
+  function closeFormModal() {
+    nameTab.style.display = "block";
+    rsvpsTab.style.display = "none";
+    thankYouTab.style.display = "none";
+
+    modal.classList.add("closed");
+    modalCover.classList.add("closed");
+    body.style.overflow = "visible";
   }
 
   function getPartyByPerson(partyId) {
@@ -114,9 +125,7 @@ function form() {
     axios.get(fullUrl)
       .then(function (response) {
         loadingTab.style.display = "none";
-        // loadingTab.classList.toggle('closed');
         rsvpsTab.style.display = "block";
-        // rsvpsTab.classList.toggle('closed');
         renderRSVPs(response);
       })
       .catch(function (error) {
@@ -134,12 +143,16 @@ function form() {
     var tryAgainButtonWrapper = document.createElement('div');
     var tryAgainButton = document.createElement('button');
 
+    rsvpsForm.textContent = '';
+
     loadingTab.style.display = "none";
-    titleMessage.textContent += "No party found with entered name. Did you misspell? If not, contact us at stephmat2018@gmail.com";
+    titleMessage.textContent += "No party found with entered name. Did you misspell? For questions, contact stephmat2018@gmail.com";
     rsvpsTab.style.display = "block";
     tryAgainButtonWrapper.appendChild(tryAgainButton);
     tryAgainButtonWrapper.className = "try-again-button";
     tryAgainButton.innerHTML = "Search Again";
+    tryAgainButton.classList.add('waves-effect', 'waves-light', 'btn');
+    tryAgainButton.focus();
 
     tryAgainButton.addEventListener('click', function () {
       nameTab.style.display = "block";
@@ -182,7 +195,8 @@ function form() {
         response.data.party.forEach(function(person) {
           postPersonRSVP(person);
         });
-        // close modal
+        rsvpsTab.style.display = "none";
+        thankYouTab.style.display = "block";
       });
       rsvpsForm.appendChild(buttonWrapper);
 
@@ -256,8 +270,10 @@ function form() {
 
     axios.post(fullUrl, createPostBody(person))
     .then(function (response) {
+      renderThankYou();
     })
     .catch(function (error) {
+      renderPostFail();
     });
   }
 
@@ -277,6 +293,16 @@ function form() {
     };
   }
 
+  function renderThankYou() {
+    thankYouTab.addEventListener('click', function () {
+      closeFormModal();
+    });
+  }
+
+  function renderPostFail() {
+    thankYouTab.querySelector('p').innerHTML = "Failed to send. Please contact stephmat2018@gmail.com";
+  }
+
   function renderPersonsRsvpInputs(response) {
     response.data.party.forEach(function(person) {
       renderPersonRsvpInputs(person);
@@ -292,6 +318,7 @@ function form() {
                     personid: person.person_id,
                     child: person.child
                   };
+
 
     div.className = 'person';
     div.innerHTML = rsvpTemplate(context);
@@ -324,7 +351,10 @@ function form() {
     errorMessage.classList.add('error');
     errorMessage.textContent += 'There was a connection error. Please try again later.';
 
-    rsvpsTab.getElementsByClassName('error').remove();
+    if (rsvpsTab.getElementsByClassName('error').length !== 0) {
+      rsvpsTab.getElementsByClassName('error').remove();  
+    }
+
     rsvpsTab.appendChild(errorMessage);
     loadingTab.style.display = 'none';
     rsvpsTab.style.display = 'block';

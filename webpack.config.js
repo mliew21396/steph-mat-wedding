@@ -2,28 +2,21 @@ var path = require('path');
 var ImageminPlugin = require('imagemin-webpack-plugin').default;
 var ImageminMozjpeg = require('imagemin-mozjpeg');
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
-var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: './src/app.js',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "eslint-loader",
-        options: {
-          // eslint options (if necessary)
+        use: {
+          loader: "eslint-loader",
+          loader: "babel-loader"
         }
       },
       {
         test: /\.(png|jpg)$/i,
-          oneOf: [
+        oneOf: [
           {
             resourceQuery: /normal/,
             use: [
@@ -42,7 +35,7 @@ module.exports = {
             loader: 'responsive-loader',
             options: {
               name: 'img/responsive/[name]-[width].[ext]',
-              sizes: [300, 600, 1200, 2000],
+              sizes: [300, 600, 1200],
               adapter: require('responsive-loader/sharp')
             }
           },
@@ -100,6 +93,18 @@ module.exports = {
       }
     ]
   },
+  optimization:{
+      splitChunks:{
+          cacheGroups:{
+              vendor: {
+                  chunks: 'initial',
+                  test: path.resolve(__dirname, 'node_modules'),
+                  name: 'vendors',
+                  enforce: true,
+              }
+          }, 
+      }
+  },
   plugins: [
     // Make sure that the plugin is after any plugins that add images
     new ImageminPlugin({
@@ -111,8 +116,7 @@ module.exports = {
       ]
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css",
-    }),
-    new HardSourceWebpackPlugin()
+      filename: "[name].css",
+    })
   ]
 };

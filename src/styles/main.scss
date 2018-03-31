@@ -52,8 +52,12 @@ p {
     }
 }
 
+
+.nav-wrapper {
+    height: 3em;
+}
+
 nav {
-    /*background-color: #f6f6f6;*/
     background-color: lightgray;
     height: 3em;
     z-index: 200;
@@ -115,8 +119,30 @@ main {
         padding: 5em 0;
     }
 
+    .wedding-party {
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .melissa,
+    .allen,
+    .emily {
+        background-position: center;
+    }
+
     .travel-data {
         text-align: left;
+
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
     }
 
     #schedule {

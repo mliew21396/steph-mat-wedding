@@ -5,7 +5,7 @@ function modal() {
   var galleryModal = document.querySelector("#gallery-modal");
   var modalCover = document.querySelector("#modal-cover");
   var closeButton = document.querySelector("#close-button");
-  var openButton = document.querySelector("#open-button");
+  var rsvpOpenButton = document.querySelector("#rsvp-open-button");
   var primaryInput = document.querySelector(".primary-input");
   var galleryTrigger = document.querySelector(".gallery-trigger");
   var nameTab = document.querySelector(".name-tab");
@@ -22,7 +22,7 @@ function modal() {
     resetFormTabs();
   });
 
-  openButton.addEventListener("click", function() {
+  rsvpOpenButton.addEventListener("click", function() {
     modal.classList.toggle("closed");
     modalCover.classList.toggle("closed");
     body.style.overflow = "hidden";
@@ -44,15 +44,12 @@ function modal() {
   function resetFormTabs() {
     if (nameTab.style.display == 'none') {
       nameTab.style.display = 'block';
-      // nameTab.classList.toggle('closed');
     }
     if (rsvpsTab.style.display == 'block') {
       rsvpsTab.style.display = 'none';
-      // rsvpsTab.classList.toggle('closed');
     }
     if (loadingTab.style.display == 'block') {
       loadingTab.style.display = 'none';
-      // loadingTab.classList.toggle('closed');
     }
   }
 }

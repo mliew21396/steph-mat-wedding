@@ -5,7 +5,7 @@ import imageConstants from './imageConstants.js';
 function loadImages() {
   "use strict";
   // Gallery
-    // Side Image
+  // Side Image
   for (const key of Object.keys(imageConstants.gallerySideImages)) {
     var sideImageFile = imageConstants.gallerySideImages[key].imageFile;
     var sideImageSizes = imageConstants.gallerySideImages[key].imageSizes;
@@ -15,9 +15,9 @@ function loadImages() {
 
     createMasonryRenditions(sideImageFile, sideParentSelector, sideImageSizes, sideClassName, sideMainImageSizes);
   }
-    // First Main Image
+  // First Main Image
   createRenditions(imageConstants.galleryMainImage.imageFile,imageConstants.galleryMainImage.parentSelector, imageConstants.galleryMainImage.imageSizes, imageConstants.galleryMainImage.className);
-    // Gallery Modal Image
+  // Gallery Modal Image
   for (const key of Object.keys(imageConstants.galleryModalImages)) {
     var modalImageFile = imageConstants.galleryModalImages[key].imageFile;
     var modalImageSizes = imageConstants.galleryModalImages[key].imageSizes;
