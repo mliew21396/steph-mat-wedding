@@ -288,6 +288,9 @@ input.invalid {
       display: block;
       max-height: 64vh;
       box-shadow: inset 0 -25px 50px -35px black; }
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .gallery .grid-side-wrapper .grid {
+          overflow: overlay; } }
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         .gallery .grid-side-wrapper .grid {
           /* IE10+ CSS styles go here */
@@ -298,9 +301,6 @@ input.invalid {
           /* IE Edge 12+ CSS styles go here */
           overflow: auto;
           -ms-overflow-style: -ms-autohiding-scrollbar; } }
-      @media screen and (-webkit-min-device-pixel-ratio: 0) {
-        .gallery .grid-side-wrapper .grid {
-          overflow: overlay; } }
       .gallery .grid-side-wrapper .grid .grid-sizer,
       .gallery .grid-side-wrapper .grid .grid-item {
         width: 6vw; }

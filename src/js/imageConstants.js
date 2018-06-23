@@ -18,7 +18,6 @@ var imageConstants = {
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "grid-item"
     },
-
     sideImage1: {
       "imageFile":"Steph_Mat_Engagement_16.jpg",
       "parentSelector": '.grid',
@@ -26,7 +25,6 @@ var imageConstants = {
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "grid-item"
     },
-
     sideImage2: {
       "imageFile":"Steph_Mat_Engagement_30.jpg",
       "parentSelector": '.grid',
@@ -48,7 +46,6 @@ var imageConstants = {
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "grid-item"
     },
-
     sideImage6: {
       "imageFile":"Steph_Mat_Engagement_93.jpg",
       "parentSelector": '.grid',
@@ -56,14 +53,6 @@ var imageConstants = {
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "grid-item"
     },
-    sideImage12: {
-      "imageFile":"Steph_Mat_Engagement_99.jpg",
-      "parentSelector": '.grid',
-      "imageSizes": "(min-width: 0.5em) 6vw",
-      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
-      "className": "grid-item"
-    },
-
     sideImage13: {
       "imageFile":"Steph_Mat_Engagement_114.jpg",
       "parentSelector": '.grid',
@@ -92,7 +81,6 @@ var imageConstants = {
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "grid-item"
     },
-
     bean: {
       "imageFile":"bean.jpg",
       "parentSelector": '.grid',
@@ -188,180 +176,168 @@ var imageConstants = {
   galleryMainImage: {
     "imageFile":"Steph_Mat_Engagement_16.jpg",
     "parentSelector": '.grid-main-wrapper',
-    "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+    "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
     "className": "grid-main-item"
   },
   galleryModalImages: {
     modalImage0: {
       "imageFile":"Steph_Mat_Engagement_3.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides "
     },
-
     modalImage1: {
       "imageFile":"Steph_Mat_Engagement_16.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides "
     },
-
     modalImage2: {
       "imageFile":"Steph_Mat_Engagement_30.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides "
     },
     modalImage3: {
       "imageFile":"Steph_Mat_Engagement_54.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides "
     },
     modalImage4: {
       "imageFile":"Steph_Mat_Engagement_58.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides "
     },
-
     modalImage6: {
       "imageFile":"Steph_Mat_Engagement_93.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
-    modalImage12: {
-      "imageFile":"Steph_Mat_Engagement_99.jpg",
-      "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
-      "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
-      "className": "my-slides"
-    },
-
     modalImage13: {
       "imageFile":"Steph_Mat_Engagement_114.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     modalImage14: {
       "imageFile":"Steph_Mat_Engagement_129.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     modalImage15: {
       "imageFile":"Steph_Mat_Engagement_152.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     modalImage16: {
       "imageFile":"Steph_Mat_Engagement_170.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
-
     bean: {
       "imageFile":"bean.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides "
     },
     buckingham: {
       "imageFile":"buckingham.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     burgers: {
       "imageFile":"burgers.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 360px) 100vw,(max-width: 1200px) 40vw, 650px",
       "className": "my-slides"
     },
     butterbeer: {
       "imageFile":"butterbeer.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     color_run: {
       "imageFile":"color_run.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     corn_maze: {
       "imageFile":"corn_maze.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     formal_buckingham: {
       "imageFile":"formal_buckingham.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     garden: {
       "imageFile":"garden.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     grass_lawn2: {
       "imageFile":"grass_lawn2.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     llama: {
       "imageFile":"llama.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 360px) 100vw,(max-width: 1200px) 40vw, 650px",
       "className": "my-slides"
     },
     ocean: {
       "imageFile":"ocean.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 360px) 100vw,(max-width: 1200px) 40vw, 650px",
       "className": "my-slides"
     },
     riverwalk: {
       "imageFile":"riverwalk.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     },
     sedona: {
       "imageFile":"sedona.jpg",
       "parentSelector": '#gallery-modal .modal-guts',
-      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 100px",
+      "imageSizes": "(max-width: 360px) 60vw,(max-width: 700px) 60vw,(max-width: 760px) 50vw, (max-width: 992px) 40vw, 1200px",
       "mainImageSizes": "(max-width: 200px) 40vw,(max-width: 960px) 40vw, 350px",
       "className": "my-slides"
     }

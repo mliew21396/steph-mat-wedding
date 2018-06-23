@@ -13,43 +13,57 @@ function linkScroll () {
   var registrySources = document.querySelectorAll("a[href='#registry']");
   var registryTarget = document.getElementById("registry");
 
+  var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+  console.log(touchEvent)
+
   homeSources.forEach(function(homeSource) {
-    homeSource.addEventListener('click', function(e) {
+    homeSource.addEventListener(touchEvent, function(e) {
+      console.log('home')
       scrollHandler(homeTarget);
     });
   });
 
-  storySources[0].addEventListener('click', function(e) {
+  storySources[0].addEventListener(touchEvent, function(e) {
+    console.log('story')
     scrollHandler(storyTarget);
   });
 
-  weddingDetailSources[0].addEventListener('click', function(e) {
+  weddingDetailSources[0].addEventListener(touchEvent, function(e) {
     scrollHandler(weddingDetailsTarget);
   });
 
-  travelSources[0].addEventListener('click', function(event) {
+  travelSources[0].addEventListener(touchEvent, function(event) {
     scrollHandler(travelTarget);
   });
 
-  photoSources[0].addEventListener('click', function(event) {
+  photoSources[0].addEventListener(touchEvent, function(event) {
     scrollHandler(photosTarget);
   });
 
-  registrySources[0].addEventListener('click', function (event) {
+  registrySources[0].addEventListener(touchEvent, function (event) {
     scrollHandler(registryTarget);
   });
 
   function scrollHandler(target) {
+    console.log('scrollHandler')
     event.preventDefault();
-    scrollTo(document.documentElement, target.offsetTop, 500);
+    scrollTo(document.scrollingElement, target.offsetTop, 500);
   }
 
   function scrollTo(element, to, duration) {
+    console.log('scrollTo')
+    console.log(duration)
+    console.log(element)
+    console.log(to)
     if (duration <= 0) return;
+    console.log('difference', difference)
     var difference = to - element.scrollTop;
+    console.log('perTick', perTick)
     var perTick = difference / duration * 10;
 
     setTimeout(function() {
+        console.log('setTimeout')
+        console.log(element.scrollTop)
         element.scrollTop = element.scrollTop + perTick;
         if (element.scrollTop === to) return;
         scrollTo(element, to, duration - 10);
